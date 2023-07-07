@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sh_portal_my_rfq_signature" name="Portal: My RFQ Signature" inherit_id="purchase.portal_my_purchase_order">
+        <xpath expr="//div[hasclass('o_download_pdf')]" position="before">
+            <a t-if="order.has_to_be_signed(True)" role="button" class="btn btn-primary btn-block mb8" data-bs-toggle="modal" data-bs-target="#modalaccept" href="#">
+                <i class="fa fa-check" /><t t-if="order.has_to_be_signed(True)"> Accept &amp; Sign</t><t t-else=""> Accept &amp; Sign</t>
+            </a>
+        </xpath>
+        <xpath expr="//div[@id='quote_content']" position="inside">
+            <div id="quote_content" class="col-12 col-lg justify-content-end">
+                <div role="dialog" class="modal fade" id="modalaccept">
+                    <div class="modal-dialog" t-if="order.has_to_be_signed(True)">
+                        <form id="accept" method="POST" t-att-data-order-id="order.id" t-att-data-token="order.access_token" class="js_accept_json modal-content js_website_submit_form">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                            <header class="modal-header">
+                                <h4 class="modal-title">Digital Signature</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">&amp;times;</button>
+                            </header>
+                            <main class="modal-body" id="sign-dialog">
+                                <t t-call="portal.signature_form">
+                                    <t t-set="call_url" t-value="order.get_portal_url(suffix='/accept')" />
+                                    <t t-set="default_name" t-value="order.partner_id.name" />
+                                </t>
+                            </main>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
