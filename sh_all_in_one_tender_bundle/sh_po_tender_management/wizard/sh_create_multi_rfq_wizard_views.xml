@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<!-- Create Multi rfq from tender wizard view -->
+    <record id="sh_create_multi_rfq_wizard_form_view" model="ir.ui.view">
+        <field name="name">sh.multi.product.wizard.form.view</field>
+        <field name="model">sh.create.multi.rfq</field>
+        <field name="arch" type="xml">
+            <form string="Create Mutiple RFQ From Tender">
+                <group>
+                    <group>
+                        <field name="sh_partner_ids" widget="many2many_tags"/>
+                        <field name="sh_mail_template_id"/>
+                    </group>
+                </group>
+
+                <footer>
+                    <button name="sh_create_and_send" string="Create &amp; Send" type="object" class="oe_highlight" />
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <!-- Create Multi rfq from tender wizard view action -->
+    <record id="action_sh_create_multi_rfq" model="ir.actions.act_window">
+        <field name="name">Create Mutiple RFQ From Tender</field>
+        <field name="res_model">sh.create.multi.rfq</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
