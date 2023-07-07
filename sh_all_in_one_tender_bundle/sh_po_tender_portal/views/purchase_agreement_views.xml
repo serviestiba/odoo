@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inheriting Purchase Tender Form View -->
+    <record id="sh_po_tender_agreement_view_inherit" model="ir.ui.view">
+		<field name="name">purchase.agreement</field>
+		<field name="model">purchase.agreement</field>
+		<field name="inherit_id" ref="sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view"/>
+		<field name="arch" type="xml">
+			<field name="company_id" position="after">
+				<field name="sh_take_document_to_rfq"/>
+			</field>
+			<field name="sh_source" position="after">
+				<field name="sh_allow_portal_access"/>
+				<label for="sh_time_limit" attrs="{'invisible': [('sh_allow_portal_access','=',False)]}"/>
+                <div attrs="{'invisible': [('sh_allow_portal_access','=',False)]}">
+                    <field name="sh_time_limit" string="Time Limit" class="oe_inline"/>
+                    <span> days</span>
+                </div>
+				<field name="sh_last_date_of_portal_access" attrs="{'invisible': [('sh_allow_portal_access','=',False)]}"/>
+				<field name="sh_open_tender"/>
+				<field name="sh_do_not_show_to_ids" attrs="{'invisible':[('sh_open_tender','=',False)]}" widget="many2many_tags"/>
+			</field>
+			<field name="partner_ids" position="attributes">
+				<attribute name="attrs">{'invisible':[('sh_open_tender','=',True)]}</attribute>
+			</field>
+		</field>
+	</record>
+    <!-- Portal Share Tender Action -->
+	<record id="portal_share_action" model="ir.actions.act_window">
+        <field name="name">Share</field>
+        <field name="res_model">portal.share</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="sh_all_in_one_tender_bundle.model_purchase_agreement"/>
+        <field name="binding_view_types">form</field>
+    </record>
+</odoo>
