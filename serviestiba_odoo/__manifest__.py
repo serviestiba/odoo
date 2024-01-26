@@ -5,17 +5,20 @@
 
 {
     'name': 'Serviestiba Odoo',
-    'version': '1.1',
+    'version': '1.2',
     'description': ''' Changes for Serviestiba
     ''',
     'category': 'Purchase',
     'author': 'IDCA',
     'website': '',
     'depends': [
-        'purchase',
+        'purchase','maintenance'
     ],
     'data': [
+        'data/maintenance_sequence_data.xml',
         'views/purchase_order_view.xml',
+        'views/stock_picking_view.xml',
+        'views/maintenance_request_view.xml',
     ],
     'images': [],
     'application': False,

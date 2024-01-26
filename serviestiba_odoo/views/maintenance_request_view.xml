@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record id="view_maintenance_request_form_custom" model="ir.ui.view">
+            <field name="name">maintenance.request.form.custom</field>
+            <field name="model">maintenance.request</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="required">0</attribute>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
