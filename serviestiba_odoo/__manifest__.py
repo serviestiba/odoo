@@ -5,7 +5,7 @@
 
 {
     'name': 'Serviestiba Odoo',
-    'version': '1.2',
+    'version': '1.3',
     'description': ''' Changes for Serviestiba
     ''',
     'category': 'Purchase',
