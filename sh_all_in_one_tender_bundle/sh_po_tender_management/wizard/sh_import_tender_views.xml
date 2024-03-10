@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Wizard For Tender Import -->
+    <record id="sh_import_tender_wizard" model="ir.ui.view">
+        <field name="name">sh.import.tender</field>
+        <field name="model">sh.import.tender</field>
+        <field name="arch" type="xml">
+            <form string="Import Tender">
+                <group>
+                    <field name="import_type" widget="radio" />
+                    <field name="product_by" widget="radio" />
+                    <field name="unit_price" widget="radio" />
+                    <field name="sh_auto_create_rfq" />
+                    <field name="sh_rfq_confirm" attrs="{'invisible':[('sh_auto_create_rfq','=',False)]}" />
+                    <field name="company_id" groups="base.group_multi_company" />
+                    <field name="file" />
+                </group>
+                <footer>
+                    <button name="import_tender_apply" string="Apply" type="object" class="btn-primary" />
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                    <div style="float: right;">
+                        <strong>Download Sample:</strong>
+                        <a role="button" href="/sh_all_in_one_tender_bundle/static/download/sh_import_tender.csv" class="btn-primary" style="margin: 0 10px; font-size: 12px; line-height: 1.5; border-radius: 3px; padding: 8px 10px; color: #ffffff;">
+                            <i class="fa fa-download" /> CSV file
+                        </a>
+                        <a role="button" href="/sh_all_in_one_tender_bundle/static/download/sh_import_tender.xls" class="btn-primary" style="font-size: 12px; line-height: 1.5; border-radius: 3px; padding: 8px 10px; color: #ffffff;">
+                            <i class="fa fa-download" /> Excel file
+                        </a>
+                    </div>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_import_tender_action" model="ir.actions.act_window">
+        <field name="name">Import Tender</field>
+        <field name="res_model">sh.import.tender</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="sh_import_tender_wizard" />
+        <field name="target">new</field>
+    </record>
+    <menuitem id="sh_menu_import_tender" name="Import Tender" parent="purchase.menu_procurement_management" action="sh_import_tender_action" groups="sh_all_in_one_tender_bundle.sh_import_tender_group"/>
+</odoo>
