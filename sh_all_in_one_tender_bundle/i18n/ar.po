@@ -1,0 +1,1952 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_all_in_one_tender_bundle
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-29 06:23+0000\n"
+"PO-Revision-Date: 2022-04-29 06:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_portal_my_rfq_signature
+msgid "&amp;times;"
+msgstr "&amp;times;"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "--Select Currency--"
+msgstr "--اختر العملة--"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>City :</b>"
+msgstr "<b>مدينة :</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Comment / Note</b>"
+msgstr "<b>التعليق / الملاحظة</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Contact Person Details</b>"
+msgstr "<b>تفاصيل الاتصال الشخص</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "<b>Currency</b>"
+msgstr "<b>عملة</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Email :</b>"
+msgstr "<b>البريد الإلكتروني :</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Mobile :</b>"
+msgstr "<b>متحرك :</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Name :</b>"
+msgstr "<b>اسم :</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Phone :</b>"
+msgstr "<b>هاتف :</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Please list products which you are selling?</b>"
+msgstr "<b>الرجاء سرد المنتجات التي تبيعها؟</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Product Categories</b>"
+msgstr "<b>فئات المنتجات</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Street :</b>"
+msgstr "<b>شارع :</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Vendor Details</b>"
+msgstr "<b>تفاصيل البائع</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Website Link :</b>"
+msgstr "<b>رابط الموقع :</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<b>Zip / Postal Code :</b>"
+msgstr "<b>الرمز البريدي / الرمز البريدي :</b>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:mail.template,body_html:sh_all_in_one_tender_bundle.sh_vendor_signup_email_notification
+msgid ""
+"<div style=\"line-height: 28px;\">\n"
+"                Hello There,<br/>\n"
+"                New Vendor <b t-out=\"object.name\"/> is just sign-up,<br/>\n"
+"                You may take follow-up with him.<br/>\n"
+"                <a class=\"btn btn-primary\" role=\"button\" t-attf-href=\"/web?#id={{object.id}}&amp;model=res.partner\">View Details</a><br/>\n"
+"                Thank You...<br/>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"line-height: 28px;\">\n"
+"                أهلاً بك,<br/>\n"
+"                بائع جديد <b t-out=\"object.name\"/> هو مجرد الاشتراك,<br/>\n"
+"                يمكنك المتابعة معه.<br/>\n"
+"                <a class=\"btn btn-primary\" role=\"button\" t-attf-href=\"/web?#id={{object.id}}&amp;model=res.partner\">عرض التفاصيل</a><br/>\n"
+"                شكرا لك...<br/>\n"
+"            </div>\n"
+"        "
+
+#. module: sh_all_in_one_tender_bundle
+#: model:mail.template,body_html:sh_all_in_one_tender_bundle.email_template_edi_purchase_tedner
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse: separate;\" summary=\"o_mail_notification\">\n"
+"                        <tbody>\n"
+"                            <!-- HEADER -->\n"
+"                            <tr>\n"
+"                                <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                    <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135, 90, 123); padding: 20px; border-collapse: separate;\">\n"
+"                                        <tr>\n"
+"                                            <td valign=\"middle\">\n"
+"                                                <span style=\"font-size: 20px; color: white; font-weight: bold;\">\n"
+"                                                    <t t-out=\"object.name\"/>\n"
+"                                                </span>\n"
+"                                            </td>\n"
+"                                            <td valign=\"middle\" align=\"right\">\n"
+"                                                <img src=\"/logo.png?company={{ object.company_id.id }}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"{{object.company_id.name}}\"/>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"\n"
+"                            <!-- CONTENT -->\n"
+"                            <tr>\n"
+"                                <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                    <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse: separate;\">\n"
+"                                        <tbody>\n"
+"                                            <td valign=\"top\" style=\"font-family: Arial, Helvetica, sans-serif; color: #555; font-size: 14px;\">\n"
+"                                                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                                                    Hello Vendors,\n"
+"                                                    <br/>\n"
+"                                                    <br/>\n"
+"                                                    We have new tender for you, Please have look and give your best quote on it.\n"
+"                                                    <br/>\n"
+"                                                    <br/>\n"
+"                                                    <br/>\n"
+"                                                    <t t-if=\"object.compute_custom_boolean\">\n"
+"                                                        <center>\n"
+"                                                            <a href=\"/my/tender/{{object.id}}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">\n"
+"                                                                View Tender\n"
+"                                                            </a>\n"
+"                                                        </center>\n"
+"                                                        <br/>\n"
+"                                                        <br/>\n"
+"                                                    </t>\n"
+"                                                    \n"
+"                                                    Please find attached tender document.\n"
+"                                                    <br/>\n"
+"                                                </p>\n"
+"                                            </td>\n"
+"                                        </tbody>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"\n"
+"                            <!-- FOOTER -->\n"
+"                            <tr>\n"
+"                                <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                    <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                                    <tr>\n"
+"                                        <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                        <t t-out=\"object.company_id.name\"/>\n"
+"                                        <br/>\n"
+"                                        <t t-out=\"object.company_id.phone or ''\"/>\n"
+"                                        </td>\n"
+"                                        <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                        <t t-if=\"object.company_id.email\">\n"
+"                                            <a t-attf-href=\"mailto:{{ object.company_id.email }}\" style=\"text-decoration:none; color: white;\">\n"
+"                                            <t t-out=\"object.company_id.email\"/>\n"
+"                                            </a>\n"
+"                                        </t>\n"
+"                                        <br/>\n"
+"                                        <t t-if=\"object.company_id.website\">\n"
+"                                            <a t-attf-href=\"{{ object.company_id.website }}\" style=\"text-decoration:none; color: white;\">\n"
+"                                            <t t-out=\"object.company_id.website\"/>\n"
+"                                            </a>\n"
+"                                        </t>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                                </tr>\n"
+"                        </tbody>\n"
+"                    </table>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse: separate;\" summary=\"o_mail_notification\">\n"
+"                        <tbody>\n"
+"                            <!-- HEADER -->\n"
+"                            <tr>\n"
+"                                <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                    <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135, 90, 123); padding: 20px; border-collapse: separate;\">\n"
+"                                        <tr>\n"
+"                                            <td valign=\"middle\">\n"
+"                                                <span style=\"font-size: 20px; color: white; font-weight: bold;\">\n"
+"                                                    <t t-out=\"object.name\"/>\n"
+"                                                </span>\n"
+"                                            </td>\n"
+"                                            <td valign=\"middle\" align=\"right\">\n"
+"                                                <img src=\"/logo.png?company={{ object.company_id.id }}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"{{object.company_id.name}}\"/>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"\n"
+"                            <!-- CONTENT -->\n"
+"                            <tr>\n"
+"                                <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                    <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse: separate;\">\n"
+"                                        <tbody>\n"
+"                                            <td valign=\"top\" style=\"font-family: Arial, Helvetica, sans-serif; color: #555; font-size: 14px;\">\n"
+"                                                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                                                    مرحبا البائعين,\n"
+"                                                    <br/>\n"
+"                                                    <br/>\n"
+"                                                    لدينا مناقصة جديدة لك ، يرجى النظر وإعطاء أفضل اقتباس لك.\n"
+"                                                    <br/>\n"
+"                                                    <br/>\n"
+"                                                    <br/>\n"
+"                                                    <t t-if=\"object.compute_custom_boolean\">\n"
+"                                                        <center>\n"
+"                                                            <a href=\"/my/tender/{{object.id}}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">\n"
+"                                                                عرض العطاء\n"
+"                                                            </a>\n"
+"                                                        </center>\n"
+"                                                        <br/>\n"
+"                                                        <br/>\n"
+"                                                    </t>\n"
+"                                                    \n"
+"                                                    يرجى العثور على وثيقة العطاء المرفقة.\n"
+"                                                    <br/>\n"
+"                                                </p>\n"
+"                                            </td>\n"
+"                                        </tbody>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"\n"
+"                            <!-- FOOTER -->\n"
+"                            <tr>\n"
+"                                <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                    <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                                    <tr>\n"
+"                                        <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                        <t t-out=\"object.company_id.name\"/>\n"
+"                                        <br/>\n"
+"                                        <t t-out=\"object.company_id.phone or ''\"/>\n"
+"                                        </td>\n"
+"                                        <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                        <t t-if=\"object.company_id.email\">\n"
+"                                            <a t-attf-href=\"mailto:{{ object.company_id.email }}\" style=\"text-decoration:none; color: white;\">\n"
+"                                            <t t-out=\"object.company_id.email\"/>\n"
+"                                            </a>\n"
+"                                        </t>\n"
+"                                        <br/>\n"
+"                                        <t t-if=\"object.company_id.website\">\n"
+"                                            <a t-attf-href=\"{{ object.company_id.website }}\" style=\"text-decoration:none; color: white;\">\n"
+"                                            <t t-out=\"object.company_id.website\"/>\n"
+"                                            </a>\n"
+"                                        </t>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                                </tr>\n"
+"                        </tbody>\n"
+"                    </table>\n"
+"                </div>\n"
+"            "
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_portal_my_rfq_order_update
+msgid "<i class=\"fa fa-comment\"/> Send message"
+msgstr "<i class=\"fa fa-comment\"/> أرسل رسالة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid ""
+"<i class=\"fa fa-download\"/>\n"
+"                                Download All"
+msgstr ""
+"<i class=\"fa fa-download\"/>\n"
+"                                تحميل الكل"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_portal_my_rfq_order_update
+msgid "<i class=\"fa fa-download\"/> Download"
+msgstr "<i class=\"fa fa-download\"/> تحميل"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_po_tender_agreement_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_view
+msgid "<span> days</span>"
+msgstr "<span> أيام</span>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_portal_my_rfq_order_update
+msgid "<strong class=\"text-muted\">Responsible</strong>"
+msgstr "<strong class=\"text-muted\">مسؤول</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_tender_portal_rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_tender_rfq_portal_content_template
+msgid "<strong>Bid Already Closed.</strong>"
+msgstr "<strong>محاولة مغلقة بالفعل.</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+msgid "<strong>Bid Updated Successfully.</strong>"
+msgstr "<strong>تم تحديث BID بنجاح.</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+msgid "<strong>Currency :</strong>"
+msgstr "<strong>عملة :</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+msgid "<strong>Date:</strong>"
+msgstr "<strong>تاريخ:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "<strong>Delivery Date:</strong>"
+msgstr "<strong>تاريخ التسليم او الوصول:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<strong>Fail!</strong>"
+msgstr "<strong>يفشل!</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "<strong>Note/Comment</strong>"
+msgstr "<strong>ملاحظة/تعليق</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "<strong>Ordering Date:</strong>"
+msgstr "<strong>تاريخ الطلب:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "<strong>Product</strong>"
+msgstr "<strong>منتج</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "<strong>Purchase Representative:</strong>"
+msgstr "<strong>ممثل الشراء:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+msgid "<strong>Purchase Tender Type:</strong>"
+msgstr "<strong>شراء نوع العطاء:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>كمية</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "<strong>Source Document:</strong>"
+msgstr "<strong>مصدر وثائق:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>نطاق فرعي</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "<strong>Success!</strong>"
+msgstr "<strong>النجاح!</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "<strong>Tender Deadline:</strong>"
+msgstr "<strong>الموعد النهائي العطاء:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+msgid "<strong>Tender Reference:</strong>"
+msgstr "<strong>مرجع العطاء:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "<strong>Tender Type:</strong>"
+msgstr "<strong>نوع العطاء:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_tender_portal_rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_tender_rfq_portal_content_template
+msgid "<strong>Tender:</strong>"
+msgstr "<strong>مناقصة، عطاء، رقيق، لين:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "<strong>Total:</strong>"
+msgstr "<strong>المجموع:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "<strong>Unit Price</strong>"
+msgstr "<strong>سعر الوحدة</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+msgid "<strong>Vendor:</strong>"
+msgstr "<strong>بائع:</strong>"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_portal_my_rfq_signature
+msgid "Accept &amp; Sign"
+msgstr "قبول & amp ؛ إشارة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__access_warning
+msgid "Access warning"
+msgstr "تحذير الوصول"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_my_tenders
+msgid "Action"
+msgstr "عمل"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "استثناء النشاط زخرفة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Add Contact"
+msgstr "إضافة جهة اتصال"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Add Product"
+msgstr "أضف منتج"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Add/Update Bid"
+msgstr "إضافة/تحديث العرض"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#, python-format
+msgid "All"
+msgstr "الجميع"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_allow_portal_access
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__sh_allow_portal_access
+msgid "Allow Portal Access ?"
+msgstr "السماح للوصول إلى البوابة؟"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.report_analyze_quotations_template
+msgid "Amount"
+msgstr "مقدار"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.ui.menu,name:sh_all_in_one_tender_bundle.bidlines_menu
+msgid "Analyze Multiple Tenders"
+msgstr "تحليل المناقصات المتعددة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.actions.report,name:sh_all_in_one_tender_bundle.action_report_analyze_quotations
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_agreement_xls_report__report_select__analyze_quotation
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.report_analyze_quotations_template
+msgid "Analyze Quotations"
+msgstr "تحليل الاقتباسات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+msgid "Analyze RFQ"
+msgstr "تحليل RFQ"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "Are you want to sure to cancel old bid and create new ?"
+msgstr "هل تريد التأكد من إلغاء العرض القديم وإنشاء جديد؟"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_ir_attachment
+msgid "Attachment"
+msgstr "المرفق"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_website__is_enable_auto_portal_user
+msgid "Auto Portal User"
+msgstr "مستخدم بوابة التلقائي"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_company__sh_auto_add_followers
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_config_settings__sh_auto_add_followers
+msgid "Auto add vendors as followers ?"
+msgstr "أضف البائعين التلقائيين كأتباع؟"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_company__sh_portal_user_create
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_config_settings__sh_portal_user_create
+msgid "Auto portal users(vendors) create ?"
+msgstr "مستخدمي البوابة التلقائي (البائعون) إنشاء؟"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_line__company_currency_id
+msgid "Base Currency"
+msgstr "العملة الأساسية"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "Bid Cancel/New Confirmation"
+msgstr "عطاءات إلغاء/تأكيد جديد"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_agreement__state__bid_selection
+msgid "Bid Selection"
+msgstr "اختيار العطاءات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+msgid "Bid Selection Purchase Tender #"
+msgstr "اختيار اختيار العطاء العطاء #"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__sh_bid_updated
+msgid "Bid Updated"
+msgstr "تم تحديث العطاءات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Browse..."
+msgstr "تصفح..."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__campaign_id
+msgid "Campaign"
+msgstr "الحملة الانتخابية"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_order_line__status__cancel
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.purchase_agreement_xls_report_view_form
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_bidline_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_order_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_update_qty_wizard_form_view
+msgid "Cancel"
+msgstr "يلغي"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__cancel_lines
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_line__cancel_lines
+msgid "Cancel Lines"
+msgstr "إلغاء الخطوط"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_wizard__sh_cancel_old_rfqs
+msgid "Cancel Old RFQ'S"
+msgstr "إلغاء RFQ القديم"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_order_wizard__sh_cancel_old_rfqs__cancel_old_partner
+msgid "Cancel Old RFQ'S of Selected Tender of Partners"
+msgstr "إلغاء RFQ القديم من مناقصة شركاء مختارة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_order_wizard__sh_cancel_old_rfqs__cancel_all_old
+msgid "Cancel Old RFQ'S of Tender"
+msgstr "إلغاء RFQ القديم من العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "Cancel RFQ/Create New"
+msgstr "إلغاء RFQ/إنشاء جديد"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_agreement__state__cancel
+#, python-format
+msgid "Cancelled"
+msgstr "ألغيت"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+msgid "Cancelled Purchase Tender #"
+msgstr "تم إلغاء شراء مناقصة #"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_management/models/sh_purchase_order.py:0
+#: model:ir.actions.act_window,name:sh_all_in_one_tender_bundle.action_chnage_qty_wizard
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_update_qty_wizard_form_view
+#, python-format
+msgid "Change Quantity"
+msgstr "تغيير الكمية"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.actions.act_window,help:sh_all_in_one_tender_bundle.sh_purchase_agreement_action
+msgid "Click to Create New Purchase Tender."
+msgstr "انقر لإنشاء مناقصة شراء جديدة."
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_portal_my_rfq_signature
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+msgid "Close"
+msgstr "قريب"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_agreement__state__closed
+#, python-format
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+msgid "Closed Purchase Tender #"
+msgstr "مناقصة شراء مغلقة #"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_res_company
+msgid "Companies"
+msgstr "شركات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__company_id
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Company"
+msgstr "شركة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_website__is_enable_company_portal_user
+msgid "Company "
+msgstr "شركة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__compute_custom_boolean
+msgid "Compute Custom Boolean"
+msgstr "حساب مخصص منطقي"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات التكوين"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_order_line__status__confirm
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_bidline_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+msgid "Confirm"
+msgstr "يتأكد"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_agreement__state__confirm
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_res_partner
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_portal_my_rfq_order_update
+msgid "Contact"
+msgstr "اتصال"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_website__is_enable_company_contact_portal_user
+msgid "Contacts"
+msgstr "جهات الاتصال"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Country"
+msgstr "دولة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Country..."
+msgstr "دولة..."
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.actions.act_window,help:sh_all_in_one_tender_bundle.action_purchase_agreement_type
+msgid "Create Purchase Tender Type."
+msgstr "إنشاء نوع العطاء شراء."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_wizard__sh_create_po
+msgid "Create RFQ/Purchase Order"
+msgstr "إنشاء طلب الشراء/الشراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_config_settings__is_enable_auto_portal_user
+msgid "Create auto portal user vendor?"
+msgstr "إنشاء بائع مستخدم بوابة تلقائية؟"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_type__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_xls_report__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_wizard__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_update_qty__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_type__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_xls_report__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_wizard__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_update_qty__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__access_url
+msgid "Customer Portal URL"
+msgstr "بوابة العميل URL"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_order__signed_on
+msgid "Date of the signature."
+msgstr "تاريخ التوقيع."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.actions.server,name:sh_all_in_one_tender_bundle.cron_deactivate_portal_access_rfq_ir_actions_server
+#: model:ir.cron,cron_name:sh_all_in_one_tender_bundle.cron_deactivate_portal_access_rfq
+#: model:ir.cron,name:sh_all_in_one_tender_bundle.cron_deactivate_portal_access_rfq
+msgid "Deactivate RFQ/PO Portal Access"
+msgstr "إلغاء تنشيط بوابة RFQ/PO"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.actions.server,name:sh_all_in_one_tender_bundle.cron_deactivate_portal_access_tender_ir_actions_server
+#: model:ir.cron,cron_name:sh_all_in_one_tender_bundle.cron_deactivate_portal_access_tender
+#: model:ir.cron,name:sh_all_in_one_tender_bundle.cron_deactivate_portal_access_tender
+msgid "Deactivate Tender Portal Access"
+msgstr "إلغاء تنشيط وصول بوابة العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+msgid "Define your terms and conditions ..."
+msgstr "حدد الشروط والأحكام الخاصة بك ..."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.actions.server,name:sh_all_in_one_tender_bundle.cron_delete_tender_zip_data_ir_actions_server
+#: model:ir.cron,cron_name:sh_all_in_one_tender_bundle.cron_delete_tender_zip_data
+#: model:ir.cron,name:sh_all_in_one_tender_bundle.cron_delete_tender_zip_data
+msgid "Delete Tender/RFQ Garbase Collection(Zip Files)"
+msgstr "حذف مجموعة Garbase العطاء/RFQ (ملفات zip)"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_delivery_date
+msgid "Delivery Date"
+msgstr "تاريخ التسليم او الوصول"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.report_analyze_quotations_template
+msgid "Description"
+msgstr "وصف"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_portal_my_rfq_signature
+msgid "Digital Signature"
+msgstr "توقيع إلكتروني"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_type__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_xls_report__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_wizard__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_update_qty__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_do_not_show_to_ids
+msgid "Do not show to"
+msgstr "لا تظهر ل"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Document"
+msgstr "وثيقة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__document_count
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Documents"
+msgstr "وثائق"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_ir_attachment__sh_document_from_portal
+msgid "Documents from portal"
+msgstr "وثائق من البوابة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_portal_my_rfq_order_update
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Download"
+msgstr "تحميل"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_agreement__state__draft
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_order_line__status__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "معالج تكوين البريد الإلكتروني"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_config_settings__is_enable_vendor_notification
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_website__is_enable_vendor_notification
+msgid "Enable Vendor Notification"
+msgstr "تمكين إشعار البائع"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.purchase_agreement_xls_report_view_form
+msgid "Export"
+msgstr "يصدّر"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+msgid "Export Xls"
+msgstr "تصدير XLS"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "أتباع (شركاء)"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "الرمز الرائع على سبيل المثال FA-TASKS"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_config_settings__is_enable_company_portal_user
+msgid "For Company "
+msgstr "لاجل الشركه"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_config_settings__is_enable_company_contact_portal_user
+msgid "For Contacts"
+msgstr "لجهات الاتصال"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_order_wizard_form_view
+msgid "Genarate Purchase Order"
+msgstr "أمر شراء الجينارات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.actions.act_window,name:sh_all_in_one_tender_bundle.action_purchase_order_wizard
+#: model:ir.actions.act_window,name:sh_all_in_one_tender_bundle.sh_generate_purchase_order_action
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_order_wizard_form_view
+msgid "Generate Purchase Order"
+msgstr "توليد أمر الشراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_vendor_signup_res_config_settings
+msgid "Get email notification on vendor signup."
+msgstr "احصل على إشعار البريد الإلكتروني على الاشتراك في البائع."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_wizard__sh_group_by_partner
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_po_bidline_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_search_view
+msgid "Group By"
+msgstr "مجموعة من"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_order_wizard_form_view
+msgid "Group By Partner"
+msgstr "مجموعة من قبل الشريك"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_po_bidline_search_view
+msgid "Hide cancelled Lines"
+msgstr "إخفاء الخطوط الملغاة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_tender_form_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_portal_my_rfq_order_update
+msgid "History"
+msgstr "تاريخ"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__id
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__id
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_type__id
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_xls_report__id
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_wizard__id
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_update_qty__id
+msgid "ID"
+msgstr "بطاقة تعريف"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثناء."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__message_needaction
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم فحصها ، تتطلب رسائل جديدة انتباهك."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__message_has_error
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم فحصها ، فإن بعض الرسائل لديها خطأ في التسليم."
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Image is a link"
+msgstr "الصورة رابط"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Individual"
+msgstr "الفرد"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_rfq_portal_signature/controllers/portal.py:0
+#, python-format
+msgid "Invalid quotation."
+msgstr "اقتباس غير صالح."
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_rfq_portal_signature/controllers/portal.py:0
+#, python-format
+msgid "Invalid signature data."
+msgstr "بيانات توقيع غير صالحة."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_is_follower
+msgid "Is Follower"
+msgstr "هو أتباع"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_users__is_tendor_vendor
+msgid "Is Tender Portal User"
+msgstr "هو مستخدم بوابة العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__is_expired
+msgid "Is expired"
+msgstr "منتهي الصلاحية"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_type____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_xls_report____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_wizard____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_update_qty____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل على"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_type__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_xls_report__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_wizard__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_update_qty__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_type__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_xls_report__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_wizard__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_update_qty__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث على"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_last_date_of_portal_access
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__sh_last_date_of_portal_access
+msgid "Last date of portal access"
+msgstr "آخر تاريخ للوصول إلى البوابة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_company__sh_manage_tender_doc_portal
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_config_settings__sh_manage_tender_doc_portal
+msgid "Manage Portal Tender Document ?"
+msgstr "إدارة وثيقة مناقصة البوابة؟"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_company__sh_tender_document_manage
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_config_settings__sh_tender_document_manage
+msgid "Manage Tender Documents ?"
+msgstr "إدارة وثائق العطاء؟"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:res.groups,name:sh_all_in_one_tender_bundle.sh_purchase_tender_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__medium_id
+msgid "Medium"
+msgstr "متوسط"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__sh_msg
+msgid "Message"
+msgstr "رسالة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ تسليم الرسائل"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي للنشط"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__name
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_type__name
+msgid "Name"
+msgstr "اسم"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_order__signed_by
+msgid "Name of the person that signed the SO."
+msgstr "اسم الشخص الذي وقع SO."
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_management/models/sh_purchase_agreement.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+msgid "New Quotation"
+msgstr "اقتباس جديد"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:mail.template,subject:sh_all_in_one_tender_bundle.sh_vendor_signup_email_notification
+msgid "New Vendor Sign up"
+msgstr "بائع جديد اشترك"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "No"
+msgstr "رقم"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_order_wizard__sh_cancel_old_rfqs__none
+msgid "None"
+msgstr "لا أحد"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_type__note
+msgid "Note "
+msgstr "ملحوظة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_line__sh_tender_note
+msgid "Note/Comment"
+msgstr "ملاحظة/تعليق"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:mail.template,name:sh_all_in_one_tender_bundle.sh_vendor_signup_email_notification
+msgid "Notification for responsible person"
+msgstr "إخطار الشخص المسؤول"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل ذات خطأ التسليم"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_open_tender
+msgid "Open Tender ?"
+msgstr "فتح العطاء؟"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_tender_my_home
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_my_home_menu
+msgid "Open Tenders"
+msgstr "المناقصات المفتوحة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Operations"
+msgstr "عمليات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Order"
+msgstr "ترتيب"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Order Date"
+msgstr "تاريخ الطلب"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__sh_ordered_qty
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Ordered Quantities"
+msgstr "الكميات المطلوبة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_order_date
+msgid "Ordering Date"
+msgstr "تاريخ الطلب"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_xls_report__parent_record
+msgid "Parent Record"
+msgstr "سجل الوالدين"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__partner_id
+msgid "Partner"
+msgstr "شريك"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__access_url
+msgid "Portal Access URL"
+msgstr "بوابة URL URL"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.report_analyze_quotations_template
+msgid "Price"
+msgstr "سعر"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__sh_product_id
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.report_analyze_quotations_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_po_bidline_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "Product"
+msgstr "منتج"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_partner__vendor_product_categ_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_users__vendor_product_categ_ids
+msgid "Product Categories"
+msgstr "فئات المنتجات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_partner__vendor_products
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_users__vendor_products
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Products"
+msgstr "منتجات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_ir_attachment__sh_is_publish_in_portal
+msgid "Publish in tender portal ?"
+msgstr "نشر في بوابة العطاء؟"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_purchase_agreement
+msgid "Purchase Agreement"
+msgstr "اتفاقية شراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_purchase_agreement_line
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_purchase_agreement_line_ids
+msgid "Purchase Agreement Line"
+msgstr "خط اتفاقية الشراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_purchase_agreement_type
+msgid "Purchase Agreement Type"
+msgstr "نوع اتفاقية الشراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_purchase_agreement_xls_report
+msgid "Purchase Agreement Xls Report"
+msgstr "تقرير اتفاقية الشراء XLS"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.purchase_agreement_xls_report_view_form
+msgid "Purchase Agreement report"
+msgstr "تقرير اتفاقية الشراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_purchase_order
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_order_wizard__sh_create_po__po
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_po_bidline_search_view
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "خط أمر الشراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_purchase_order_wizard
+msgid "Purchase Order Wizard"
+msgstr "معالج أمر الشراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_management/wizard/sh_purchase_order_wizard.py:0
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_management/wizard/sh_purchase_order_wizard.py:0
+#, python-format
+msgid "Purchase Orders/RFQ's"
+msgstr "أوامر الشراء/RFQ"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_purchase_user_id
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_search_view
+msgid "Purchase Representative"
+msgstr "ممثل شراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.actions.act_window,name:sh_all_in_one_tender_bundle.sh_purchase_agreement_action
+#: model:ir.actions.report,name:sh_all_in_one_tender_bundle.action_report_purchase_tender
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__agreement_id
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__agreement_id
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_line__agreement_id
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_agreement_xls_report__report_select__purchase_tender
+#: model:ir.module.category,description:sh_all_in_one_tender_bundle.module_purchase_tender_category
+#: model:ir.module.category,name:sh_all_in_one_tender_bundle.module_purchase_tender_category
+#: model:ir.ui.menu,name:sh_all_in_one_tender_bundle.sh_purchase_agreement_menu
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_tree_view
+msgid "Purchase Tender"
+msgstr "شراء العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_template
+msgid "Purchase Tender #"
+msgstr "شراء العطاء #"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_config_seetings
+msgid "Purchase Tender Configuration"
+msgstr "شراء تكوين العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_search_view
+msgid "Purchase Tender Deadline"
+msgstr "شراء الموعد النهائي العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_search_view
+msgid "Purchase Tender Delivery Date"
+msgstr "شراء تاريخ تسليم المناقصة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_search_view
+msgid "Purchase Tender Number"
+msgstr "شراء رقم العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_search_view
+msgid "Purchase Tender Order Date"
+msgstr "شراء تاريخ طلب العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.actions.act_window,name:sh_all_in_one_tender_bundle.action_purchase_agreement_type
+#: model:ir.ui.menu,name:sh_all_in_one_tender_bundle.sh_purchase_agreement_type_menu
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_type_form_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_tender_type_tree_view
+msgid "Purchase Tender Type"
+msgstr "شراء نوع العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:mail.template,name:sh_all_in_one_tender_bundle.email_template_edi_purchase_tedner
+msgid "Purchase Tender: Send Purchase Tender"
+msgstr "شراء العطاء: أرسل مناقصة الشراء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_tender_my_home
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_my_home_menu
+msgid "Purchase Tenders"
+msgstr "الشراء المناقصات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__sh_qty
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_update_qty__sh_qty
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.report_analyze_quotations_template
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Quantity"
+msgstr "كمية"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields.selection,name:sh_all_in_one_tender_bundle.selection__purchase_order_wizard__sh_create_po__rfq
+msgid "RFQ"
+msgstr "RFQ"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_management/models/sh_purchase_agreement.py:0
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__rfq_count
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+#, python-format
+msgid "Received Quotations"
+msgstr "وردت اقتباسات"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_xls_report__report_select
+msgid "Reports"
+msgstr "تقارير"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Request For Quotations/PO"
+msgstr "طلب الاقتباسات/po"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_res_config_settings__user_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_website__user_ids
+msgid "Responsible Person"
+msgstr "شخص مسؤول"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ تسليم الرسائل القصيرة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__access_token
+msgid "Security Token"
+msgstr "رمز الأمان"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_management/models/sh_purchase_agreement.py:0
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__order_count
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__selected_order
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_order_search_view
+#, python-format
+msgid "Selected Orders"
+msgstr "أوامر مختارة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+msgid "Sent By Email"
+msgstr "أرسلت عن طريق البريد الإلكتروني"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+msgid "Set To Draft"
+msgstr "ضبط على المسودة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_manage_tender_document
+msgid "Sh Manage Tender Document"
+msgstr "SH إدارة الوثيقة العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.actions.act_window,name:sh_all_in_one_tender_bundle.portal_share_action
+msgid "Share"
+msgstr "يشارك"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__signature
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.purchase_order_custom_form_view
+msgid "Signature"
+msgstr "التوقيع"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_rfq_portal_signature/controllers/portal.py:0
+#, python-format
+msgid "Signature is missing."
+msgstr "التوقيع مفقود."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_order__signature
+msgid "Signature received through the portal."
+msgstr "توقيع ورد من خلال البوابة."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__signed_by
+msgid "Signed By"
+msgstr "موقعة من قبل"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__signed_on
+msgid "Signed On"
+msgstr "وقعت على"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_portal/controllers/portal.py:0
+#, python-format
+msgid "Something went wrong! "
+msgstr "هناك خطأ ما!"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__source_id
+msgid "Source"
+msgstr "مصدر"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_source
+msgid "Source Document"
+msgstr "مصدر وثائق"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__state
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_line__status
+msgid "State"
+msgstr "حالة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "State / Province"
+msgstr "الدولة / المقاطعة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "State / Province..."
+msgstr "الدولة / المقاطعة ..."
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Status"
+msgstr "حالة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"تأخر: تم تمرير تاريخ الاستحقاق بالفعل\n"
+"اليوم: تاريخ النشاط اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Street..."
+msgstr "شارع..."
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Street2..."
+msgstr "Street2 ..."
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Submit"
+msgstr "يُقدِّم"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_line__sh_base_price_subtotal
+msgid "Subtotal "
+msgstr "نطاق فرعي"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__sh_supplier_note
+msgid "Supplier Note "
+msgstr "ملاحظة المورد"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "Supplier Note/Comment"
+msgstr "ملاحظة المورد/التعليق"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_view
+msgid "Supplier Note/Comment ..."
+msgstr "ملاحظة المورد/التعليق ..."
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "Supplier Note/Comment......"
+msgstr "ملاحظة المورد/تعليق ......"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_view
+msgid "Supplier Notes"
+msgstr "ملاحظات المورد"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "Taxes:"
+msgstr "الضرائب:"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.purchase_order_template_custom
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_po_bidline_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_order_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_tender_rfq_portal_template
+msgid "Tender"
+msgstr "مناقصة، عطاء، رقيق، لين"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_my_tenders
+msgid "Tender #"
+msgstr "مناقصة، عطاء، رقيق، لين #"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_agreement_deadline
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_my_tenders
+msgid "Tender Deadline"
+msgstr "الموعد النهائي العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_po_tender_management/models/sh_purchase_agreement.py:0
+#: model:ir.actions.act_window,name:sh_all_in_one_tender_bundle.action_po_bidline_action
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.purchase_order_line_pivot_custom
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_bidline_form_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_bidline_tree_view
+#, python-format
+msgid "Tender Lines"
+msgstr "خطوط العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_po_bidline_search_view
+msgid "Tender Lines Search View"
+msgstr "عرض البحث عن خطوط العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_agreement_type
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_my_tenders
+msgid "Tender Type"
+msgstr "نوع العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:mail.template,report_name:sh_all_in_one_tender_bundle.email_template_edi_purchase_tedner
+msgid "Tender_{{(object.name or '')}}"
+msgstr "مناقصة، عطاء، رقيق، لين_{{(object.name or '')}}"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_notes
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+msgid "Terms & Conditions"
+msgstr "البنود و الظروف"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_tender_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.tender_portal_content
+msgid "Terms &amp; Conditions"
+msgstr "شروط & amp ؛ الظروف"
+
+#. module: sh_all_in_one_tender_bundle
+#: code:addons/sh_all_in_one_tender_bundle/sh_rfq_portal_signature/controllers/portal.py:0
+#, python-format
+msgid "The quotation is not in a state requiring customer signature."
+msgstr "الاقتباس ليس في حالة تتطلب توقيع العميل."
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_my_tenders
+msgid "There are currently no Tenders for your account."
+msgstr "لا يوجد حاليًا أي مناقصات لحسابك."
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_my_tenders
+msgid "There are currently no open tenders for your account."
+msgstr "لا يوجد حاليًا أي مناقصات مفتوحة لحسابك."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+"هذا اسم يساعدك على تتبع جهودك المختلفة في حملتك ،"
+" على سبيل المثال Fall_drive ، Christmas_special"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr "هذه هي طريقة التسليم ، على سبيل المثال بطاقة بريدية أو بريد إلكتروني أو إعلان لافتة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+"هذا هو مصدر الرابط ، على سبيل المثال محرك البحث ، مجال آخر ، أو اسم "
+"من قائمة البريد الإلكتروني"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_time_limit
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order__sh_time_limit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_po_tender_agreement_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_view
+msgid "Time Limit"
+msgstr "حد الوقت"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل."
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement_line__sh_price_unit
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_order_line__sh_base_price_unit
+msgid "Unit Price "
+msgstr "سعر الوحدة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "رسائل غير مقروءة عداد"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "Untaxed Amount:"
+msgstr "كمية غير خاضية:"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "Update Bid"
+msgstr "تحديث العطاء"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_update_qty
+msgid "Update Qty"
+msgstr "تحديث Qty"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_bidline_tree_view
+msgid "Update Quantity"
+msgstr "تحديث الكمية"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Upload File"
+msgstr "رفع ملف"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__user_id
+#: model:res.groups,name:sh_all_in_one_tender_bundle.sh_purchase_tender_user
+msgid "User"
+msgstr "المستعمل"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+msgid "Validate"
+msgstr "التحقق"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__sh_vender_id
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.open_portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.portal_my_tenders
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_bidline_form_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_bidline_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_search_view
+msgid "Vendor"
+msgstr "بائع"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_view
+#: model_terms:website.page,arch_db:sh_all_in_one_tender_bundle.vendor_sign_up_form_page
+msgid "Vendor Registration Form"
+msgstr "نموذج تسجيل البائع"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:website.menu,name:sh_all_in_one_tender_bundle.menu_vendor_sign_up_form
+msgid "Vendor Request"
+msgstr "طلب البائع"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_vendor_signup_res_config_settings
+msgid "Vendor Sign up Configuration"
+msgstr "بائع التسجيل تكوين"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__partner_ids
+msgid "Vendors"
+msgstr "البائعون"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_website
+msgid "Website"
+msgstr "موقع الكتروني"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,field_description:sh_all_in_one_tender_bundle.field_purchase_agreement__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model.fields,help:sh_all_in_one_tender_bundle.field_purchase_agreement__website_message_ids
+msgid "Website communication history"
+msgstr "تاريخ اتصال الموقع"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.rfq_portal_update_content
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_rfq_portal_inherit
+msgid "Yes"
+msgstr "نعم"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:ir.model,name:sh_all_in_one_tender_bundle.model_report_sh_all_in_one_tender_bundle_report_analyze_quotations
+msgid "analyze quotations report abstract model"
+msgstr "تحليل الاقتباسات التقرير النموذج التجريدي"
+
+#. module: sh_all_in_one_tender_bundle
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view
+msgid "e.g. PO0001"
+msgstr "على سبيل المثال PO0001"
+
+#. module: sh_all_in_one_tender_bundle
+#: model:mail.template,subject:sh_all_in_one_tender_bundle.email_template_edi_purchase_tedner
+msgid "{{object.company_id.name}}About Tender #{{object.name or 'n/a'}}"
+msgstr "{{object.company_id.name}}حول العطاء #{{object.name or 'n/a'}}"
