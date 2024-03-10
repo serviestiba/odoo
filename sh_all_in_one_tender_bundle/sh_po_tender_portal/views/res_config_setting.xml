@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="sh_tender_portal_config_setting_view" model="ir.ui.view">
+		<field name="name">res.config.settings</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="sh_all_in_one_tender_bundle.sh_purchase_config_seetings"/>
+       	<field name="arch" type="xml">
+       		<xpath expr="//div[@id='tender_document']" position="after">
+       			<div class="col-6 col-lg-6 o_setting_box" id="tender_document_portal">
+               		<div class="o_setting_left_pane">
+                       	<field name="sh_manage_tender_doc_portal"/>
+                   	</div>
+                    <div class="o_setting_right_pane">
+                    	<label for="sh_manage_tender_doc_portal"/>
+                    </div>
+               	</div>
+       		</xpath>
+       	</field>
+	</record>
+	<!-- Inheriting Config Setting Of purchase -->
+	<record id="sh_po_portal_config_setting_view" model="ir.ui.view">
+		<field name="name">res.config.settings</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
+       	<field name="arch" type="xml">
+            <xpath expr="//div[@data-key='purchase']" position="inside">
+                <h2>Bid Update Notification Configuration</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-6 col-lg-6 o_setting_box" id="po_notification">
+                        <div class="o_setting_left_pane">
+                            <field name="sh_notify_purchase_representative_po"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="sh_notify_purchase_representative_po"/>
+                        </div>
+                    </div>
+					<div class="col-6 col-lg-6 o_setting_box">
+						<div class="o_setting_left_pane">
+							<field name="sh_notify_purchase_representative"/>
+						</div>
+						<div class="o_setting_right_pane">
+							<label for="sh_notify_purchase_representative"/>
+						</div>
+					</div>
+                </div>
+            </xpath>
+       	</field>
+	</record>
+</odoo>
