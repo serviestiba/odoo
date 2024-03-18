@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="maintenance_request_stage_rule_not_view_column" model="ir.rule">
+            <field name="name">maintenance_request_stage_rule_not_view_column</field>
+            <field name="model_id" ref="maintenance.model_maintenance_request" />
+            <field name="domain_force">[
+                '|', ('stage_id.group_id', '=', False),
+                ('stage_id.group_id', 'not in', [gp.id for gp in user.groups_id])]</field>
+        </record>
+
+        <record id="maintenance_stage_rule_not_view_column" model="ir.rule">
+            <field name="name">maintenance_stage_rule_not_view_column</field>
+            <field name="model_id" ref="maintenance.model_maintenance_stage" />
+            <field name="domain_force">[
+                '|', ('group_id', '=', False),
+                ('group_id', 'not in', [gp.id for gp in user.groups_id])]</field>
+        </record>
+    </data>
+</odoo>
