@@ -4,6 +4,8 @@
 from odoo import fields, http, _
 from odoo.http import request
 from odoo.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
+import json
+from odoo.addons.portal.controllers.mail import PortalChatter
 import base64
 from werkzeug.utils import redirect
 import io
@@ -12,28 +14,41 @@ import zipfile
 from io import BytesIO
 import tempfile
 import shutil
-from odoo.exceptions import UserError, AccessError, MissingError
+from odoo.exceptions import UserError,AccessError, MissingError
 from odoo.tools import ustr
+
+
+class TenderChatterController(PortalChatter):
+
+    @http.route(['/mail/chatter_post'], type='http', methods=['POST'], auth='public', website=True)
+    def portal_chatter_post(self, res_model, res_id, message, **kw):
+        res = super(TenderChatterController, self).portal_chatter_post(
+            res_model, res_id, message, **kw)
+        if kw.get('doc_file'):
+            file_read = kw.get('doc_file')
+            result = base64.b64encode(file_read.read())
+            attachment_list = []
+            message_id = request.env['mail.message'].sudo().search(
+                [('res_id', '=', res_id)], limit=1)
+            attachment_list.append(request.env['ir.attachment'].sudo().create({
+                'name': file_read.filename,
+                'datas': result,
+                'type': 'binary',
+                'mimetype': file_read.mimetype,
+                'datas_fname': file_read.filename,
+                'store_fname': file_read.filename,
+                'res_model': res_model,
+                'res_id': res_id,
+            }).id)
+            message_id.sudo().write(
+                {'attachment_ids': [(6, 0, attachment_list)]})
+        return res
 
 
 class TenderPortal(CustomerPortal):
 
-    def _prepare_home_portal_values(self, counters):
-        values = super()._prepare_home_portal_values(counters)
-        tender_obj = request.env['purchase.agreement']
-        if request.env.user.is_tendor_vendor:
-            if request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user'):
-                tender_count = tender_obj.sudo().search_count([('sh_open_tender','=',False),('state', 'not in', ['draft'])])
-                values['tender_count'] = tender_count
-                return values
-            else:
-                tender_count = tender_obj.sudo().search_count([('sh_open_tender','=',False),('state', 'not in', ['draft']), (
-                    'partner_ids', 'in', [request.env.user.partner_id.id])])
-                values['tender_count'] = tender_count
-        return values
-
     def _prepare_portal_layout_values(self):
-        """Prepare Portal Home values for My Account page at portal"""
+
         values = super(TenderPortal, self)._prepare_portal_layout_values()
         tender_obj = request.env['purchase.agreement']
         if request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user'):
@@ -53,29 +68,27 @@ class TenderPortal(CustomerPortal):
 
     @http.route(['/my/tender', '/my/tender/page/<int:page>'], type='http', auth="user", website=True)
     def portal_my_home_tender(self, page=1):
-        """Tender Portal List View with some filters and group by"""
         values = self._prepare_portal_layout_values()
         tender_obj = request.env['purchase.agreement']
         domain = [
-            ('sh_open_tender', '=', False),
+            ('sh_open_tender','=',False),
             ('state', 'not in', ['draft']),
         ]
         if not request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user'):
-            domain.append(
-                ('partner_ids', 'in', [request.env.user.partner_id.id]))
+            domain.append(('partner_ids', 'in', [request.env.user.partner_id.id]))
 
         searchbar_filters = {}
         if not request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user') or not request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_manager'):
             searchbar_filters.update({
-                'all': {'label': _('All'), 'domain': [('sh_open_tender', '=', False), ('state', 'in', ['confirm', 'bid_selection']), ('partner_ids', 'in', [request.env.user.partner_id.id])]},
-                'draft': {'label': _('Closed'), 'domain': [('sh_open_tender', '=', False), ('state', '=', 'closed'), ('partner_ids', 'in', [request.env.user.partner_id.id])]},
-                'cancel': {'label': _('Cancelled'), 'domain': [('sh_open_tender', '=', False), ('state', '=', ['cancel']), ('partner_ids', 'in', [request.env.user.partner_id.id])]},
+                'all': {'label': _('All'), 'domain': [('sh_open_tender','=',False),('state', 'in', ['confirm','bid_selection']), ('partner_ids', 'in', [request.env.user.partner_id.id])]},
+                'draft': {'label': _('Closed'), 'domain': [('sh_open_tender','=',False),('state', '=', 'closed'), ('partner_ids', 'in', [request.env.user.partner_id.id])]},
+                'cancel': {'label': _('Cancelled'), 'domain': [('sh_open_tender','=',False),('state', '=', ['cancel']), ('partner_ids', 'in', [request.env.user.partner_id.id])]},
             })
         else:
             searchbar_filters.update({
-                'all': {'label': _('All'), 'domain': [('sh_open_tender', '=', False), ('state', 'in', ['confirm', 'bid_selection'])]},
-                'draft': {'label': _('Closed'), 'domain': [('sh_open_tender', '=', False), ('state', '=', 'closed')]},
-                'cancel': {'label': _('Cancelled'), 'domain': [('sh_open_tender', '=', False), ('state', '=', ['cancel'])]},
+                'all': {'label': _('All'), 'domain': [('sh_open_tender','=',False),('state', 'in', ['confirm','bid_selection'])]},
+                'draft': {'label': _('Closed'), 'domain': [('sh_open_tender','=',False),('state', '=', 'closed')]},
+                'cancel': {'label': _('Cancelled'), 'domain': [('sh_open_tender','=',False),('state', '=', ['cancel'])]},
             })
         # default filter by value
         tender_count = tender_obj.sudo().search_count(domain)
@@ -101,7 +114,6 @@ class TenderPortal(CustomerPortal):
 
     @http.route(['/my/tender/<int:tender_id>'], type='http', auth="user", website=True)
     def portal_my_tender_form(self, tender_id, report_type=None, access_token=None, message=False, download=False, **kw):
-        """Tender Portal Form View"""
         tender = request.env['purchase.agreement'].sudo().browse(tender_id)
         try:
             if not request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user'):
@@ -110,32 +122,27 @@ class TenderPortal(CustomerPortal):
                         return request.redirect('/my')
                     elif tender.sh_do_not_show_to_ids and request.env.user.partner_id.id not in tender.sh_do_not_show_to_ids.ids:
                         if tender.sh_allow_portal_access:
-                            tender_sudo = self._document_check_access(
-                                'purchase.agreement', tender_id, access_token=access_token)
+                            tender_sudo = self._document_check_access('purchase.agreement', tender_id, access_token=access_token)
                         else:
-                            tender_sudo = self._document_check_access(
-                                'purchase.agreement', tender_id, access_token=None)
+                            tender_sudo = self._document_check_access('purchase.agreement', tender_id, access_token=None)        
                 else:
                     if tender.sh_allow_portal_access:
                         if tender.partner_ids and request.env.user.partner_id.id in tender.partner_ids.ids:
-                            tender_sudo = self._document_check_access(
-                                'purchase.agreement', tender_id, access_token=access_token)
+                            tender_sudo = self._document_check_access('purchase.agreement', tender_id, access_token=access_token)
                         elif tender.partner_ids and request.env.user.partner_id.id not in tender.partner_ids.ids:
                             if access_token:
-                                tender_sudo = self._document_check_access(
-                                    'purchase.agreement', tender_id, access_token=access_token)
+                                tender_sudo = self._document_check_access('purchase.agreement', tender_id, access_token=access_token)
                             else:
-                                return request.redirect('/my')
+                                return request.redirect('/my')        
                     else:
                         if tender.partner_ids:
                             if request.env.user.partner_id.id in tender.partner_ids.ids:
-                                tender_sudo = self._document_check_access(
-                                    'purchase.agreement', tender_id, access_token=None)
+                                tender_sudo = self._document_check_access('purchase.agreement', tender_id, access_token=None)
                             elif request.env.user.partner_id.id not in tender.partner_ids.ids:
                                 return request.redirect('/my')
                         else:
                             return request.redirect('/my')
-
+                    
         except (AccessError, MissingError):
             return request.redirect('/my')
         if report_type in ('html', 'pdf', 'text'):
@@ -151,9 +158,8 @@ class TenderPortal(CustomerPortal):
             'report_type': 'html',
         }
         return request.render('sh_all_in_one_tender_bundle.portal_tender_form_template', values)
-
+    
     def sh_po_tender_portal_xls(self, tender):
-        """Method For Create Ir.attchment record while download any document from tender portal form view and file downloaded"""
         if tender:
             get_wizard_id = request.env[
                 'purchase.agreement.xls.report'].sudo().create({
@@ -166,9 +172,8 @@ class TenderPortal(CustomerPortal):
             url = report_action.get('url')
             return request.redirect(url)
 
-    @http.route(['/rfq/create'], type='json', auth='user', website=True, csrf=False)
+    @http.route(['/rfq/create'], type='http', auth='user', website=True, csrf=False)
     def portal_create_rfq(self, **kw):
-        """Create RFQ from Tender Views based on Add/Update Bid button from tender portal list and form view"""
         dic = {}
         purchase_tender = request.env['purchase.agreement'].sudo().search(
             [('id', '=', int(kw.get('tender_id')))], limit=1)
@@ -177,11 +182,11 @@ class TenderPortal(CustomerPortal):
             [('agreement_id', '=', purchase_tender.id), ('partner_id', '=', request.env.user.partner_id.id), ('state', 'in', ['draft'])])
         if purchase_order and len(purchase_order.ids) > 1:
             dic.update({
-                'url': '/my/purchase'
+                'url': '/my/rfq'
             })
         elif purchase_order and len(purchase_order.ids) == 1:
             dic.update({
-                'url': '/my/purchase/'+str(purchase_order.id)
+                'url': '/my/rfq/'+str(purchase_order.id)
             })
         else:
             order_dic = {}
@@ -244,16 +249,13 @@ class TenderPortal(CustomerPortal):
                         }
                         if attachment_vals:
                             request.env['ir.attachment'].sudo().create(attachment_vals)
-
-
             dic.update({
-                'url': '/my/purchase/'+str(purchase_order_id.id)
+                'url': '/my/rfq/'+str(purchase_order_id.id)
             })
-        return dic
+        return json.dumps(dic)
 
     @http.route(['/attachment/download', ], type='http', auth='user')
     def download_file(self, attachment_id):
-        """Download Individual document"""
         # Check if this is a valid attachment id
         attachment = request.env['ir.attachment'].sudo().search_read(
             [('id', '=', int(attachment_id))],
@@ -273,12 +275,10 @@ class TenderPortal(CustomerPortal):
             return request.not_found()
 
     @http.route(['/rfq/all/document/download', ], type='http', auth='public')
-    def po_portal_all_document_download(self, attachment_ids):
-        """Download All Document Button"""
+    def po_portal_all_document_download(self,attachment_ids):
         return self.po_document_download_all(attachment_ids)
-
+    
     def po_document_download_all(self, get_attachment):
-        """Prepare and create ir.attachment record as zip file contains all individual documents in one"""
         try:
             mem_zip = BytesIO()
             tmp_dir = tempfile.mkdtemp(suffix=None, prefix=None, dir=None)
@@ -287,6 +287,9 @@ class TenderPortal(CustomerPortal):
             is_exist = os.path.exists(path_main)
             if not is_exist:
                 os.mkdir(path_main)
+            path_ED = path_main
+            path_ID = tmp_dir
+            document_category_id = False
             with zipfile.ZipFile(mem_zip,
                                  mode="w",
                                  compression=zipfile.ZIP_DEFLATED) as zf:
@@ -294,8 +297,7 @@ class TenderPortal(CustomerPortal):
                 documents = []
                 for elem in res:
                     documents.append(int(elem))
-                tender_attachments = request.env['ir.attachment'].sudo().browse(
-                    documents)
+                tender_attachments = request.env['ir.attachment'].sudo().browse(documents)
                 if tender_attachments:
                     for attachment in tender_attachments:
                         # if bill then only export attachment.
@@ -311,7 +313,7 @@ class TenderPortal(CustomerPortal):
                 attachment_id = request.env['ir.attachment'].sudo().create({
                     'name':
                     'Tender Documents' + '.zip',
-                    'sh_document_from_portal': True,
+                    'sh_document_from_portal':True,
                     'type':
                     'binary',
                     'mimetype':
@@ -330,25 +332,10 @@ class TenderPortal(CustomerPortal):
         except Exception as e:
             raise UserError(_("Something went wrong! " + ustr(e)))
 
-
 class OpenTenderPortal(CustomerPortal):
 
-    def _prepare_home_portal_values(self, counters):
-        values = super()._prepare_home_portal_values(counters)
-        tender_obj = request.env['purchase.agreement']
-        if request.env.user.is_tendor_vendor:
-            if not request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user'):
-                open_tender_count = tender_obj.sudo().search_count([('sh_open_tender','=',True),('sh_do_not_show_to_ids','not in',[request.env.user.partner_id.id]),('state', 'not in', ['draft'])])
-                values['open_tender_count'] = open_tender_count
-                return values
-            else:
-                open_tender_count = tender_obj.sudo().search_count([('sh_open_tender','=',True),('state', 'not in', ['draft'])])
-                values['open_tender_count'] = open_tender_count
-                return values
-        return values
-
     def _prepare_portal_layout_values(self):
-        """Prepare Home Values display in my account page"""
+
         values = super(OpenTenderPortal, self)._prepare_portal_layout_values()
         tender_obj = request.env['purchase.agreement']
         if not request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user'):
@@ -366,30 +353,28 @@ class OpenTenderPortal(CustomerPortal):
 
     @http.route(['/my/open_tender', '/my/open_tender/page/<int:page>'], type='http', auth="user", website=True)
     def open_portal_my_home_tender(self, page=1):
-        """Open Tender List View"""
         values = self._prepare_portal_layout_values()
         tender_obj = request.env['purchase.agreement']
         domain = [
-            ('sh_open_tender', '=', True),
+            ('sh_open_tender','=',True),
             ('state', 'not in', ['draft']),
         ]
         if not request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user'):
-            domain.append(('sh_do_not_show_to_ids', 'not in',
-                           [request.env.user.partner_id.id]))
-        searchbar_filters = {}
+            domain.append(('sh_do_not_show_to_ids','not in',[request.env.user.partner_id.id]))
+        searchbar_filters={}
         if not request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user') or not request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_manager'):
             searchbar_filters.update({
-                'all': {'label': _('All'), 'domain': [('sh_open_tender', '=', True), ('sh_do_not_show_to_ids', 'not in', [request.env.user.partner_id.id]), ('state', 'in', ['confirm', 'bid_selection'])]},
-                'draft': {'label': _('Closed'), 'domain': [('sh_open_tender', '=', True), ('state', '=', 'closed'), ('sh_do_not_show_to_ids', 'not in', [request.env.user.partner_id.id])]},
-                'cancel': {'label': _('Cancelled'), 'domain': [('sh_open_tender', '=', True), ('state', '=', ['cancel']), ('sh_do_not_show_to_ids', 'not in', [request.env.user.partner_id.id])]},
+                'all': {'label': _('All'), 'domain': [('sh_open_tender','=',True),('sh_do_not_show_to_ids','not in',[request.env.user.partner_id.id]),('state', 'in', ['confirm','bid_selection'])]},
+                'draft': {'label': _('Closed'), 'domain': [('sh_open_tender','=',True),('state', '=', 'closed'), ('sh_do_not_show_to_ids','not in',[request.env.user.partner_id.id])]},
+                'cancel': {'label': _('Cancelled'), 'domain': [('sh_open_tender','=',True),('state', '=', ['cancel']), ('sh_do_not_show_to_ids','not in',[request.env.user.partner_id.id])]},
             })
         else:
             searchbar_filters.update({
-                'all': {'label': _('All'), 'domain': [('sh_open_tender', '=', True), ('state', 'in', ['confirm', 'bid_selection'])]},
-                'draft': {'label': _('Closed'), 'domain': [('sh_open_tender', '=', True), ('state', '=', 'closed')]},
-                'cancel': {'label': _('Cancelled'), 'domain': [('sh_open_tender', '=', True), ('state', '=', ['cancel'])]},
+                'all': {'label': _('All'), 'domain': [('sh_open_tender','=',True),('state', 'in', ['confirm','bid_selection'])]},
+                'draft': {'label': _('Closed'), 'domain': [('sh_open_tender','=',True),('state', '=', 'closed')]},
+                'cancel': {'label': _('Cancelled'), 'domain': [('sh_open_tender','=',True),('state', '=', ['cancel'])]},
             })
-
+        
         open_tender_count = tender_obj.sudo().search_count(domain)
 
         pager = portal_pager(
@@ -413,9 +398,7 @@ class OpenTenderPortal(CustomerPortal):
 
     @http.route(['/my/open_tender/<int:open_tender_id>'], type='http', auth="user", website=True)
     def open_portal_my_tender_form(self, open_tender_id, report_type=None, access_token=None, message=False, download=False, **kw):
-        """Open Tender FOrm View"""
-        open_tender = request.env['purchase.agreement'].sudo().browse(
-            open_tender_id)
+        open_tender = request.env['purchase.agreement'].sudo().browse(open_tender_id)
         try:
             if not request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user'):
                 if open_tender.sh_open_tender:
@@ -424,21 +407,18 @@ class OpenTenderPortal(CustomerPortal):
                             if open_tender.sh_do_not_show_to_ids and request.env.user.partner_id.id in open_tender.sh_do_not_show_to_ids.ids:
                                 return request.redirect('/my')
                             else:
-                                open_tender_sudo = self._document_check_access(
-                                    'purchase.agreement', open_tender_id, access_token=access_token)
+                                open_tender_sudo = self._document_check_access('purchase.agreement', open_tender_id, access_token=access_token)
                         else:
                             if open_tender.sh_do_not_show_to_ids and request.env.user.partner_id.id in open_tender.sh_do_not_show_to_ids.ids:
                                 return request.redirect('/my')
                             else:
-                                open_tender_sudo = self._document_check_access(
-                                    'purchase.agreement', open_tender_id, access_token=None)
+                                open_tender_sudo = self._document_check_access('purchase.agreement', open_tender_id, access_token=None)
                     else:
                         if request.env.user.is_tendor_vendor:
                             if open_tender.sh_do_not_show_to_ids and request.env.user.partner_id.id in open_tender.sh_do_not_show_to_ids.ids:
                                 return request.redirect('/my')
                             else:
-                                open_tender_sudo = self._document_check_access(
-                                    'purchase.agreement', open_tender_id, access_token=None)
+                                open_tender_sudo = self._document_check_access('purchase.agreement', open_tender_id, access_token=None)
                         else:
                             return request.redirect('/my')
                 else:
@@ -446,7 +426,7 @@ class OpenTenderPortal(CustomerPortal):
         except (AccessError, MissingError):
             return request.redirect('/my')
         if report_type in ('html', 'pdf', 'text'):
-            return self._show_report(model=open_tender, report_type=report_type, report_ref='sh_all_in_one_tender_bundle.action_report_purchase_tender', download=download)
+            return self._show_report(model=open_tender_sudo, report_type=report_type, report_ref='sh_all_in_one_tender_bundle.action_report_purchase_tender', download=download)
         if report_type == 'sh_po_tender_portal_xls':
             return self.sh_po_tender_portal_xls(open_tender)
         values = {
@@ -458,9 +438,8 @@ class OpenTenderPortal(CustomerPortal):
             'report_type': 'html',
         }
         return request.render('sh_all_in_one_tender_bundle.open_portal_tender_form_template', values)
-
+    
     def sh_po_tender_portal_xls(self, tender):
-        """Download Tender Xls Report"""
         if tender:
             get_wizard_id = request.env[
                 'purchase.agreement.xls.report'].sudo().create({
@@ -472,3 +451,4 @@ class OpenTenderPortal(CustomerPortal):
             report_action = get_wizard_id.get_xls_reports()
             url = report_action.get('url')
             return request.redirect(url)
+

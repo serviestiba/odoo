@@ -13,3 +13,4 @@ access_update_qty,access_update_qty,model_update_qty,base.group_user,1,1,1,1
 access_purchase_agreement_xls_report,access_purchase_agreement_xls_report,model_purchase_agreement_xls_report,base.group_user,1,1,1,1
 access_sh_create_multi_rfq,access_sh_create_multi_rfq,model_sh_create_multi_rfq,base.group_user,1,1,1,1
 access_sh_import_tender_lines,access_sh_import_tender_lines,model_sh_import_tender_lines,base.group_user,1,1,1,1
+access_sh_import_tender,access_sh_import_tender,model_sh_import_tender,base.group_user,1,1,1,1

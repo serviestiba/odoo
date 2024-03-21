@@ -28,7 +28,9 @@ class ResConfigSettings(models.TransientModel):
     is_enable_company_portal_user = fields.Boolean(
         'For Company ',
         related="website_id.is_enable_company_portal_user", readonly=False)
-
+    
     is_enable_company_contact_portal_user = fields.Boolean(
         'For Contacts',
         related="website_id.is_enable_company_contact_portal_user", readonly=False)
+
+
