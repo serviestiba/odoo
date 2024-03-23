@@ -20,3 +20,7 @@
 16.0.6 (Date: 7th March 2024)
 --------------------------------
 [FIX] removed admin user from the group.
+
+16.0.7 (Date: 21st March 2024)
+------------------------------------
+[FIX] fix issues at portal side.

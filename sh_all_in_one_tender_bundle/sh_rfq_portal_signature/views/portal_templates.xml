@@ -2,11 +2,11 @@
 <odoo>
     <template id="sh_portal_my_rfq_signature" name="Portal: My RFQ Signature" inherit_id="sh_all_in_one_tender_bundle.portal_rfq_form_template">
         <xpath expr="//div[hasclass('o_download_pdf')]" position="before">
-            <a t-if="quotes.has_to_be_signed(True)" role="button" class="btn btn-primary btn-block mb8" data-toggle="modal" data-target="#modalaccept" href="#">
+            <a t-if="quotes.has_to_be_signed(True)" role="button" class="btn btn-primary btn-block mb8" data-bs-toggle="modal" data-bs-target="#modalaccept" href="#">
                 <i class="fa fa-check" /><t t-if="quotes.has_to_be_signed(True)"> Accept &amp; Sign</t><t t-else=""> Accept &amp; Sign</t>
             </a>
         </xpath>
-        <xpath expr="//div[@id='rfq_content']" position="inside">
+        <xpath expr="//div[@id='quote_content']" position="inside">
             <div id="quote_content" class="col-12 col-lg justify-content-end">
                 <div role="dialog" class="modal fade" id="modalaccept">
                     <div class="modal-dialog" t-if="quotes.has_to_be_signed(True)">
@@ -30,15 +30,15 @@
     </template>
     <template id="sh_portal_my_rfq_update_signature" name="Portal: My RFQ Update Signature" inherit_id="sh_all_in_one_tender_bundle.sh_portal_my_rfq_order_update">
         <xpath expr="//div[hasclass('o_download_pdf')]" position="before">
-            <a t-if="quotes.has_to_be_signed(True)" role="button" class="btn btn-primary btn-block mb8" data-toggle="modal" data-target="#modalaccept" href="#">
-                <i class="fa fa-check" /><t t-if="quotes.has_to_be_signed(True)">Accept &amp; Sign</t><t t-else=""> Accept &amp; Sign</t>
+            <a t-if="order.has_to_be_signed(True)" role="button" class="btn btn-primary btn-block mb8" data-bs-toggle="modal" data-bs-target="#modalaccept" href="#">
+                <i class="fa fa-check" /><t t-if="quotes.has_to_be_signed(True)"> Accept &amp; Sign</t><t t-else=""> Accept &amp; Sign</t>
             </a>
         </xpath>
         <xpath expr="//div[@id='rfq_content']" position="inside">
             <div id="quote_content" class="col-12 col-lg justify-content-end">
                 <div role="dialog" class="modal fade" id="modalaccept">
-                    <div class="modal-dialog" t-if="quotes.has_to_be_signed(True)">
-                        <form id="accept" method="POST" t-att-data-order-id="quotes.id" t-att-data-token="quotes.access_token" class="js_accept_json modal-content js_website_submit_form">
+                    <div class="modal-dialog" t-if="order.has_to_be_signed(True)">
+                        <form id="accept" method="POST" t-att-data-order-id="order.id" t-att-data-token="order.access_token" class="js_accept_json modal-content js_website_submit_form">
                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
                             <header class="modal-header">
                                 <h4 class="modal-title">Digital Signature</h4>
@@ -46,8 +46,8 @@
                             </header>
                             <main class="modal-body" id="sign-dialog">
                                 <t t-call="portal.signature_form">
-                                    <t t-set="call_url" t-value="quotes.get_portal_url(suffix='/accept')" />
-                                    <t t-set="default_name" t-value="quotes.partner_id.name" />
+                                    <t t-set="call_url" t-value="order.get_portal_url(suffix='/accept')" />
+                                    <t t-set="default_name" t-value="order.partner_id.name" />
                                 </t>
                             </main>
                         </form>

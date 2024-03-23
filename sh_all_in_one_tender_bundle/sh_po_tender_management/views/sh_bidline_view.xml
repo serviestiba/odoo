@@ -102,9 +102,9 @@
                 <field name="sh_base_price_subtotal" widget="monetary" options="{'currency_field': 'company_currency_id'}" />
                 <field name="status" />
                 <field name="agreement_id" invisible="1" />
-                <button name="action_update_qty" icon="fa-shopping-cart" type="object" />
-                <button name="action_confirm" icon="fa-check" type="object" />
-                <button name="action_cancel" icon="fa-times" type="object" />
+                <button name="action_update_qty" icon="fa-shopping-cart" type="object" title="Update Qty" />
+                <button name="action_confirm" icon="fa-check" type="object" title="Confirm" />
+                <button name="action_cancel" icon="fa-times" type="object" title="Cancel" />
             </tree>
         </field>
     </record>

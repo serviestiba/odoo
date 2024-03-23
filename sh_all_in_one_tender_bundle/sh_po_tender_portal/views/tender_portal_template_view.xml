@@ -1,33 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <template id="custom_assets_backend" name="Custom Assets" inherit_id="portal.assets_frontend">
-        <xpath expr="//script[last()]" position="after">
-            <script type="text/javascript" src="/sh_all_in_one_tender_bundle/sh_po_tender_portal/static/src/js/custom.js"></script>
-        </xpath>
-    </template>
     <template id="tender_portal_my_home_menu" name="Portal layout : Tender menu entries" inherit_id="portal.portal_breadcrumbs" priority="20">
         <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
-            <t t-if="request.env.user.is_tendor_vendor==True">
-                <li t-if="page_name == 'tender' or tender" t-attf-class="breadcrumb-item #{'active ' if not tender else ''}">
-                    <a t-if="tender" t-attf-href="/my/tender?{{ keep_query() }}">Purchase Tenders</a>
-                    <t t-else="">Purchase Tenders</t>
-                </li>
-                <li t-if="tender" class="breadcrumb-item active">
-                    <span t-field="tender.name" />
-                </li>
-            </t>
+            <li t-if="page_name == 'tender' or tender" t-attf-class="breadcrumb-item #{'active ' if not tender else ''}">
+                <a t-if="tender" t-attf-href="/my/tender?{{ keep_query() }}">Purchase Tenders</a>
+                <t t-else="">Purchase Tenders</t>
+            </li>
+            <li t-if="tender" class="breadcrumb-item active">
+                <span t-field="tender.name" />
+            </li>
         </xpath>
     </template>
     <template id="portal_tender_my_home" name="Portal My Home : Tender entries" inherit_id="portal.portal_my_home" priority="20">
         <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
-            <t t-if="request.env.user.is_tendor_vendor==True">
-                <t t-if="tender_count" t-call="portal.portal_docs_entry">
-                    <t t-set="title">Purchase Tenders </t>
-                    <t t-if="tenders">
-                        <t t-set="url" t-value="'/my/tender'" />
-                    </t>
-                    <t t-set="count" t-value="tender_count" />
-                </t>
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Purchase Tenders</t>
+                <t t-set="url" t-value="'/my/tender'"/>
+                <t t-set="placeholder_count" t-value="'tender_count'"/>
             </t>
         </xpath>
     </template>
@@ -55,7 +44,7 @@
                     </tr>
                 </thead>
                 <t t-foreach="tenders" t-as="tender">
-                    <tr>
+                    <tr id="tender_tr">
                         <td>
                             <t t-if="tender.sh_allow_portal_access">
                                 <a t-att-href="tender.get_portal_url()"><t t-esc="tender.name" /></a>

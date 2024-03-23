@@ -100,10 +100,9 @@ class CreateVendor(http.Controller):
                 ctx = {
                     "customer_url": url,
                 }
-                template_id = request.env['ir.model.data'].get_object(
-                    'sh_all_in_one_tender_bundle', 'sh_vendor_signup_email_notification')
-                _ = request.env['mail.template'].sudo().browse(template_id.id).with_context(ctx).send_mail(
-                    vendor_id.id, email_values=email_values, notif_layout='mail.mail_notification_light', force_send=True)
+                template_id = request.env['ir.model.data']._xmlid_lookup('sh_all_in_one_tender_bundle.sh_vendor_signup_email_notification')[2]
+                _ = request.env['mail.template'].sudo().browse(template_id).with_context(ctx).send_mail(
+                    vendor_id.id, email_values=email_values, email_layout_xmlid='mail.mail_notification_light', force_send=True)
             
             contact_dic =  {k: v for k, v in post.items() if  k.startswith('vendor_c_name_')}
             if vendor_id and contact_dic:

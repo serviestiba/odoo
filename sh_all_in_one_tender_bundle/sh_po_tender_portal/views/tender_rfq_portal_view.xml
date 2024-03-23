@@ -91,14 +91,14 @@
         <xpath expr="//thead//th[1]" position="after">
             <th>Tender</th>
         </xpath>
-        <xpath expr="//tbody//td[1]" position="after">
+        <xpath expr="//t[@t-foreach='orders']//tr[1]//td[1]" position="after">
             <td>
                 <a t-attf-href="/my/tender/#{order.agreement_id.id}?#{keep_query()}"><t t-esc="order.agreement_id.name" /></a>
             </td>
         </xpath>
     </template>
-    <template id="purchase_order_template_custom_form" inherit_id="purchase.portal_my_purchase_order">
-        <xpath expr="//div[hasclass('mb-4')]" position="after">
+    <template id="purchase_order_template_custom_form" inherit_id="purchase.purchase_order_portal_content">
+        <xpath expr="//div[@id='po_date']" position="after">
             <div class="mb-4">
                 <strong>Tender:</strong><a t-attf-href="/my/tender/#{order.agreement_id.id}?#{keep_query()}"><t t-esc="order.agreement_id.name" /></a>
             </div>

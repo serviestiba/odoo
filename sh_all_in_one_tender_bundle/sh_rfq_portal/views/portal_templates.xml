@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="rfq_custom_assets_backend" name="RFQ Custom Assets" inherit_id="portal.assets_frontend">
-        <xpath expr="//script[last()]" position="after">
-            <script type="text/javascript" src="/sh_all_in_one_tender_bundle/sh_rfq_portal/static/src/js/custom.js"></script>
-        </xpath>
-    </template>
     <template id="sh_portal_my_home_menu_rfq" name="Portal layout : rfq menu entries" inherit_id="portal.portal_breadcrumbs" priority="25">
         <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
             <li t-if="page_name == 'quotes' or quotes" t-attf-class="breadcrumb-item #{'active ' if not quotes else ''}">
@@ -103,7 +98,7 @@
                 </t>
 
                 <!-- Page content -->
-                <div id="rfq_content" class="col-12 col-lg justify-content-end">
+                <div id="quote_content" class="col-12 col-lg justify-content-end">
                     <div t-attf-class="card #{'pb-5' if report_type == 'html' else ''}">
                         <div t-call="sh_all_in_one_tender_bundle.rfq_portal_content" />
                     </div>

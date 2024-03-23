@@ -223,11 +223,10 @@ class ShPurchaseAgreement(models.Model):
     def action_send_tender(self):
         self.ensure_one()
         ir_model_data = self.env['ir.model.data']
-        template_id = ir_model_data.get_object_reference(
-            'sh_all_in_one_tender_bundle', 'email_template_edi_purchase_tedner')[1]
+        
+        template_id = ir_model_data._xmlid_lookup('sh_all_in_one_tender_bundle.email_template_edi_purchase_tedner')[2]
         try:
-            compose_form_id = ir_model_data.get_object_reference(
-                'mail', 'email_compose_message_wizard_form')[1]
+            compose_form_id = ir_model_data._xmlid_lookup('mail.email_compose_message_wizard_form')[2]
         except ValueError:
             compose_form_id = False
         ctx = {

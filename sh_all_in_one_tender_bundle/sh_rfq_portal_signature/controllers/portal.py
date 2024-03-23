@@ -7,12 +7,14 @@ from odoo.exceptions import AccessError, MissingError
 from odoo.http import request
 from odoo.tools.translate import _
 from odoo.addons.portal.controllers.portal import CustomerPortal
+import binascii
 
 
 class CustomerSignaturePortal(CustomerPortal):
 
     @http.route(['/my/rfq/<int:quote_id>/accept'], type='json', auth="public", website=True)
     def portal_quote_accept(self, quote_id, access_token=None, name=None, signature=None):
+        """This controller is made for digital signature in rfq"""
         # get from query string if not on json param
         access_token = access_token or request.httprequest.args.get(
             'access_token')

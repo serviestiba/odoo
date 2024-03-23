@@ -5,7 +5,6 @@ from odoo import fields, http, _
 from odoo.http import request
 from odoo.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
 import json
-from odoo.addons.portal.controllers.mail import PortalChatter
 import base64
 from werkzeug.utils import redirect
 import io
@@ -18,40 +17,27 @@ from odoo.exceptions import UserError,AccessError, MissingError
 from odoo.tools import ustr
 
 
-class TenderChatterController(PortalChatter):
-
-    @http.route(['/mail/chatter_post'], type='http', methods=['POST'], auth='public', website=True)
-    def portal_chatter_post(self, res_model, res_id, message, **kw):
-        res = super(TenderChatterController, self).portal_chatter_post(
-            res_model, res_id, message, **kw)
-        if kw.get('doc_file'):
-            file_read = kw.get('doc_file')
-            result = base64.b64encode(file_read.read())
-            attachment_list = []
-            message_id = request.env['mail.message'].sudo().search(
-                [('res_id', '=', res_id)], limit=1)
-            attachment_list.append(request.env['ir.attachment'].sudo().create({
-                'name': file_read.filename,
-                'datas': result,
-                'type': 'binary',
-                'mimetype': file_read.mimetype,
-                'datas_fname': file_read.filename,
-                'store_fname': file_read.filename,
-                'res_model': res_model,
-                'res_id': res_id,
-            }).id)
-            message_id.sudo().write(
-                {'attachment_ids': [(6, 0, attachment_list)]})
-        return res
-
-
 class TenderPortal(CustomerPortal):
 
-    def _prepare_portal_layout_values(self):
+    def _prepare_home_portal_values(self, counters):
+        values = super()._prepare_home_portal_values(counters)
+        tender_obj = request.env['purchase.agreement']
+        if request.env.user.is_tendor_vendor:
+            if request.env.user.has_group('sh_po_tender_management.sh_purchase_tender_user'):
+                tender_count = tender_obj.sudo().search_count([('sh_open_tender','=',False),('state', 'not in', ['draft'])])
+                values['tender_count'] = tender_count
+                return values
+            else:
+                tender_count = tender_obj.sudo().search_count([('sh_open_tender','=',False),('state', 'not in', ['draft']), (
+                    'partner_ids', 'in', [request.env.user.partner_id.id])])
+                values['tender_count'] = tender_count
+        return values
 
+    def _prepare_portal_layout_values(self):
+        """Prepare Portal Home values for My Account page at portal"""
         values = super(TenderPortal, self)._prepare_portal_layout_values()
         tender_obj = request.env['purchase.agreement']
-        if request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user'):
+        if request.env.user.has_group('sh_po_tender_management.sh_purchase_tender_user'):
             tenders = tender_obj.sudo().search([('sh_open_tender','=',False),('state', 'not in', ['draft'])])
             tender_count = tender_obj.sudo().search_count([('sh_open_tender','=',False),('state', 'not in', ['draft'])])
             values['tender_count'] = tender_count
@@ -172,8 +158,9 @@ class TenderPortal(CustomerPortal):
             url = report_action.get('url')
             return request.redirect(url)
 
-    @http.route(['/rfq/create'], type='http', auth='user', website=True, csrf=False)
+    @http.route(['/rfq/create'], type='json', auth='user', website=True, csrf=False)
     def portal_create_rfq(self, **kw):
+        """Create RFQ from Tender Views based on Add/Update Bid button from tender portal list and form view"""
         dic = {}
         purchase_tender = request.env['purchase.agreement'].sudo().search(
             [('id', '=', int(kw.get('tender_id')))], limit=1)
@@ -249,10 +236,12 @@ class TenderPortal(CustomerPortal):
                         }
                         if attachment_vals:
                             request.env['ir.attachment'].sudo().create(attachment_vals)
+
+
             dic.update({
                 'url': '/my/rfq/'+str(purchase_order_id.id)
             })
-        return json.dumps(dic)
+        return dic
 
     @http.route(['/attachment/download', ], type='http', auth='user')
     def download_file(self, attachment_id):
@@ -334,11 +323,25 @@ class TenderPortal(CustomerPortal):
 
 class OpenTenderPortal(CustomerPortal):
 
-    def _prepare_portal_layout_values(self):
+    def _prepare_home_portal_values(self, counters):
+        values = super()._prepare_home_portal_values(counters)
+        tender_obj = request.env['purchase.agreement']
+        if request.env.user.is_tendor_vendor:
+            if not request.env.user.has_group('sh_po_tender_management.sh_purchase_tender_user'):
+                open_tender_count = tender_obj.sudo().search_count([('sh_open_tender','=',True),('sh_do_not_show_to_ids','not in',[request.env.user.partner_id.id]),('state', 'not in', ['draft'])])
+                values['open_tender_count'] = open_tender_count
+                return values
+            else:
+                open_tender_count = tender_obj.sudo().search_count([('sh_open_tender','=',True),('state', 'not in', ['draft'])])
+                values['open_tender_count'] = open_tender_count
+                return values
+        return values
 
+    def _prepare_portal_layout_values(self):
+        """Prepare Home Values display in my account page"""
         values = super(OpenTenderPortal, self)._prepare_portal_layout_values()
         tender_obj = request.env['purchase.agreement']
-        if not request.env.user.has_group('sh_all_in_one_tender_bundle.sh_purchase_tender_user'):
+        if not request.env.user.has_group('sh_po_tender_management.sh_purchase_tender_user'):
             open_tenders = tender_obj.sudo().search([('sh_open_tender','=',True),('sh_do_not_show_to_ids','not in',[request.env.user.partner_id.id]),('state', 'not in', ['draft'])])
             open_tender_count = tender_obj.sudo().search_count([('sh_open_tender','=',True),('sh_do_not_show_to_ids','not in',[request.env.user.partner_id.id]),('state', 'not in', ['draft'])])
             values['open_tender_count'] = open_tender_count

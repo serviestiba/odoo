@@ -9,7 +9,7 @@
     "category": "Purchases",
     "summary": "Manage Multiple Tenders Request For Quotation Manage Same Partner Tender Management Purchase Tender Management PO Tender Management Bid Apply Analyze Tender Analyze RFQ Best Supplier At Best Price Tender Send To Multiple Vendor Change RFQ Price Odoo Multi Vendor Purchase Tender Vendor Tender Portal Purchase Order Tender Management PO Tender Multiple Purchase Tender Purchase Agreement Purchase Bidding Multi Vendor Bidding Manage Purchase Bid Process Vendor BID Purchase Order Bid Manage Tender RFQ Bid Odoo Tender Management System Odoo Tender Management App Tender Management Software Odoo Tender Vendor Purchase Tender Vendor Tender Portal Supplier Multiple Purchase Tender",
     "description": """Nowadays in a competitive market, several vendors sell the same products and everyone has their price so it will difficult to manage multiple tenders list at a time even in odoo there is no kind of feature where you can manage multiple tenders & RFQ's in a single list. Here the vendor can change the price from portal or website for tenders & RFQ's. You can see tender portal details from RFQ. This module helps in the online signature in the RFQ at the portal. You can print "Purchase Tender" & "Analyze Quotations" PDF report.""",
-    "version": "16.0.6",
+    "version": "16.0.7",
     "depends": [
         "purchase",
         "stock",
@@ -55,7 +55,6 @@
         'sh_po_tender_portal/views/tender_rfq_portal_view.xml',
         'sh_po_tender_portal/data/cron_garbase_collection.xml',
 
-        "sh_vendor_signup/views/assets_frontend.xml",
         "sh_vendor_signup/views/vendor_sign_up_template.xml",
         "sh_vendor_signup/views/res_partner_view_inherit.xml",
         "sh_vendor_signup/views/res_config_settings.xml",
@@ -65,9 +64,19 @@
         'sh_rfq_portal_signature/views/purchase_view.xml',
         'sh_rfq_portal_signature/views/portal_templates.xml',
     ],
+    'assets': {
+        'web.assets_frontend': [
+            'sh_all_in_one_tender_bundle/static/src/js/purchase_agreeement.js',
+            'sh_all_in_one_tender_bundle/static/src/js/rfq.js',
+            'sh_all_in_one_tender_bundle/static/src/scss/style.scss',
+            'sh_all_in_one_tender_bundle/static/src/js/country_state.js',
+            'sh_all_in_one_tender_bundle/static/src/js/vendor_signup.js',
+            'sh_all_in_one_tender_bundle/static/src/js/lib/bootstrap-multiselect.js',
+        ]
+    },
     "images": ["static/description/background.gif", ],
     "auto_install": False,
     "installable": True,
-    "price": 350,
+    "price": 270,
     "currency": "EUR"
 }
