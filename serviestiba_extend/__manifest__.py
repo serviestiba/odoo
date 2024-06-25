@@ -17,6 +17,7 @@
     ],
     "data": [
         "views/purchase_order_view.xml",
+        "views/purchase_template.xml",
     ],
     "application": False,
     "installable": True,
