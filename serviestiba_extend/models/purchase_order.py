@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from datetime import datetime
 
 
 class PurchaseOrder(models.Model):
@@ -43,3 +44,14 @@ class PurchaseOrder(models.Model):
                 [x._convert_to_tax_base_line_dict() for x in order_lines],
                 order.currency_id or order.company_id.currency_id,
             )
+
+
+class ShPurchaseAgreement(models.Model):
+    _inherit = "purchase.agreement"
+
+    sh_agreement_deadline = fields.Datetime(
+        String="Tender Deadline",
+        tracking=True,
+        default=datetime.now(),
+        readonly=True,
+    )

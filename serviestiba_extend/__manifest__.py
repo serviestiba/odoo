@@ -13,6 +13,7 @@
     "website": "",
     "depends": [
         "purchase",
+        "sh_all_in_one_tender_bundle",
     ],
     "data": [
         "views/purchase_order_view.xml",

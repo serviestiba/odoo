@@ -12,4 +12,14 @@
 			</xpath>
 		</field>
 	</record>
+	<record id="serviestiba_sh_purchase_agreement_form_view" model="ir.ui.view">
+		<field name="name">serviestiba.sh.purchase.agreement.form.view</field>
+		<field name="model">purchase.agreement</field>
+		<field name="inherit_id" ref="sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='sh_agreement_deadline']" position="replace">
+				<field name="sh_agreement_deadline" readonly="1"/>
+			</xpath>
+		</field>
+	</record>
 </odoo>
