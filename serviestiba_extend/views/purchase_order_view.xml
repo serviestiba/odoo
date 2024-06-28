@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="serviestiba_purchase_order_form_inherit" model="ir.ui.view">
+		<field name="name">serviestiba.purchase.order.form.inherit</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//button[@name='print_quotation']" position="after">
+				<button name="action_purchase_reviewed" string="Reviewed" type="object" states="draft" class="btn btn-primary"/>
+				<button name="action_purchase_preapprove" string="Pre Approve" type="object" states="reviewed" class="btn btn-primary"/>
+				<button name="button_approve" type="object" states="preapprove" string="Approve Order" class="oe_highlight" data-hotkey="z"/>
+			</xpath>
+		</field>
+	</record>
+	<record id="serviestiba_sh_purchase_agreement_form_view" model="ir.ui.view">
+		<field name="name">serviestiba.sh.purchase.agreement.form.view</field>
+		<field name="model">purchase.agreement</field>
+		<field name="inherit_id" ref="sh_all_in_one_tender_bundle.sh_purchase_agreement_form_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='sh_agreement_deadline']" position="replace">
+				<field name="sh_agreement_deadline" readonly="1"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>
