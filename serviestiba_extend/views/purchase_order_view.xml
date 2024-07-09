@@ -22,4 +22,40 @@
 			</xpath>
 		</field>
 	</record>
+	<record id="group_approve_quote_manager" model="res.groups">
+		<field name="name">Aprobación Gerencia</field>
+	</record>
+	<record id="action_server_approve_quote" model="ir.actions.server">
+		<field name="name">Aprobar</field>
+		<field name="groups_id" eval="[(4, ref('serviestiba_extend.group_approve_quote_manager'))]"/>
+		<field name="model_id" ref="serviestiba_extend.model_purchase_order"/>
+		<field name="binding_model_id" ref="serviestiba_extend.model_purchase_order"/>
+		<field name="binding_view_types">list</field>
+		<field name="state">code</field>
+		<field name="code">                if records:                    action = records.button_approve()            </field>
+	</record>
+	<record model="ir.ui.view" id="view_purchase_agreement_pivot">
+		<field name="name">purchase.agreement.pivot</field>
+		<field name="model">purchase.agreement</field>
+		<field name="arch" type="xml">
+			<pivot string="Licitaciones" display_quantity="1" sample="1">
+				<field name="x_studio_periodo" type="row"/>
+				<field name="sh_purchase_user_id" type="row"/>
+				<field name="sh_agreement_type" type="row"/>
+				<field name="sh_order_date" type="row"/>
+				<field name="x_studio_periodo" type="row"/>
+				<field name="state" type="row"/>
+			</pivot>
+		</field>
+	</record>
+	<record id="serviestiba_sh_purchase_agreement_action" model="ir.actions.act_window">
+		<field name="name">Licitaciones</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">purchase.agreement</field>
+		<field name="view_mode">pivot</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">                Click to Create New Purchase Tender.            </p>
+		</field>
+	</record>
+	<menuitem id="serviestiba_sh_purchase_agreement_menu" name="Licitaciones" parent="purchase.purchase_report_main" action="serviestiba_sh_purchase_agreement_action" />
 </odoo>

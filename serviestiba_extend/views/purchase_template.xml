@@ -3,9 +3,9 @@
 	<template id="serviestiva_report_purchaseorder_document" inherit_id="purchase.report_purchaseorder_document">
 		<xpath expr="//div[@id='informations']" position="after">
 			<div id="extend_data" class="row mt-4 mb32">
-				<div t-if="o.departamento" class="col-3 bm-2">
+				<div t-if="o.x_studio_departamento_1" class="col-3 bm-2">
 					<strong>Departamento:</strong>
-					<p t-field="o.departamento" class="m-0"/>
+					<p t-field="o.x_studio_departamento_1" class="m-0"/>
 				</div>
 				<div t-elif="o.agreement_id" class="col-3 bm-2">
 					<strong>Solicitud de compra:</strong>
