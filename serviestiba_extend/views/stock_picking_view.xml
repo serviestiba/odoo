@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+	<record id="group_return_picking_draft_manager" model="res.groups">
+		<field name="name">Devolver Estado Borrador</field>
+	</record>
 	<record id="serviestiba_stock_view_picking_form" model="ir.ui.view">
 		<field name="name">serviestiba.stock.view.picking.form</field>
 		<field name="model">stock.picking</field>
@@ -7,6 +10,9 @@
 		<field name="arch" type="xml">
 			<xpath expr="//field[@name='scheduled_date']" position="replace">
 				<field name="scheduled_date" readonly="1"/>
+			</xpath>
+			<xpath expr="//button[@name='action_cancel']" position="before">
+				<button name="action_return_draft" string="Devolver" type="object" states="assigned,confirmed" class="btn btn-primary" groups="serviestiba_extend.group_return_picking_draft_manager"/>
 			</xpath>
 		</field>
 	</record>
