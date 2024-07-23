@@ -18,3 +18,7 @@ class StockPicking(models.Model):
         states={"done": [("readonly", True)], "cancel": [("readonly", True)]},
         help="Scheduled time for the first part of the shipment to be processed. Setting manually a value here would set it as expected date for all the stock moves.",
     )
+
+    def action_return_draft(self):
+        for order in self:
+            order.state = "draft"

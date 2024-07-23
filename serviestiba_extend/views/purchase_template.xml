@@ -13,5 +13,57 @@
 				</div>
 			</div>
 		</xpath>
+		<xpath expr="//table[@class='table table-sm o_main_table table-borderless mt-4']/tbody" position="replace">
+			<tbody>
+				<t t-set="current_subtotal" t-value="0"/>
+				<t t-foreach="o.order_line" t-as="line">
+					<t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+					<t t-set="current_subtotal" t-value="current_subtotal + line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+					<tr t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else ''">
+						<t t-if="not line.display_type and line.status != 'cancel'">
+							<td id="product">
+								<span t-field="line.name"/>
+							</td>
+							<t t-set="taxes" t-value="', '.join([(tax.description or tax.name) for tax in line.taxes_id])"/>
+							<td name="td_taxes" t-attf-class="text-end {{ 'text-nowrap' if len(taxes) &lt; 10 else '' }}">
+								<span t-out="taxes">Tax 15%</span>
+							</td>
+							<td class="text-center">
+								<span t-field="line.date_planned"/>
+							</td>
+							<td class="text-end">
+								<span t-field="line.product_qty"/>
+								<span t-field="line.product_uom.name" groups="uom.group_uom"/>
+							</td>
+							<td class="text-end">
+								<span t-field="line.price_unit"/>
+							</td>
+							<td class="text-end">
+								<span t-field="line.price_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+							</td>
+						</t>
+						<t t-if="line.display_type == 'line_section'">
+							<td colspan="99" id="section">
+								<span t-field="line.name"/>
+							</td>
+							<t t-set="current_section" t-value="line"/>
+							<t t-set="current_subtotal" t-value="0"/></t>
+						<t t-if="line.display_type == 'line_note'">
+							<td colspan="99" id="note">
+								<span t-field="line.name"/>
+							</td>
+						</t>
+					</tr>
+					<t t-if="current_section and (line_last or o.order_line[line_index+1].display_type == 'line_section')">
+						<tr class="is-subtotal text-end">
+							<td colspan="99" id="subtotal">
+								<strong class="mr16">Subtotal</strong>
+								<span t-esc="current_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+							</td>
+						</tr>
+					</t>
+				</t>
+			</tbody>
+		</xpath>
 	</template>
 </odoo>
