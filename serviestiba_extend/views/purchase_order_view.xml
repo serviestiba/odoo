@@ -34,6 +34,15 @@
 		<field name="state">code</field>
 		<field name="code">                if records:                    action = records.button_approve()            </field>
 	</record>
+	<record id="action_server_pre_approve_quote" model="ir.actions.server">
+		<field name="name">Pre Aprobar</field>
+		<field name="groups_id" eval="[(4, ref('serviestiba_extend.group_approve_quote_manager'))]"/>
+		<field name="model_id" ref="serviestiba_extend.model_purchase_order"/>
+		<field name="binding_model_id" ref="serviestiba_extend.model_purchase_order"/>
+		<field name="binding_view_types">list</field>
+		<field name="state">code</field>
+		<field name="code">                if records:                    action = records.action_purchase_preapprove()            </field>
+	</record>
 	<record model="ir.ui.view" id="view_purchase_agreement_pivot">
 		<field name="name">purchase.agreement.pivot</field>
 		<field name="model">purchase.agreement</field>
