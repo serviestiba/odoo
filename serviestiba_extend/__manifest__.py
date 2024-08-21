@@ -5,7 +5,7 @@
 
 {
     "name": "Serviestiba Extend Features",
-    "version": "16.0",
+    "version": "16.1",
     "description": """ Changes for Serviestiba Features
     """,
     "category": "Purchase",
