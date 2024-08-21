@@ -10,6 +10,9 @@
 				<button name="action_purchase_preapprove" string="Pre Approve" type="object" states="reviewed" class="btn btn-primary"/>
 				<button name="button_approve" type="object" states="preapprove" string="Approve Order" class="oe_highlight" data-hotkey="z"/>
 			</xpath>
+			<xpath expr="//button[@name='button_cancel']" position="replace">
+				<button name="button_cancel" states="draft,to approve,sent,purchase,reviewed,preapprove" string="Cancel" type="object" data-hotkey="x" />
+			</xpath>
 		</field>
 	</record>
 	<record id="serviestiba_sh_purchase_agreement_form_view" model="ir.ui.view">
