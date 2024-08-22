@@ -6,7 +6,7 @@
 		<field name="inherit_id" ref="purchase.purchase_order_form" />
 		<field name="arch" type="xml">
 			<xpath expr="//button[@name='print_quotation']" position="after">
-				<button name="action_purchase_reviewed" string="Reviewed" type="object" states="draft" class="btn btn-primary"/>
+				<button name="action_purchase_reviewed" string="Reviewed" type="object" states="sent" class="btn btn-primary"/>
 				<button name="action_purchase_preapprove" string="Pre Approve" type="object" states="reviewed" class="btn btn-primary"/>
 				<button name="button_approve" type="object" states="preapprove" string="Approve Order" class="oe_highlight" data-hotkey="z"/>
 			</xpath>
