@@ -22,6 +22,7 @@ from collections import OrderedDict
 import base64
 import io
 import json
+from pytz import timezone
 from .copier import MyWorksheetCopy
 from copy import copy
 from odoo.tools.pdf import merge_pdf
@@ -41,8 +42,6 @@ try:
     import jpype.imports  # @UnusedImport
 except:
     jpype = None
-
-
 soffice_bin = None
 if sys.platform == "win32":
     try:
@@ -84,7 +83,16 @@ class Report(models.TransientModel):
             if isinstance(value, bool):
                 return value
             if supported_datetime(value):
+                user_tz = self.env.user.tz or "UTC"
+                local = timezone(user_tz)
+                date_on = (
+                    fields.Datetime.from_string(value)
+                    .replace(tzinfo=timezone("UTC"))
+                    .astimezone(local)
+                ).replace(tzinfo=None)
+                value = date_on
                 return value
+
             if isinstance(value, dict):
                 return value.get(self.env.lang) or value.get("en_US") or repr(value)
             try:
