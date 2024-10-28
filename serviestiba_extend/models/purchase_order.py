@@ -52,6 +52,6 @@ class ShPurchaseAgreement(models.Model):
     sh_agreement_deadline = fields.Datetime(
         String="Tender Deadline",
         tracking=True,
-        default=datetime.now(),
+        default=fields.Datetime.now,
         readonly=True,
     )
