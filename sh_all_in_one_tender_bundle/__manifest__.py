@@ -9,7 +9,7 @@
     "category": "Purchases",
     "summary": "Manage Multiple Tenders Request For Quotation Manage Same Partner Tender Management Purchase Tender Management PO Tender Management Bid Apply Analyze Tender Analyze RFQ Best Supplier At Best Price Tender Send To Multiple Vendor Change RFQ Price Odoo Multi Vendor Purchase Tender Vendor Tender Portal Purchase Order Tender Management PO Tender Multiple Purchase Tender Purchase Agreement Purchase Bidding Multi Vendor Bidding Manage Purchase Bid Process Vendor BID Purchase Order Bid Manage Tender RFQ Bid Odoo Tender Management System Odoo Tender Management App Tender Management Software Odoo Tender Vendor Purchase Tender Vendor Tender Portal Supplier Multiple Purchase Tender",
     "description": """Nowadays in a competitive market, several vendors sell the same products and everyone has their price so it will difficult to manage multiple tenders list at a time even in odoo there is no kind of feature where you can manage multiple tenders & RFQ's in a single list. Here the vendor can change the price from portal or website for tenders & RFQ's. You can see tender portal details from RFQ. This module helps in the online signature in the RFQ at the portal. You can print "Purchase Tender" & "Analyze Quotations" PDF report.""",
-    "version": "16.0.7",
+    "version": "19.0.1",
     "depends": [
         "purchase",
         "stock",

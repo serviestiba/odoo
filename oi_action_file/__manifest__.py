@@ -3,7 +3,7 @@
 {
     "name": "Client Action File Download",
     "summary": "Client Action File Download",
-    "version": "16.0.1.1.1",
+    "version": "19.0.1.1.1",
     'category': 'Extra Tools',
     "website": "https://www.open-inside.com",
 	"description": """

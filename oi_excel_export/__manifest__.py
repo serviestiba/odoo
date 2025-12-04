@@ -17,7 +17,7 @@
 'price': 81.0,
 'currency': 'USD',
 'category': 'Extra Tools',
-'version': '16.0.1.3.18',
+'version': '19.0.0.0.1',
 'depends': ['base', 'web', 'oi_action_file', 'base_import'],
 'data': ['security/ir.model.access.csv',
           'security/ir_rule.xml',
