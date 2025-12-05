@@ -29,7 +29,7 @@
     ],
     'demo': [],
     'images': ['static/description/banner.gif'],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': False,
     'price': 21.0,
