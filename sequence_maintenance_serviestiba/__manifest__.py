@@ -19,9 +19,5 @@
         'views/maintenance_request_view.xml',
     ],
     'images': [],
-    'application': False,
-    'installable': False,
-    'price': 0.00,
-    'currency': 'USD',
     'license': 'OPL-1',
 }
