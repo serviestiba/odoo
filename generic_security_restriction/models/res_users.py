@@ -40,14 +40,11 @@ class ResUsers(models.Model):
             self._gsr_is_debug_mode_allowed.clear_cache(self)
         return users
 
+
     def write(self, values):
-        res = super(ResUsers, self).write(values)
-        self.env['ir.ui.menu'].clear_caches()
-        if 'allowed_use_debug_mode' in values:
-            self._gsr_is_debug_mode_allowed.clear_cache(self)
-        if 'groups_id' in values:
-            self._gsr_is_debug_mode_allowed.clear_cache(self)
-        return res
+        # En Odoo 19 ya no existe ir.ui.menu.clear_caches(), así que no la usamos.
+        # Si tu módulo antes hacía algo especial aquí, puedes añadirlo arriba de super().
+        return super().write(values)
 
     @api.model
     @tools.ormcache('user_id')
