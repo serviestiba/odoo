@@ -1,6 +1,6 @@
 {
     "name": "Generic Security Restriction",
-    "version": "19.0.0.0.1",
+    "version": "19.0.0.0.2",
     "author": "Center of Research and Development",
     "website": "https://crnd.pro",
     "license": 'OPL-1',
