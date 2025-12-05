@@ -24,7 +24,7 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'oi_action_file/static/src/js/action_file_download.js',
+            #'oi_action_file/static/src/js/action_file_download.js',
         ],
 
     },    

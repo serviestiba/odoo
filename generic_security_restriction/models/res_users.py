@@ -33,10 +33,9 @@ class ResUsers(models.Model):
     @api.model
     def create(self, values):
         users = super(ResUsers, self).create(values)
-        self.env['ir.ui.menu'].clear_caches()
         if 'allowed_use_debug_mode' in values:
             self._gsr_is_debug_mode_allowed.clear_cache(self)
-        if 'groups_id' in values:
+        if 'group_ids' in values:
             self._gsr_is_debug_mode_allowed.clear_cache(self)
         return users
 
@@ -53,7 +52,7 @@ class ResUsers(models.Model):
         if user.allowed_use_debug_mode:
             return True
         # Check if allowed debug mode by groups
-        if bool(user.groups_id.filtered(
+        if bool(user.group_ids.filtered(
                 lambda g: g.allowed_use_debug_mode)):
             return True
         return False

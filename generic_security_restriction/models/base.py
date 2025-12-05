@@ -22,7 +22,7 @@ class Base(models.AbstractModel):
             if res['views'].get(view, {}).get('toolbar', {}).get('print', []):
 
                 hidden_reports = self.env.user.hidden_reports_ids
-                hidden_reports += self.env.user.groups_id.mapped(
+                hidden_reports += self.env.user.group_ids.mapped(
                     'hidden_report_ids')
 
                 new_print_actions = []
@@ -40,11 +40,11 @@ class Base(models.AbstractModel):
             if res['views'].get(view, {}).get('toolbar', {}).get('action', []):
 
                 hidden_actions = self.env.user.hidden_actions_ids
-                hidden_actions += self.env.user.groups_id.mapped(
+                hidden_actions += self.env.user.group_ids.mapped(
                     'hidden_actions_ids')
                 # check hided server actions
                 hidden_server_actions = self.env.user.hidden_server_actions_ids
-                hidden_server_actions += self.env.user.groups_id.mapped(
+                hidden_server_actions += self.env.user.group_ids.mapped(
                     'hidden_server_actions_ids')
                 new_window_actions = []
                 for act in res['views'][view]['toolbar']['action']:
@@ -59,11 +59,11 @@ class Base(models.AbstractModel):
             if res['views'].get(view, {}).get('toolbar', {}).get('relate', []):
 
                 hidden_actions = self.env.user.hidden_actions_ids
-                hidden_actions += self.env.user.groups_id.mapped(
+                hidden_actions += self.env.user.group_ids.mapped(
                     'hidden_actions_ids')
                 # check hided server actions related
                 hidden_server_actions = self.env.user.hidden_server_actions_ids
-                hidden_server_actions += self.env.user.groups_id.mapped(
+                hidden_server_actions += self.env.user.group_ids.mapped(
                     'hidden_server_actions_ids')
                 new_related_actions = []
                 for act in res['views'][view]['toolbar']['relate']:
