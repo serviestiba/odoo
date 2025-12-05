@@ -81,9 +81,8 @@ Ce module est utile pour l'ajustement de l'inventaire d'importation à partir de
 	'qweb': [
 		],
     'demo': [],
-    'test': [],
     'license':'OPL-1',
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     "images":['static/description/Banner.gif'],
 }
