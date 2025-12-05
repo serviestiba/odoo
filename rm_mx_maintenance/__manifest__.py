@@ -13,7 +13,7 @@
         "views/maintenance_request_views.xml",
     ],
     'application': True,
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'license': 'LGPL-3',
 }

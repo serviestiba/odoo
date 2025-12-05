@@ -16,5 +16,5 @@
         "views/product_product_views.xml",
         "views/stock_location_views.xml",
     ],
-    "installable": True,
+    "installable": False,
 }

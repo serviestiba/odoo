@@ -17,15 +17,15 @@
     "license": "OPL-1",
     "price" : 9,
     "currency": 'USD',
-    "installable": True,
+    "installable": False,
     "depends": [
         'web'
     ],
     "data": [
         
     ],
-    'installable': True,
-    'auto_install': True,    
+    'installable': False,
+    'auto_install': False,    
     'odoo-apps' : True,
     'assets': {
         'web.assets_backend': [
