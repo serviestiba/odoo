@@ -28,7 +28,8 @@
         ],
     
     'odoo-apps' : True,
-    'auto_install': True,
+    'auto_install': False,
+    "installable": False,
     'images':[
         'static/description/cover.png'
     ]     
