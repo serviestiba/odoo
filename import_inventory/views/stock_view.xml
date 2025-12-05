@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <odoo>
     <data>
 
@@ -11,26 +11,26 @@
 
 
                     <group>
-                        <field name="import_option" widget='radio' />
+                        <field name="import_option" widget="radio"/>
                     </group>
 
                     <group>
-                        <field name="import_prod_option" widget='radio'/>
+                        <field name="import_prod_option" widget="radio"/>
                     </group>
                     <group>
                         <field name="is_validate_inventory"/>
                     </group>
                 </group>
-                <span style="font-size:20px; color:red;" attrs ="{'invisible': [('import_prod_option' ,'!=', 'name')]}">Make sure that you have unique product name for all products Otherwise import doesn't work well</span>
+                <span style="font-size:20px; color:red;">Make sure that you have unique product name for all products Otherwise import doesn't work well</span>
                 <group>
-                    <field name="file"  filename="filename"  />
+                    <field name="file" filename="filename"/>
                 </group>
                 
                 <group>
                     <group string="Download Sample XLS and CSV Files">
-                        <field name="down_samp_file" widget="checkbox" />
-                        <field name="sample_option" widget="radio" attrs="{'invisible': [('down_samp_file', '=', False)]}"/>
-                        <button name="download_auto" string="Download Sample File" type="object" class="oe_highlight" attrs="{'invisible': [('down_samp_file', '=', False)]}"/>
+                        <field name="down_samp_file" widget="checkbox"/>
+                        <field name="sample_option" widget="radio"/>
+                        <button name="download_auto" string="Download Sample File" type="object" class="oe_highlight"/>
                     </group>
                 </group>
                 
@@ -61,12 +61,7 @@
         </field>
     </record>
 
-   <menuitem action="gen_inv_wizard"
-        id="gen_inv_wizard_import"
-        parent="stock.menu_stock_inventory_control" 
-        groups="import_inventory.group_import_inventory_access" 
-        sequence="31"
-    />
+   <menuitem action="gen_inv_wizard" id="gen_inv_wizard_import" parent="stock.menu_stock_inventory_control" groups="import_inventory.group_import_inventory_access" sequence="31"/>
 
   </data>
 </odoo>
