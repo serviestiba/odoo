@@ -116,32 +116,5 @@
             </p>
         </field>
     </record>
-    <record id="sh_purchase_agreement_search_view" model="ir.ui.view">
-        <field name="name">sh.purchase.agreement.search.view</field>
-        <field name="model">purchase.agreement</field>
-        <field name="arch" type="xml">
-            <search string="Purchase Tender">
-                <field name="name"/>
-                <field name="sh_purchase_user_id"/>
-                <field name="sh_agreement_type"/>
-                <field name="sh_vender_id"/>
-                <field name="sh_agreement_deadline"/>
-                <field name="sh_order_date"/>
-                <field name="sh_delivery_date"/>
-                <field name="sh_source"/>
-                <field name="state"/>
-                <group expand="0" string="Group By">
-                    <filter string="Purchase Tender Number" name="agreement" domain="[]" context="{'group_by':'name'}"/>
-                    <filter string="Purchase Representative" name="user_id" domain="[]" context="{'group_by':'sh_purchase_user_id'}"/>
-                    <filter string="Purchase Tender Type" name="agreement_type" domain="[]" context="{'group_by':'sh_agreement_type'}"/>
-                    <filter string="Vendor" name="vendor" domain="[]" context="{'group_by':'sh_vender_id'}"/>
-                    <filter string="Purchase Tender Deadline" name="deadline" domain="[]" context="{'group_by':'sh_agreement_deadline'}"/>
-                    <filter string="Purchase Tender Order Date" name="order_date" domain="[]" context="{'group_by':'sh_order_date'}"/>
-                    <filter string="Purchase Tender Delivery Date" name="delivery_date" domain="[]" context="{'group_by':'sh_delivery_date'}"/>
-                    <filter string="Status" name="status" domain="[]" context="{'group_by':'state'}"/>
-                </group>
-            </search>
-        </field>
-    </record>
     <menuitem id="sh_purchase_agreement_menu" name="Purchase Tender" parent="purchase.menu_procurement_management" action="sh_purchase_agreement_action"/>
 </odoo>
