@@ -47,7 +47,7 @@
         ]
     },
     "images": ["static/description/background.png", ],
-    "installable": True,    
+    "installable": False,    
     "auto_install": False,    
     "application": True,        
 }
