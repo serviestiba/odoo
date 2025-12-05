@@ -34,7 +34,6 @@ class Groups(models.Model):
 
     @api.model
     def create(self, values):
-        self.env['ir.ui.menu'].clear_caches()
         if 'allowed_use_debug_mode' in values:
             self.env['res.users']._gsr_is_debug_mode_allowed.clear_cache(
                 self.env['res.users'])
