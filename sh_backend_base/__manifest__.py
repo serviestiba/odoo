@@ -30,15 +30,15 @@
         'web.assets_backend': [
     
             # pyeval domain
-            "sh_backend_base/static/src/lib/pyeval.js",
+            #"sh_backend_base/static/src/lib/pyeval.js",
 
             #Notification
-            'sh_backend_base/static/src/xml/notification_menu.xml',
-            'sh_backend_base/static/src/scss/notification.scss',
-            'sh_backend_base/static/src/js/systray_activity_menu.js',
-            'sh_backend_base/static/src/scss/light_icon/style.css',
-            'sh_backend_base/static/src/scss/regular_icon/style.css',
-            'sh_backend_base/static/src/scss/thin_icon/style.css',
+            #'sh_backend_base/static/src/xml/notification_menu.xml',
+            #'sh_backend_base/static/src/scss/notification.scss',
+            #'sh_backend_base/static/src/js/systray_activity_menu.js',
+            #'sh_backend_base/static/src/scss/light_icon/style.css',
+            #'sh_backend_base/static/src/scss/regular_icon/style.css',
+            #'sh_backend_base/static/src/scss/thin_icon/style.css',
         ],
         'web.assets_frontend': [
             'https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js',

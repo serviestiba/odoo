@@ -66,12 +66,12 @@
     ],
     'assets': {
         'web.assets_frontend': [
-            'sh_all_in_one_tender_bundle/static/src/js/purchase_agreeement.js',
+            #'sh_all_in_one_tender_bundle/static/src/js/purchase_agreeement.js',
             'sh_all_in_one_tender_bundle/static/src/js/rfq.js',
             'sh_all_in_one_tender_bundle/static/src/scss/style.scss',
-            'sh_all_in_one_tender_bundle/static/src/js/country_state.js',
+            #'sh_all_in_one_tender_bundle/static/src/js/country_state.js',
             'sh_all_in_one_tender_bundle/static/src/js/vendor_signup.js',
-            'sh_all_in_one_tender_bundle/static/src/js/lib/bootstrap-multiselect.js',
+            #'sh_all_in_one_tender_bundle/static/src/js/lib/bootstrap-multiselect.js',
         ]
     },
     "images": ["static/description/background.gif", ],
