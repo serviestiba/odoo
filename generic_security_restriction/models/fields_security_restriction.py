@@ -41,7 +41,4 @@ class FieldSecurity(models.Model):
                 rec.set_no_quick_create = False
                 rec.set_no_create_edit = False
 
-    @api.model
-    def create(self, values):
-        self.env['ir.ui.view'].clear_caches()
-        return super(FieldSecurity, self).create(values)
+

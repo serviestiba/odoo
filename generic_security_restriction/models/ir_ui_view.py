@@ -19,8 +19,7 @@ class IrUiView(models.Model):
         ).mapped('field_security_ids').search(
             [('field_name', '=', node.get('name'))]
         )
-        if field_security:
-            self.clear_caches()
+
         if not self.env.user.group_ids & field_security.group_ids:
             return result
 
