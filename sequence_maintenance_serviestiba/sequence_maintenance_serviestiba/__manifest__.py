@@ -20,7 +20,7 @@
     ],
     'images': [],
     'application': False,
-    'installable': True,
+    'installable': False,
     'price': 0.00,
     'currency': 'USD',
     'license': 'OPL-1',
