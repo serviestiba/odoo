@@ -20,7 +20,5 @@
         "views/stock_picking_view.xml",
         "views/purchase_template.xml",
     ],
-    "application": False,
-    "installable": False,
     "license": "OPL-1",
 }

@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 {
     'name': 'Invisible Maintenance Stage',
-    'version': '15.1.0',
+    'version': '19.1',
     'author': 'IDCA',
     'summary': 'Maintenance stage by group',
     'website': '',
@@ -16,7 +16,5 @@
     ],
     'images': [],
     'qweb': [],
-    'installable': False,
-    'application': False,
     'license': 'OPL-1',
 }

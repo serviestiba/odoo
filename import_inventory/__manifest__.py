@@ -82,7 +82,5 @@ Ce module est utile pour l'ajustement de l'inventaire d'importation à partir de
 		],
     'demo': [],
     'license':'OPL-1',
-    'installable': False,
-    'auto_install': False,
     "images":['static/description/Banner.gif'],
 }

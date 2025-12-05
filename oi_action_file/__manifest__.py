@@ -15,18 +15,13 @@
 	],
     "author": "Openinside",
     "license": "OPL-1",
-    "price" : 9,
-    "currency": 'USD',
-    "installable": False,
+
     "depends": [
         'web'
     ],
     "data": [
         
     ],
-    'installable': False,
-    'auto_install': False,    
-    'odoo-apps' : True,
     'assets': {
         'web.assets_backend': [
             'oi_action_file/static/src/js/action_file_download.js',

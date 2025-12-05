@@ -17,6 +17,4 @@
         "wizard/sh_message_wizard.xml",
     ],
     "images": ["static/description/background.jpg", ],
-    "auto_install": False,
-    "installable": False,
 }

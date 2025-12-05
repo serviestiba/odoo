@@ -29,9 +29,5 @@
     ],
     'demo': [],
     'images': ['static/description/banner.gif'],
-    'installable': False,
-    'auto_install': False,
-    'application': False,
-    'price': 21.0,
-    'currency': 'EUR',
+
 }

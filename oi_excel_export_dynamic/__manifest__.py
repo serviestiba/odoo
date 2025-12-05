@@ -11,8 +11,6 @@
     "author": "Openinside",
     "license": "OPL-1",
     'website': "https://www.open-inside.com",
-    "price" : 27,
-    "currency": 'USD',
     'category': 'Extra Tools',
     'version': "19.0.1.1.1",
 
@@ -27,9 +25,6 @@
         'view/menu.xml'
         ],
     
-    'odoo-apps' : True,
-    'auto_install': False,
-    "installable": False,
     'images':[
         'static/description/cover.png'
     ]     

@@ -75,8 +75,5 @@
         ]
     },
     "images": ["static/description/background.gif", ],
-    "auto_install": False,
-    "installable": False,
-    "price": 270,
-    "currency": "EUR"
+
 }

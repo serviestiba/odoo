@@ -46,8 +46,5 @@
             'sh_backend_base/static/src/js/firebase.js',
         ]
     },
-    "images": ["static/description/background.png", ],
-    "installable": False,    
-    "auto_install": False,    
-    "application": True,        
+    "images": ["static/description/background.png", ],     
 }
