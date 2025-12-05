@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <odoo>
     <record id="report_access_restrict" model="ir.ui.view">
         <field name="name">ir.actions.report.access.restrict</field>
@@ -8,14 +8,14 @@
             <xpath expr="//form/sheet//notebook/page" position="after">
                 <page string="Security Restrictions">
                     <field name="hide_for_group_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden for groups"/>
-                        </tree>
+                        </list>
                     </field>
                     <field name="hide_for_user_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden for users"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>
@@ -30,14 +30,14 @@
             <xpath expr="//notebook/page" position="after">
                 <page string="Security Restrictions">
                     <field name="restrict_group_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden for groups"/>
-                        </tree>
+                        </list>
                     </field>
                     <field name="hide_from_user_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden for users"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>
@@ -53,14 +53,14 @@
             <xpath expr="//notebook" position="inside">
                 <page string="Security Restrictions">
                     <field name="restrict_group_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden for groups"/>
-                        </tree>
+                        </list>
                     </field>
                     <field name="hide_from_user_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden for users"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>

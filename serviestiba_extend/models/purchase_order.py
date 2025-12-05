@@ -30,7 +30,7 @@ class PurchaseOrder(models.Model):
 
     @api.depends_context("lang")
     @api.depends(
-        "order_line.taxes_id",
+        "order_line.tax_ids",
         "order_line.price_subtotal",
         "amount_total",
         "amount_untaxed",

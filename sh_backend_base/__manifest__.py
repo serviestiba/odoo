@@ -9,7 +9,7 @@
     
     "support": "support@softhealer.com",   
 
-    "version": "16.0.3",
+    "version": "19.0.1",
     
     "license": "OPL-1",
     
@@ -46,8 +46,5 @@
             'sh_backend_base/static/src/js/firebase.js',
         ]
     },
-    "images": ["static/description/background.png", ],
-    "installable": True,    
-    "auto_install": False,    
-    "application": True,        
+    "images": ["static/description/background.png", ],     
 }

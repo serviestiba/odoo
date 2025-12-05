@@ -44,11 +44,12 @@ class Groups(models.Model):
         return super(Groups, self).create(values)
 
     def write(self, values):
-        self.env['ir.ui.menu'].clear_caches()
         if 'allowed_use_debug_mode' in values:
             self.env['res.users']._gsr_is_debug_mode_allowed.clear_cache(
-                self.env['res.users'])
+                self.env['res.users']
+            )
         if 'users' in values:
             self.env['res.users']._gsr_is_debug_mode_allowed.clear_cache(
-                self.env['res.users'])
+                self.env['res.users']
+            )
         return super(Groups, self).write(values)

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='UTF-8'?>
 <odoo>
     <record id="view_users_hidden_menus_form" model="ir.ui.view">
         <field name="name">res.users.hidden.menus.form</field>
@@ -11,30 +11,29 @@
                         <field name="allowed_use_debug_mode"/>
                     </group>
                     <field name="hidden_menu_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden menus"/>
-                        </tree>
+                        </list>
                     </field>
                     <field name="access_only_menu_ids">
-                        <tree>
-                            <field name="display_name"
-                                   string="Access only menus"/>
-                        </tree>
+                        <list>
+                            <field name="display_name" string="Access only menus"/>
+                        </list>
                     </field>
                     <field name="hidden_reports_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden reports"/>
-                        </tree>
+                        </list>
                     </field>
                     <field name="hidden_actions_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden actions"/>
-                        </tree>
+                        </list>
                     </field>
                     <field name="hidden_server_actions_ids" domain="[('binding_model_id', '!=', False)]">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden server contextual actions"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>

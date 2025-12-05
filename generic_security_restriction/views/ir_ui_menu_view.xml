@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <odoo>
     <record id="edit_menu_access_restrict" model="ir.ui.view">
         <field name="name">edit.menu.access.restrict</field>
@@ -13,9 +13,9 @@
             <xpath expr="//form/sheet//notebook" position="inside">
                 <page string="Hidden for users">
                     <field name="hide_from_user_ids">
-                        <tree>
+                        <list>
                             <field name="display_name"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>

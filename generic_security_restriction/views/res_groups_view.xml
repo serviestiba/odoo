@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <odoo>
     <record id="view_groups_form_restrict_access" model="ir.ui.view">
         <field name="name">view.groups.form.restrict.access</field>
@@ -22,25 +22,25 @@
                 <page name="page_hidden_reports" string="Report Restrictions">
 
                     <field name="hidden_report_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden reports"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
                 <page name="page_hidden_actions" string="Actions Restrictions">
 
                     <field name="hidden_actions_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden actions"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
                 <page name="page_hidden_server_actions" string="Server Actions Restrictions">
 
                     <field name="hidden_server_actions_ids" domain="[('binding_model_id', '!=', False)]">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden server contextual actions"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>

@@ -5,7 +5,7 @@
 
 {
     'name': 'Sequence Maintenance',
-    'version': '16.1',
+    'version': '19.1',
     'description': ''' Changes for sequence in maintenance
     ''',
     'category': 'Purchase',
@@ -19,9 +19,5 @@
         'views/maintenance_request_view.xml',
     ],
     'images': [],
-    'application': False,
-    'installable': True,
-    'price': 0.00,
-    'currency': 'USD',
     'license': 'OPL-1',
 }

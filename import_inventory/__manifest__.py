@@ -3,7 +3,7 @@
 
 {
     'name': 'Import Stock Inventory from Excel/CSV File',
-    'version': '16.0.0.1',
+    'version': '19.0.0.1',
     'sequence': 4,
     'summary': 'App helps to import stock inventory adjustment import inventory adjustment import product stock import opening stock import stock with lot import serial import inventory data import stock balance import stock with lot data import stock with Serial number',
     "price": 22,
@@ -81,9 +81,6 @@ Ce module est utile pour l'ajustement de l'inventaire d'importation à partir de
 	'qweb': [
 		],
     'demo': [],
-    'test': [],
     'license':'OPL-1',
-    'installable': True,
-    'auto_install': False,
     "images":['static/description/Banner.gif'],
 }
