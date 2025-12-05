@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Rm_mx_maintenance',
-    'version': '',
+    'version': "19.0.1.1.1",
     'description': """ Rm_mx_maintenance Description """,
     'summary': """ Rm_mx_maintenance Summary """,
     'author': '',
