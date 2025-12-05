@@ -5,7 +5,7 @@
 
 {
     'name': 'Sequence Maintenance',
-    'version': '16.1',
+    'version': '19.1',
     'description': ''' Changes for sequence in maintenance
     ''',
     'category': 'Purchase',
