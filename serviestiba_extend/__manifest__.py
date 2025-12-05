@@ -21,6 +21,6 @@
         "views/purchase_template.xml",
     ],
     "application": False,
-    "installable": True,
+    "installable": False,
     "license": "OPL-1",
 }
