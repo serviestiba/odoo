@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
-	<!-- Inherit Purchase Order Tree View -->
+    <!-- Inherit Purchase Order Tree View -->
     <record id="purchase_rfq_tree_view_custom" model="ir.ui.view">
         <field name="name">purchase.rfq.tree.view.custom</field>
         <field name="model">purchase.order</field>
@@ -44,7 +44,9 @@
             <xpath expr="//div[hasclass('oe_title')]" position="after">
                 <div class="row">
                     <div class="col-12">
-                        <p width="100%" class="alert alert-danger" role="alert"><field name="sh_msg"/></p>
+                        <p width="100%" class="alert alert-danger" role="alert">
+                            <field name="sh_msg"/>
+                        </p>
                     </div>
                 </div>
             </xpath>
@@ -82,7 +84,7 @@
                         <field name="partner_id" string="Vendor"/>
                         <field name="product_id"/>
                         <field name="company_currency_id" invisible="1"/>
-                		<field name="sh_base_price_unit" widget="monetary" options="{'currency_field': 'company_currency_id'}"/>
+                        <field name="sh_base_price_unit" widget="monetary" options="{'currency_field': 'company_currency_id'}"/>
                         <field name="product_qty"/>
                         <field name="sh_base_price_subtotal" widget="monetary" options="{'currency_field': 'company_currency_id'}"/>
                         <field name="status"/>
@@ -148,12 +150,12 @@
         <field name="name">Tender Lines</field>
         <field name="res_model">purchase.order.line</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="view_mode">tree,pivot,form</field>
+        <field name="view_mode">list,pivot,form</field>
         <field name="domain">[('state','not in',['cancel']),('order_id.state','in',['draft'])]</field>
         <field name="context">{'search_default_hide_cancelled_lines':1,'search_default_tender':1,'search_default_groupby_product':1}</field>
         <field name="view_id" ref="sh_bidline_tree_view"/>
         <field name="search_view_id" ref="sh_po_bidline_search_view"/>
     </record>
-	<!-- Analyze Tender Lines menu -->
+    <!-- Analyze Tender Lines menu -->
     <menuitem id="bidlines_menu" name="Analyze Multiple Tenders" action="action_po_bidline_action" parent="purchase.menu_procurement_management"/>
 </odoo>

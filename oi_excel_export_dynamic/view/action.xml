@@ -4,7 +4,7 @@
 	<record id="action_oi_excel_export_config" model="ir.actions.act_window">
 		<field name="name">Excel Report</field>
 		<field name="res_model">oi_excel_export.config</field>
-		<field name="view_mode">tree,form</field>
+		<field name="view_mode">list,form</field>
 	</record>
 
 </odoo>

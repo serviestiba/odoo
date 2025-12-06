@@ -78,7 +78,7 @@ class ShPurchaseOrderWizard(models.TransientModel):
                     'type': 'ir.actions.act_window',
                     'res_model': 'purchase.order',
                     'view_type': 'form',
-                    'view_mode': 'tree,form',
+                    'view_mode': 'list,form',
                     'domain': [('id', 'in', order_ids), ('selected_order', '=', True)],
                     'target': 'current'
                 }
@@ -126,7 +126,7 @@ class ShPurchaseOrderWizard(models.TransientModel):
                     'type': 'ir.actions.act_window',
                     'res_model': 'purchase.order',
                     'view_type': 'form',
-                    'view_mode': 'tree,form',
+                    'view_mode': 'list,form',
                     'domain': [('id', 'in', order_ids), ('selected_order', '=', True)],
                     'target': 'current'
                 }
