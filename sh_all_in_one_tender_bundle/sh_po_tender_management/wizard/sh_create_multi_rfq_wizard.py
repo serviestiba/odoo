@@ -55,7 +55,7 @@ class CreateMultiRFQ(models.TransientModel):
                     'name': _('Request For Quotations'),
                     'type': 'ir.actions.act_window',
                     'res_model': 'purchase.order',
-                    'view_mode': 'tree,form',
+                    'view_mode': 'list,form',
                     'domain':[('id','in',order_ids)],
                     'target': 'current'
                 }

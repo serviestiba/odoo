@@ -127,7 +127,7 @@
         <field name="name">Tender Lines</field>
         <field name="res_model">purchase.order.line</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="view_mode">tree,pivot,form</field>
+        <field name="view_mode">list,pivot,form</field>
         <field name="domain">[('state','not in',['cancel']),('order_id.state','in',['draft'])]</field>
         <field name="context">{'search_default_hide_cancelled_lines':1,'search_default_tender':1,'search_default_groupby_product':1}</field>
         <field name="view_id" ref="sh_bidline_tree_view"/>

@@ -151,7 +151,7 @@ class ReportConfig(models.Model):
         return {
           'type' : 'ir.actions.act_window',
           'name' : 'Columns',
-          'view_mode' : 'tree,form',
+          'view_mode' : 'list,form',
           'view_type' : 'form',
           'res_model' : 'oi_excel_export.line',
           'domain' : [('report_id', '=', self.id)],

@@ -76,7 +76,7 @@ class ShPurchaseAgreement(models.Model):
             'name':'Tender Documents',
             'type':'ir.actions.act_window',
             'res_model':'ir.attachment',
-            'view_mode':'kanban,tree,form',
+            'view_mode':'kanban,list,form',
             'domain':[('res_model','=','purchase.agreement'),('res_id','=',self.id)],
             'target':'current',
             }
@@ -198,7 +198,7 @@ class ShPurchaseAgreement(models.Model):
             'type': 'ir.actions.act_window',
             'res_model': 'purchase.order.line',
             'view_type': 'form',
-            'view_mode': 'tree,pivot,form',
+            'view_mode': 'list,pivot,form',
             'views': [(list_id, 'tree'), (pivot_id, 'pivot'), (form_id, 'form')],
             'domain': [('agreement_id', '=', self.id), ('state', 'not in', ['cancel']), ('order_id.selected_order', '=', False)],
             'context': {'search_default_groupby_product': 1},
@@ -262,7 +262,7 @@ class ShPurchaseAgreement(models.Model):
             'type': 'ir.actions.act_window',
             'res_model': 'purchase.order',
             'view_type': 'form',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'res_id': self.id,
             'domain': [('agreement_id', '=', self.id), ('selected_order', '=', False), ('state', 'in', ['draft','sent'])],
             'target': 'current'
@@ -274,7 +274,7 @@ class ShPurchaseAgreement(models.Model):
             'type': 'ir.actions.act_window',
             'res_model': 'purchase.order',
             'view_type': 'form',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'res_id': self.id,
             'domain': [('agreement_id', '=', self.id), ('selected_order', '=', True), ('state', 'not in', ['cancel'])],
             'target': 'current'
