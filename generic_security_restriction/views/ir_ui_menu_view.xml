@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="edit_menu_access_restrict" model="ir.ui.view">
         <field name="name">edit.menu.access.restrict</field>

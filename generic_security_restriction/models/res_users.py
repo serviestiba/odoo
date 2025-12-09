@@ -30,20 +30,25 @@ class ResUsers(models.Model):
     allowed_use_debug_mode = fields.Boolean(
         help="Allow use debug mode for this user.")
 
-    @api.model
-    def create(self, values):
-        users = super(ResUsers, self).create(values)
-        if 'allowed_use_debug_mode' in values:
-            self._gsr_is_debug_mode_allowed.clear_cache(self)
-        if 'group_ids' in values:
-            self._gsr_is_debug_mode_allowed.clear_cache(self)
+    @api.model_create_multi
+    def create(self, vals_list):
+        users = super(ResUsers, self).create(vals_list)
+        for user in users:
+            self.env['ir.ui.menu'].clear_caches()
+            if 'allowed_use_debug_mode' in user:
+                self.env.registry.clear_cache()
+            if 'groups_id' in user:
+                self.env.registry.clear_cache()
         return users
 
-
     def write(self, values):
-        # En Odoo 19 ya no existe ir.ui.menu.clear_caches(), así que no la usamos.
-        # Si tu módulo antes hacía algo especial aquí, puedes añadirlo arriba de super().
-        return super().write(values)
+        res = super(ResUsers, self).write(values)
+        self.env.registry.clear_cache()
+        if 'allowed_use_debug_mode' in values:
+            self.env.registry.clear_cache()
+        if 'groups_id' in values:
+            self.env.registry.clear_cache()
+        return res
 
     @api.model
     @tools.ormcache('user_id')
@@ -52,7 +57,7 @@ class ResUsers(models.Model):
         if user.allowed_use_debug_mode:
             return True
         # Check if allowed debug mode by groups
-        if bool(user.group_ids.filtered(
+        if bool(user.groups_id.filtered(
                 lambda g: g.allowed_use_debug_mode)):
             return True
         return False
