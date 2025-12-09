@@ -94,7 +94,18 @@ class GenericSecurityModelRestrictionUser(models.Model):
             return self.domain_code
         return []
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        self.env['ir.rule'].clear_caches()
+        return super().create(vals_list)
 
+    def write(self, values):
+        self.env['ir.rule'].clear_caches()
+        return super().write(values)
+
+    def unlink(self):
+        self.env['ir.rule'].clear_caches()
+        return super().unlink()
 
     # This method needed to create domain for 'model_id' to filter models that
     # is not abstract
@@ -106,3 +117,9 @@ class GenericSecurityModelRestrictionUser(models.Model):
 
         domain = [('model', 'not in', abstract_models)]
         return domain
+
+    @api.onchange('model_id')
+    def _onchange_model_id(self):
+        for record in self:
+            record.domain_simple = False
+            record.domain_code = False

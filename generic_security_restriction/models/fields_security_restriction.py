@@ -41,4 +41,7 @@ class FieldSecurity(models.Model):
                 rec.set_no_quick_create = False
                 rec.set_no_create_edit = False
 
-
+    @api.model_create_multi
+    def create(self, vals_lict):
+        self.env.registry.clear_cache()
+        return super(FieldSecurity, self).create(vals_lict)

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="report_access_restrict" model="ir.ui.view">
         <field name="name">ir.actions.report.access.restrict</field>
@@ -66,4 +66,4 @@
             </xpath>
         </field>
     </record>
-z</odoo>
+</odoo>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="view_generic_security_model_restriction_search" model="ir.ui.view">
         <field name="model">generic.security.model.restriction</field>
@@ -41,7 +41,8 @@
                             <field name="model_name"/>
                             <field name="active"/>
                         </group>
-                        <group name="group_root_perms" col="4">
+                        <group name="group_root_perms"
+                               col="4">
                             <field name="apply_mode_read"/>
                             <field name="apply_mode_write"/>
                             <field name="apply_mode_create"/>
@@ -69,5 +70,8 @@
         <field name="name">Generic Model Restrictions</field>
         <field name="res_model">generic.security.model.restriction</field>
     </record>
-    <menuitem action="action_generic_security_model_restriction_view" id="menu_generic_security_model_restriction_view" parent="base.menu_security" sequence="42"/>
+    <menuitem action="action_generic_security_model_restriction_view"
+              id="menu_generic_security_model_restriction_view"
+              parent="base.menu_security"
+              sequence="42"/>
 </odoo>
