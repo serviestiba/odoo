@@ -30,7 +30,7 @@ class IrRule(models.Model):
             [('active', '=', True)],
             expression.OR([
                 [('user_ids.id', '=', self.env.user.id)],
-                [('group_ids.users.id', '=', self.env.user.id)],
+                [('group_ids.user_ids.id', '=', self.env.user.id)],
             ]),
         ])
 
