@@ -13,39 +13,11 @@ class Groups(models.Model):
         help='Only selected menus will be available for this group')
     hidden_report_ids = fields.Many2many(
         'ir.actions.report', 'ir_actions_report_res_groups_hidden_reports_rel',
-        'group_id', 'report_id', string='Restrict Access Reoprts')
-    hidden_actions_ids = fields.Many2many(
-        'ir.actions.act_window',
-        'ir_actions_act_window_res_groups_hidden_actions_rel',
-        'group_id', 'act_window_id', string='Restrict Access Actions')
-    hidden_server_actions_ids = fields.Many2many(
-        'ir.actions.server',
-        'ir_actions_server_res_groups_hidden_actions_rel',
-        'group_id', 'act_server_id',
-        string='Restrict Access Contextual Server Actions')
-    model_restriction_ids = fields.Many2many(
-        comodel_name='generic.security.model.restriction',
-        relation='generic_security_model_restriction__group__rel',
-        column1='group_id',
-        column2='restriction_id',
-        help="Apply specified access restrictions to this group.")
-    allowed_use_debug_mode = fields.Boolean(
-        help="Allow use debug mode to this group.")
+        'group_id', 'report_id', string='Restrict Access Reports')
 
     @api.model_create_multi
     def create(self, vals_list):
-        for values in vals_list:
-            self.env.registry.clear_cache()
-            if 'allowed_use_debug_mode' in values:
-                self.env.registry.clear_cache()
-            if 'users' in values:
-                self.env.registry.clear_cache()
-        return super(Groups, self).create(vals_list)
+        return super().create(vals_list)
 
     def write(self, values):
-        self.env.registry.clear_cache()
-        if 'allowed_use_debug_mode' in values:
-            self.env.registry.clear_cache()
-        if 'users' in values:
-            self.env.registry.clear_cache()
-        return super(Groups, self).write(values)
+        return super().write(values)
