@@ -36,10 +36,11 @@ class PurchaseOrder(models.Model):
         "amount_untaxed",
     )
     def _compute_tax_totals(self):
-        AccountTax = self.env["account.tax"]
         for order in self:
+            order_lines = order.order_line.filtered(
+                lambda x: not x.display_type and x.status not in ["cancel"]
+            )
             order.tax_totals = 0
-
 
 class ShPurchaseAgreement(models.Model):
     _inherit = "purchase.agreement"
