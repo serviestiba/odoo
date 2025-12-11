@@ -36,14 +36,23 @@ class PurchaseOrder(models.Model):
         "amount_untaxed",
     )
     def _compute_tax_totals(self):
+        AccountTax = self.env["account.tax"]
         for order in self:
+            # Filtramos las líneas que realmente cuentan para impuestos
             order_lines = order.order_line.filtered(
                 lambda x: not x.display_type and x.status not in ["cancel"]
             )
-            order.tax_totals = self.env["account.tax"]._prepare_tax_totals(
-                [x._convert_to_tax_base_line_dict() for x in order_lines],
-                order.currency_id or order.company_id.currency_id,
+
+            base_lines = [line._convert_to_tax_base_line_dict() for line in order_lines]
+
+            tax_totals = AccountTax._get_tax_totals_summary(
+                base_lines=base_lines,
+                currency=order.currency_id or order.company_id.currency_id,
+                company=order.company_id,
+                cash_rounding=None,  # normalmente None para compras
             )
+
+            order.tax_totals = tax_totals
 
 
 class ShPurchaseAgreement(models.Model):
