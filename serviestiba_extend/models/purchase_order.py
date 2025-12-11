@@ -28,19 +28,7 @@ class PurchaseOrder(models.Model):
             }
         )
 
-    @api.depends_context("lang")
-    @api.depends(
-        "order_line.tax_ids",
-        "order_line.price_subtotal",
-        "amount_total",
-        "amount_untaxed",
-    )
-    def _compute_tax_totals(self):
-        for order in self:
-            order_lines = order.order_line.filtered(
-                lambda x: not x.display_type and x.status not in ["cancel"]
-            )
-            order.tax_totals = 0
+
 
 class ShPurchaseAgreement(models.Model):
     _inherit = "purchase.agreement"
