@@ -144,7 +144,7 @@ class ShPurchaseAgreement(models.Model):
                         'product_qty': rec_line.sh_qty,
                         'status': 'draft',
                         'agreement_id': rec.id,
-                        'product_uom': rec_line.sh_product_id.uom_id.id,
+                        'product_uom_id': rec_line.sh_product_id.uom_id.id,
                         'price_unit': rec_line.sh_price_unit,
                     }
                     line_ids.append((0, 0, line_vals))
@@ -199,7 +199,7 @@ class ShPurchaseAgreement(models.Model):
             'res_model': 'purchase.order.line',
             'view_type': 'form',
             'view_mode': 'list,pivot,form',
-            'views': [(list_id, 'tree'), (pivot_id, 'pivot'), (form_id, 'form')],
+            'views': [(list_id, 'list'), (pivot_id, 'pivot'), (form_id, 'form')],
             'domain': [('agreement_id', '=', self.id), ('state', 'not in', ['cancel']), ('order_id.selected_order', '=', False)],
             'context': {'search_default_groupby_product': 1},
             'target': 'current'
