@@ -26,13 +26,13 @@ class CreateMultiRFQ(models.TransientModel):
                 for rec_line in active_tender_id.sh_purchase_agreement_line_ids:
                     line_vals = {}
                     line_vals.update({
-                        'name':rec_line.sh_product_id.name_get()[0][1],
+                        'name':rec_line.sh_product_id.name,
                         'currency_id':self.env.user.partner_id.property_purchase_currency_id.id or self.env.company.currency_id.id or False,
                         'product_id': rec_line.sh_product_id.id,
                         'agreement_id': active_tender_id.id,
                         'status': 'draft',
                         'product_qty': rec_line.sh_qty,
-                        'product_uom': rec_line.sh_product_id.uom_id.id,
+                        'product_uom_id': rec_line.sh_product_id.uom_id.id,
                         'price_unit': 0.0,
                         'date_planned':current_date,
                         'state':'sent'
