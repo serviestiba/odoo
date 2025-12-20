@@ -12,7 +12,7 @@
 				<field name="scheduled_date" readonly="1"/>
 			</xpath>
 			<xpath expr="//button[@name='action_cancel']" position="before">
-				<button name="action_return_draft" string="Devolver" type="object" states="assigned,confirmed" class="btn btn-primary" groups="serviestiba_extend.group_return_picking_draft_manager"/>
+				<button name="action_return_draft" string="Devolver" type="object" class="btn btn-primary" groups="serviestiba_extend.group_return_picking_draft_manager"/>
 			</xpath>
 		</field>
 	</record>

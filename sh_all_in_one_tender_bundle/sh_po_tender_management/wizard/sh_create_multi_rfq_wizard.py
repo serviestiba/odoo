@@ -33,7 +33,7 @@ class CreateMultiRFQ(models.TransientModel):
                         'agreement_id': active_tender_id.id,
                         'status': 'draft',
                         'product_qty': rec_line.sh_qty,
-                        'product_uom': rec_line.sh_product_id.uom_id.id,
+                        'product_uom_id': rec_line.sh_product_id.uom_id.id,
                         'price_unit': 0.0,
                         'date_planned':current_date,
                         'state':'sent'
@@ -55,7 +55,7 @@ class CreateMultiRFQ(models.TransientModel):
                     'name': _('Request For Quotations'),
                     'type': 'ir.actions.act_window',
                     'res_model': 'purchase.order',
-                    'view_mode': 'tree,form',
+                    'view_mode': 'list,form',
                     'domain':[('id','in',order_ids)],
                     'target': 'current'
                 }

@@ -13,14 +13,14 @@
     <record id="view_generic_security_model_restriction_tree" model="ir.ui.view">
         <field name="model">generic.security.model.restriction</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="model_id"/>
                 <field name="apply_mode_read"/>
                 <field name="apply_mode_write"/>
                 <field name="apply_mode_create"/>
                 <field name="apply_mode_unlink"/>
-            </tree>
+            </list>
         </field>
     </record>
     <record id="view_generic_security_model_restriction_form" model="ir.ui.view">
@@ -50,17 +50,8 @@
                         </group>
                         <group colspan="4" string="Domain">
                             <field name="domain_type" colspan="1"/>
-                            <field name="domain_simple"
-                                   attrs="{'invisible': [('domain_type', '!=', 'simple')], 'required': [('domain_type', '=', 'simple')]}"
-                                   nolabel="1"
-                                   colspan="2"
-                                   widget="domain" options="{'model': 'model_name'}"/>
-                            <field name="domain_code"
-                                   attrs="{'invisible': [('domain_type', '!=', 'code')], 'required': [('domain_type', '=', 'code')]}"
-                                   nolabel="1"
-                                   colspan="2"
-                                   widget="ace"
-                                   options="{'mode': 'python'}"/>
+                            <field name="domain_simple" nolabel="1" colspan="2" widget="domain" options="{'model': 'model_name'}" invisible="domain_type != 'simple'" required="domain_type == 'simple'"/>
+                            <field name="domain_code" nolabel="1" colspan="2" widget="ace" options="{'mode': 'python'}" invisible="domain_type != 'code'" required="domain_type == 'code'"/>
                         </group>
                     </group>
                     <notebook>

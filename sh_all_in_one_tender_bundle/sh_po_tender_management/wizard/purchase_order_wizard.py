@@ -62,7 +62,7 @@ class ShPurchaseOrderWizard(models.TransientModel):
                         'name': order_line.product_id.name,
                         'date_planned': order_line.date_planned,
                         'status': 'draft',
-                        'product_uom': order_line.product_id.uom_id.id,
+                        'product_uom_id': order_line.product_id.uom_id.id,
                         'product_qty': order_line.product_qty,
                         'price_unit': order_line.price_unit,
                         'taxes_id': [(6, 0, order_line.taxes_id.ids)]
@@ -79,7 +79,7 @@ class ShPurchaseOrderWizard(models.TransientModel):
                     'type': 'ir.actions.act_window',
                     'res_model': 'purchase.order',
                     'view_type': 'form',
-                    'view_mode': 'tree,form',
+                    'view_mode': 'list,form',
                     'domain': [('id', 'in', order_ids), ('selected_order', '=', True)],
                     'target': 'current'
                 }
@@ -110,7 +110,7 @@ class ShPurchaseOrderWizard(models.TransientModel):
                                 'name': order_line.product_id.name,
                                 'date_planned': order_line.date_planned,
                                 'status': 'draft',
-                                'product_uom': order_line.product_id.uom_id.id,
+                                'product_uom_id': order_line.product_id.uom_id.id,
                                 'product_qty': order_line.product_qty,
                                 'price_unit': order_line.price_unit,
                                 'taxes_id': [(6, 0, order_line.taxes_id.ids)]
@@ -127,7 +127,7 @@ class ShPurchaseOrderWizard(models.TransientModel):
                     'type': 'ir.actions.act_window',
                     'res_model': 'purchase.order',
                     'view_type': 'form',
-                    'view_mode': 'tree,form',
+                    'view_mode': 'list,form',
                     'domain': [('id', 'in', order_ids), ('selected_order', '=', True)],
                     'target': 'current'
                 }
