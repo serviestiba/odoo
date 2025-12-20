@@ -319,20 +319,20 @@ class Report(models.TransientModel):
         return self
 
     def action_download(self):
+        self.ensure_one()
+        # Odoo 19+ (OWL) no longer provides a 'file_download' client action in the JS registry.
+        # Use a standard /web/content download URL instead.
+        url = "/web/content/?model=%s&id=%s&field=datas&download=true&filename_field=filename" % (
+            self._name,
+            self.id,
+        )
         return {
-            "type": "ir.actions.client",
-            "tag": "file_download",
-            "params": {
-                "model": self._name,
-                "field": "datas",
-                "id": self.id,
-                "filename": self.filename,
-                "filename_field": "filename",
-                "download": True,
-                "mimetype": self.mimetype,
-            },
+            "type": "ir.actions.act_url",
+            "url": url,
+            "target": "self",
         }
 
+    
     def action_preview_pdf(self, title=None):
         return {
             "type": "ir.actions.act_window",

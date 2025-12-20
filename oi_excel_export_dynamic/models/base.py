@@ -75,7 +75,7 @@ class Base(models.AbstractModel):
             })
         parameters = {}
         if report.lines:            
-            safe_eval(report.lines, localdict, mode='exec', nocopy=True)
+            safe_eval(report.lines, localdict, mode='exec')
             data = localdict.get('result', [])
             parameters = localdict.get('parameters') or {}
             rows = localdict.get('rows') or []
@@ -91,7 +91,7 @@ class Base(models.AbstractModel):
         for col in list(col_line_ids):
             if col.visible_condition:
                 localdict['result'] = None
-                safe_eval(col.visible_condition, localdict, mode='exec', nocopy=True)
+                safe_eval(col.visible_condition, localdict, mode='exec')
                 if not localdict.get('result'):
                     col_line_ids -= col                    
                     
@@ -109,7 +109,7 @@ class Base(models.AbstractModel):
                     'no' : report.crosstab and _rowno or no
                     })
                 if col.value:
-                    safe_eval(col.value, localdict, mode='exec', nocopy=True)
+                    safe_eval(col.value, localdict, mode='exec')
                 result = localdict.get('result')
                 result_seq = localdict.get('result_seq') or 0
                 vals[col.name] = result
