@@ -14,7 +14,7 @@ class IrActionsReport(models.Model):
 
     def report_action(self, docids, data=None, config=True):
         hidden_reports = self.env.user.hidden_reports_ids
-        hidden_reports += self.env.user.groups_id.mapped('hidden_report_ids')
+        hidden_reports += self.env.user.group_ids.mapped('hidden_report_ids')
 
         result = super(IrActionsReport, self).report_action(
             docids, data=data, config=config)

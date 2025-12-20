@@ -60,7 +60,7 @@ class IrUiView(models.Model):
 
         if field_security:
             self.env.registry.clear_cache()
-        if not self.env.user.groups_id & field_security.group_ids:
+        if not self.env.user.group_ids & field_security.group_ids:
             return result
 
         if field_security.set_invisible:
@@ -110,7 +110,7 @@ class IrUiView(models.Model):
             ]
         )
 
-        if not self.env.user.groups_id & fields_hide_stat_button.group_ids:
+        if not self.env.user.group_ids & fields_hide_stat_button.group_ids:
             return None
 
         if fields_hide_stat_button:

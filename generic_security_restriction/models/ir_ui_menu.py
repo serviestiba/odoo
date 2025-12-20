@@ -24,7 +24,7 @@ class IrUiMenu(models.Model):
             return menus
 
         access_group_only_menus = self.env.user.mapped(
-            'groups_id.menu_access_only')
+            'group_ids.menu_access_only')
         access_user_only_menus = self.env.user.access_only_menu_ids
 
         # Collect child action menus
@@ -52,7 +52,7 @@ class IrUiMenu(models.Model):
         menus = menus.filtered(
             lambda menu: (
                 menu not in self.env.user.mapped(
-                    'groups_id.menu_access_restrict') and
+                    'group_ids.menu_access_restrict') and
                 menu not in self.env.user.hidden_menu_ids))
 
         return menus

@@ -37,7 +37,7 @@ class ResUsers(models.Model):
             self.env['ir.ui.menu'].clear_caches()
             if 'allowed_use_debug_mode' in user:
                 self.env.registry.clear_cache()
-            if 'groups_id' in user:
+            if 'group_ids' in user:
                 self.env.registry.clear_cache()
         return users
 
@@ -46,7 +46,7 @@ class ResUsers(models.Model):
         self.env.registry.clear_cache()
         if 'allowed_use_debug_mode' in values:
             self.env.registry.clear_cache()
-        if 'groups_id' in values:
+        if 'group_ids' in values:
             self.env.registry.clear_cache()
         return res
 
@@ -57,7 +57,7 @@ class ResUsers(models.Model):
         if user.allowed_use_debug_mode:
             return True
         # Check if allowed debug mode by groups
-        if bool(user.groups_id.filtered(
+        if bool(user.group_ids.filtered(
                 lambda g: g.allowed_use_debug_mode)):
             return True
         return False
