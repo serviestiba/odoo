@@ -81,11 +81,7 @@
                     <field name="sh_notes" string="Terms &amp; Conditions" class="oe_inline" placeholder="Define your terms and conditions ..."/>
                     <div class="oe_clear"/>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" widget="mail_followers"/>
-                    <field name="activity_ids" widget="mail_activity"/>
-                    <field name="message_ids" widget="mail_thread"/>
-                </div>
+                <chatter/>
             </form>
         </field>
     </record>
