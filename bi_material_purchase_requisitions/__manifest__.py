@@ -99,8 +99,6 @@ odoo Product Requisitions on RFQ Product Requisitions on Tender Product Requisit
 
 """,
     'author': 'BrowseInfo',
-    'price': 49,
-    'currency': "EUR",
     'website': 'https://www.browseinfo.in',
     'depends': ['sale_management','purchase','stock','hr','sale_stock','purchase_stock'],
     'data': [
@@ -112,9 +110,6 @@ odoo Product Requisitions on RFQ Product Requisitions on Tender Product Requisit
             'edi/purchase_requisition_template_view.xml',
     ],
     'license':'OPL-1',
-    'installable': True,
-    'auto_install': False,
-    'live_test_url':'https://youtu.be/gCmU_r0D8lk',
     "images":['static/description/Banner.png'],
 }
 

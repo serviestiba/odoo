@@ -5,7 +5,7 @@
 
 {
     "name": "Serviestiba Extend Features",
-    "version": "16.1",
+    "version": "19.1",
     "description": """ Changes for Serviestiba Features
     """,
     "category": "Purchase",
@@ -20,7 +20,5 @@
         "views/stock_picking_view.xml",
         "views/purchase_template.xml",
     ],
-    "application": False,
-    "installable": True,
     "license": "OPL-1",
 }

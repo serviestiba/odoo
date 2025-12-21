@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of BrowseInfo. See LICENSE file for full copyright and licensing details.
 
-from odoo.exceptions import Warning, ValidationError
+from odoo.exceptions import ValidationError
 from odoo import models, fields, exceptions, api, _
 import io
 import tempfile

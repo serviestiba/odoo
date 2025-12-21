@@ -17,24 +17,24 @@
                                 <label for="enable_web_push_notification"/>
                             </div>
                         </div>
-                        <div id="firebase_other_setting" class="col-xs-12 col-md-12 o_setting_box" attrs="{'invisible':[('enable_web_push_notification','=',False)]}">
+                        <div id="firebase_other_setting" class="col-xs-12 col-md-12 o_setting_box">
                             <div class="o_setting_left_pane">
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="api_key" class="col-2 col-lg-2 o_light_label" />
-                                <field name="api_key" attrs="{'required':[('enable_web_push_notification','=',True)]}"/>
+                                <field name="api_key"/>
                             </div>
                             <div class="o_setting_left_pane">
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="vapid" class="col-2 col-lg-2 o_light_label"/>
-                                <field name="vapid" attrs="{'required':[('enable_web_push_notification','=',True)]}"/>
+                                <field name="vapid"/>
                             </div>
                             <div class="o_setting_left_pane">
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="config_details" class="col-2 col-lg-2 o_light_label"/>
-                                <field name="config_details" attrs="{'required':[('enable_web_push_notification','=',True)]}"/>
+                                <field name="config_details"/>
                             </div>
                         </div>
                         <div id="firebase_setting" class="col-xs-12 col-md-12 o_setting_box">

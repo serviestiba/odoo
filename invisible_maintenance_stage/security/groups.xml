@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='UTF-8'?>
 <odoo>
     <data>
         <record id="maintenance_stage_column_group1" model="res.groups">
 		    <field name="name">Refer</field>
-	        <field name="category_id" ref="base.module_category_usability"/>
-		</record>
+	        </record>
 
         <record id="maintenance_stage_column_group2" model="res.groups">
 		    <field name="name">Taller</field>
-	        <field name="category_id" ref="base.module_category_usability"/>
-		</record>
+	        </record>
     </data>
 </odoo>
