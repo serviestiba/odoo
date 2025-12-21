@@ -65,7 +65,7 @@ class ShPurchaseOrderWizard(models.TransientModel):
                         'product_uom_id': order_line.product_id.uom_id.id,
                         'product_qty': order_line.product_qty,
                         'price_unit': order_line.price_unit,
-                        'taxes_id': [(6, 0, order_line.taxes_id.ids)]
+                        'tax_ids': [(6, 0, order_line.tax_ids.ids)]
                     }
                     purchase_order_line = self.env['purchase.order.line'].sudo().create(
                         line_vals)
@@ -113,7 +113,7 @@ class ShPurchaseOrderWizard(models.TransientModel):
                                 'product_uom_id': order_line.product_id.uom_id.id,
                                 'product_qty': order_line.product_qty,
                                 'price_unit': order_line.price_unit,
-                                'taxes_id': [(6, 0, order_line.taxes_id.ids)]
+                                'tax_ids': [(6, 0, order_line.tax_ids.ids)]
                             }
                             line_ids.append((0, 0, order_line_vals))
                     order_id.order_line = line_ids
