@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 {
     'name': 'Invisible Maintenance Stage',
-    'version': '19.1',
+    'version': '19.2',
     'author': 'IDCA',
     'summary': 'Maintenance stage by group',
     'website': '',
