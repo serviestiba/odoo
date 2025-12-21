@@ -14,7 +14,6 @@
     'depends': [
         'base',
         'web',
-        'generic_mixin',
     ],
     'data': [
         'security/ir.model.access.csv',
