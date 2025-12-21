@@ -297,7 +297,7 @@ class ImportTender(models.Model):
                                                         'product_qty': tender_line.sh_qty,
                                                         'status': 'draft',
                                                         'agreement_id': tender.id,
-                                                        'product_uom': tender_line.sh_product_id.uom_id.id,
+                                                        'product_uom_id': tender_line.sh_product_id.uom_id.id,
                                                         'price_unit': tender_line.sh_price_unit,
                                                     }
                                                     line_ids.append((0, 0, line_vals))

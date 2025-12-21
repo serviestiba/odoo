@@ -3,7 +3,7 @@
 {
     "name": "Client Action File Download",
     "summary": "Client Action File Download",
-    "version": "16.0.1.1.1",
+    "version": "19.0.1.1.1",
     'category': 'Extra Tools',
     "website": "https://www.open-inside.com",
 	"description": """
@@ -15,21 +15,16 @@
 	],
     "author": "Openinside",
     "license": "OPL-1",
-    "price" : 9,
-    "currency": 'USD',
-    "installable": True,
+
     "depends": [
         'web'
     ],
     "data": [
         
     ],
-    'installable': True,
-    'auto_install': True,    
-    'odoo-apps' : True,
     'assets': {
         'web.assets_backend': [
-            'oi_action_file/static/src/js/action_file_download.js',
+            #'oi_action_file/static/src/js/action_file_download.js',
         ],
 
     },    

@@ -24,7 +24,7 @@
     'qweb': [
     ],
     "auto_install": False,
-    "installable": True,
+    "installable": False,
     "live_test_url": 'https://youtu.be/97nhyGxlo8A',
     "images": ["static/description/Banner.gif"],
 	'license':'OPL-1',

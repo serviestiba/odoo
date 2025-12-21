@@ -32,23 +32,20 @@ class Groups(models.Model):
     allowed_use_debug_mode = fields.Boolean(
         help="Allow use debug mode to this group.")
 
-    @api.model
-    def create(self, values):
-        self.env['ir.ui.menu'].clear_caches()
-        if 'allowed_use_debug_mode' in values:
-            self.env['res.users']._gsr_is_debug_mode_allowed.clear_cache(
-                self.env['res.users'])
-        if 'users' in values:
-            self.env['res.users']._gsr_is_debug_mode_allowed.clear_cache(
-                self.env['res.users'])
-        return super(Groups, self).create(values)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for values in vals_list:
+            self.env.registry.clear_cache()
+            if 'allowed_use_debug_mode' in values:
+                self.env.registry.clear_cache()
+            if 'users' in values:
+                self.env.registry.clear_cache()
+        return super(Groups, self).create(vals_list)
 
     def write(self, values):
-        self.env['ir.ui.menu'].clear_caches()
+        self.env.registry.clear_cache()
         if 'allowed_use_debug_mode' in values:
-            self.env['res.users']._gsr_is_debug_mode_allowed.clear_cache(
-                self.env['res.users'])
+            self.env.registry.clear_cache()
         if 'users' in values:
-            self.env['res.users']._gsr_is_debug_mode_allowed.clear_cache(
-                self.env['res.users'])
+            self.env.registry.clear_cache()
         return super(Groups, self).write(values)
