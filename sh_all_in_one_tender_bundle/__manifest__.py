@@ -26,7 +26,7 @@
         'sh_po_tender_management/security/sh_purchase_tender_security.xml',
         'sh_po_tender_management/security/ir.model.access.csv',
         'sh_po_tender_management/data/sh_purchase_agreement_data.xml',
-        'sh_po_tender_management/views/res_config_seetings.xml',
+        #'sh_po_tender_management/views/res_config_seetings.xml',
         'sh_po_tender_management/views/sh_purchase_agreement_type_view.xml',
         'sh_po_tender_management/views/res_users.xml',
         'sh_po_tender_management/views/sh_purchase_agreement_view.xml',
