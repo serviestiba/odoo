@@ -24,7 +24,7 @@
     "data": [                 
         "security/ir.model.access.csv",
         "views/sh_user_push_notification_views.xml",
-        "views/res_config_setting.xml",
+        #"views/res_config_setting.xml",
     ],
     'assets': {
         'web.assets_backend': [
