@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -148,7 +148,6 @@ msgstr ""
 #. module: generic_security_restriction
 #. odoo-python
 #: code:addons/generic_security_restriction/models/generic_security_model_restriction.py:0
-#, python-format
 msgid ""
 "Cannot parse domain for rule %(rule)s is not valid!\n"
 "%(domain)s"
@@ -200,7 +199,6 @@ msgstr ""
 #. module: generic_security_restriction
 #. odoo-python
 #: code:addons/generic_security_restriction/models/generic_security_model_restriction.py:0
-#, python-format
 msgid ""
 "Domain for rule %(rule)s is not valid!\n"
 "%(domain)s"
@@ -255,10 +253,6 @@ msgstr ""
 
 #. module: generic_security_restriction
 #: model:ir.model.fields,field_description:generic_security_restriction.field_generic_security_restriction_field__group_ids
-#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_act_window__restrict_group_ids
-#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_server__restrict_group_ids
-#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_cron__restrict_group_ids
-#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_ui_menu__restrict_group_ids
 #: model_terms:ir.ui.view,arch_db:generic_security_restriction.view_generic_security_model_restriction_form
 msgid "Groups"
 msgstr ""
@@ -301,10 +295,18 @@ msgid "Hidden menus"
 msgstr ""
 
 #. module: generic_security_restriction
-#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_report__hide_for_group_ids
-#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_report__hide_for_user_ids
 #: model:ir.model.fields,field_description:generic_security_restriction.field_res_users__hidden_reports_ids
 msgid "Hidden print reports"
+msgstr ""
+
+#. module: generic_security_restriction
+#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_report__hide_for_group_ids
+msgid "Hidden print reports for Groups"
+msgstr ""
+
+#. module: generic_security_restriction
+#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_report__hide_for_user_ids
+msgid "Hidden print reports for Users"
 msgstr ""
 
 #. module: generic_security_restriction
@@ -360,12 +362,6 @@ msgstr ""
 #. module: generic_security_restriction
 #: model:ir.model.fields,help:generic_security_restriction.field_generic_security_restriction_field__set_no_create
 msgid "It is no_quick_create and no_create_edit combined."
-msgstr ""
-
-#. module: generic_security_restriction
-#: model:ir.model.fields,field_description:generic_security_restriction.field_generic_security_model_restriction____last_update
-#: model:ir.model.fields,field_description:generic_security_restriction.field_generic_security_restriction_field____last_update
-msgid "Last Modified on"
 msgstr ""
 
 #. module: generic_security_restriction
@@ -465,6 +461,14 @@ msgstr ""
 #. module: generic_security_restriction
 #: model:ir.model.fields,field_description:generic_security_restriction.field_res_groups__hidden_report_ids
 msgid "Restrict Access Reoprts"
+msgstr ""
+
+#. module: generic_security_restriction
+#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_act_window__restrict_group_ids
+#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_server__restrict_group_ids
+#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_cron__restrict_group_ids
+#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_ui_menu__restrict_group_ids
+msgid "Restricted Groups"
 msgstr ""
 
 #. module: generic_security_restriction

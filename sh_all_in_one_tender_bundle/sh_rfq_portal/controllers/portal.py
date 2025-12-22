@@ -5,10 +5,10 @@ import base64
 from collections import OrderedDict
 from odoo import http
 from odoo.http import request
-from odoo.tools import image_process
+from odoo.tools.image import image_process
 from odoo.tools.translate import _
 from odoo.addons.portal.controllers.portal import pager as portal_pager, CustomerPortal
-from odoo.addons.web.controllers.main import Binary
+from odoo.addons.web.controllers.binary import Binary
 import json
 from odoo.exceptions import UserError,AccessError, MissingError
 

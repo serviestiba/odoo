@@ -15,8 +15,8 @@
 						</group>
 						<group>
 							<field name="sequence" />
-							<field name="crosstabloc" attrs="{'invisible' : [('crosstab','=', False)],'required' : [('crosstab','=', True)]}" />
-							<field name="show_title" attrs="{'invisible' : [('crosstab','=', False)]}" />
+							<field name="crosstabloc" />
+							<field name="show_title" />
 						</group>
 					</group>
 					<group string="Value">
@@ -34,7 +34,7 @@
 		<field name="name">oi_excel_export.line.tree</field>
 		<field name="model">oi_excel_export.line</field>
 		<field name="arch" type="xml">
-			<tree>
+			<list>
 				<field name="sequence" widget="handle" />
 				<field name="name" />
 				<field name="value" />
@@ -42,7 +42,7 @@
 				<field name="show_title" />
 				<field name="visible_condition" />
 
-			</tree>
+			</list>
 		</field>
 	</record>
 

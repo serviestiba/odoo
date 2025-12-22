@@ -11,10 +11,8 @@
     "author": "Openinside",
     "license": "OPL-1",
     'website': "https://www.open-inside.com",
-    "price" : 27,
-    "currency": 'USD',
     'category': 'Extra Tools',
-    'version': "16.0.1.1.14",
+    'version': "19.0.1.1.1",
 
     # any module necessary for this one to work correctly
     'depends': ['oi_excel_export'],
@@ -27,8 +25,6 @@
         'view/menu.xml'
         ],
     
-    'odoo-apps' : True,
-    'auto_install': True,
     'images':[
         'static/description/cover.png'
     ]     

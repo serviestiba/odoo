@@ -207,7 +207,7 @@ class TenderPortal(CustomerPortal):
                     'status': 'draft',
                     'name': line.sh_product_id.name,
                     'product_qty': line.sh_qty,
-                    'product_uom': line.sh_product_id.uom_id.id,
+                    'product_uom_id': line.sh_product_id.uom_id.id,
                     'price_unit': 0.0,
                 }
                 if purchase_tender.sh_agreement_deadline:

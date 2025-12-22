@@ -13,7 +13,7 @@
 				</div>
 			</div>
 		</xpath>
-		<xpath expr="//table[@class='table table-sm o_main_table table-borderless mt-4']/tbody" position="replace">
+		<xpath expr="//table[@class='o_has_total_table table o_main_table table-borderless']/tbody" position="replace">
 			<tbody>
 				<t t-set="current_subtotal" t-value="0"/>
 				<t t-foreach="o.order_line" t-as="line">
@@ -47,7 +47,8 @@
 								<span t-field="line.name"/>
 							</td>
 							<t t-set="current_section" t-value="line"/>
-							<t t-set="current_subtotal" t-value="0"/></t>
+							<t t-set="current_subtotal" t-value="0"/>
+						</t>
 						<t t-if="line.display_type == 'line_note'">
 							<td colspan="99" id="note">
 								<span t-field="line.name"/>

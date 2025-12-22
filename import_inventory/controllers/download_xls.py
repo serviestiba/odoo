@@ -2,8 +2,7 @@
 # Part of BrowseInfo. See LICENSE file for full copyright and licensing details.
 
 from odoo import http
-from odoo.http import request
-from odoo.addons.web.controllers.main import content_disposition
+from odoo.http import request, content_disposition
 import base64
 import os, os.path
 import csv
