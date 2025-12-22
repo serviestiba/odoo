@@ -13,6 +13,9 @@
 			<xpath expr="//button[@name='button_cancel']" position="replace">
 				<button name="button_cancel" string="Cancel" type="object" data-hotkey="x" />
 			</xpath>
+			<xpath expr="/form//field[@name='tax_totals']" position="replace">
+				<field name="amount_total_cc" string="Total"/>
+			</xpath>
 		</field>
 	</record>
 	<record id="serviestiba_sh_purchase_agreement_form_view" model="ir.ui.view">

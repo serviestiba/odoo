@@ -6,9 +6,9 @@
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
         <field name="arch" type="xml">
-            <xpath expr="//div[@name=&quot;purchase_setting_container&quot;]" position="after">
+            <xpath expr="//block[@name='invoicing_settings_container']" position="before">
                 <h2>Vendor Sign up Configuration</h2>
-                <div class="row mt16 o_settings_container">
+                <block class="row mt16 o_settings_container">
                     <div class="col-12 col-lg-offset-6 col-lg-6 o_setting_box">
                         <div class="o_setting_left_pane">
                             <field name="is_enable_vendor_notification"/>
@@ -20,23 +20,25 @@
                             <field name="user_ids" widget="many2many_tags" domain="[('share', '=', False)]"/>
                         </div>
                     </div>
-                    
-                     <div class="col-12 col-lg-offset-6 col-lg-6 o_setting_box">
+
+                    <div class="col-12 col-lg-offset-6 col-lg-6 o_setting_box">
                         <div class="o_setting_left_pane">
                             <field name="is_enable_auto_portal_user"/>
                             <field name="is_enable_company_portal_user"/>
                             <field name="is_enable_company_contact_portal_user"/>
                         </div>
                         <div class="o_setting_right_pane">
-                            <label for="is_enable_auto_portal_user"/><br/>
-                            <label for="is_enable_company_portal_user" style="margin-top: 5px;"/><br/>
+                            <label for="is_enable_auto_portal_user"/>
+                            <br/>
+                            <label for="is_enable_company_portal_user" style="margin-top: 5px;"/>
+                            <br/>
                             <label for="is_enable_company_contact_portal_user" style="margin-top: 7px;"/>
                         </div>
                     </div>
-                   
-                </div>
-                </xpath>
-                
+
+                </block>
+            </xpath>
+
         </field>
     </record>
 </odoo>
