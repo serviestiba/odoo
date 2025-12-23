@@ -1,19 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
+    <!-- Purchase Agreement form view -->
     <record id="sh_purchase_agreement_form_view" model="ir.ui.view">
         <field name="name">sh.purchase.agreement.form.view</field>
         <field name="model">purchase.agreement</field>
         <field name="arch" type="xml">
             <form string="Purchase Tender">
                 <header>
-                    <button name="action_confirm" string="Confirm" type="object" class="oe_highlight" groups="sh_all_in_one_tender_bundle.sh_purchase_tender_manager"/>
-                    <button name="action_new_quotation" string="New Quotation" type="object" class="oe_highlight"/>
-                    <button name="action_validate" string="Validate" type="object" class="oe_highlight"/>
-                    <button name="action_close" string="Close" type="object" class="oe_highlight"/>
-                    <button name="action_analyze_rfq" string="Analyze RFQ" type="object" class="oe_highlight"/>
-                    <button name="action_set_to_draft" string="Set To Draft" type="object"/>
+                    <button name="action_confirm" string="Confirm" type="object" class="oe_highlight" groups="sh_all_in_one_tender_bundle.sh_purchase_tender_manager" invisible="state in ['confirm','bid_selection','closed','cancel']"/>
+                    <button name="action_new_quotation" string="New Quotation" type="object" class="oe_highlight" invisible="state in ['draft','bid_selection','closed','cancel']"/>
+                    <button name="action_validate" string="Validate" type="object" class="oe_highlight" invisible="state in ['draft','bid_selection','closed','cancel']"/>
+                    <button name="action_close" string="Close" type="object" class="oe_highlight" invisible="state in ['draft','confirm','closed','cancel']"/>
+                    <button name="action_analyze_rfq" string="Analyze RFQ" type="object" class="oe_highlight" invisible="state in ['draft','confirm','closed','cancel']"/>
+                    <button name="action_set_to_draft" string="Set To Draft" type="object" invisible="state in ['draft','confirm','bid_selection']"/>
                     <button name="action_send_tender" string="Sent By Email" type="object"/>
-                    <button name="action_cancel" string="Cancel" type="object" class="btn btn-primary"/>
+                    <button name="action_cancel" string="Cancel" type="object" class="btn btn-primary" invisible="state in ['cancel']"/>
                     <button name="action_purchase_tender_xls" string="Export Xls" type="object" class="btn btn-primary"/>
                     <button name="sh_action_create_multiple_rfq" string="Create Multiple RFQ" type="object" class="btn-primary"/>
                     <button name="action_import_tl" string="Import Tender Lines" type="object" class="btn-primary" groups="sh_all_in_one_tender_bundle.sh_import_tender_line_group"/>
@@ -21,10 +22,10 @@
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        <button type="object" name="action_view_quote" class="oe_stat_button" icon="fa-pencil-square-o">
+                        <button type="object" name="action_view_quote" class="oe_stat_button" icon="fa-pencil-square-o" invisible="state in ['draft']">
                             <field name="rfq_count" widget="statinfo" string="Received Quotations"/>
                         </button>
-                        <button type="object" name="action_view_order" class="oe_stat_button" icon="fa-pencil-square-o">
+                        <button type="object" name="action_view_order" class="oe_stat_button" icon="fa-pencil-square-o" invisible="state in ['draft']">
                             <field name="order_count" widget="statinfo" string="Selected Orders"/>
                         </button>
                         <button type="object" name="action_view_documents" class="oe_stat_button" icon="fa-folder">
@@ -84,23 +85,25 @@
             </form>
         </field>
     </record>
+    <!-- Purchase Agreement tree view -->
     <record id="sh_purchase_agreement_tree_view" model="ir.ui.view">
         <field name="name">sh.purchase.agreement.tree.view</field>
         <field name="model">purchase.agreement</field>
         <field name="arch" type="xml">
-            <list string="Purchase Tender">
-                <field name="name"/>
-                <field name="sh_purchase_user_id"/>
-                <field name="sh_agreement_type"/>
-                <field name="sh_vender_id"/>
-                <field name="sh_agreement_deadline"/>
-                <field name="sh_order_date"/>
-                <field name="sh_delivery_date"/>
-                <field name="sh_source"/>
-                <field name="state"/>
+            <list string="Purchase Tender" decoration-info="state in ['draft','confirm']" decoration-muted="state in ['cancel','closed']" decoration-success="state in ['bid_selection']">
+                <field name="name" optional="show"/>
+                <field name="sh_purchase_user_id" optional="show"/>
+                <field name="sh_agreement_type" optional="show"/>
+                <field name="sh_vender_id" optional="show"/>
+                <field name="sh_agreement_deadline" optional="show"/>
+                <field name="sh_order_date" optional="show"/>
+                <field name="sh_delivery_date" optional="show"/>
+                <field name="sh_source" optional="show"/>
+                <field name="state" widget="badge" decoration-success="state == 'bid_selection'" decoration-warning="state == 'cancel' or state == 'closed'" decoration-info="state == 'draft' or state == 'confirm'" optional="show"/>
             </list>
         </field>
     </record>
+    <!-- Purchase Agreement menu action -->
     <record id="sh_purchase_agreement_action" model="ir.actions.act_window">
         <field name="name">Purchase Tender</field>
         <field name="type">ir.actions.act_window</field>
@@ -112,5 +115,8 @@
             </p>
         </field>
     </record>
+    <!-- Purchase Agreement search view -->
+
+    <!-- Purchase Agreement menu -->
     <menuitem id="sh_purchase_agreement_menu" name="Purchase Tender" parent="purchase.menu_procurement_management" action="sh_purchase_agreement_action"/>
 </odoo>
