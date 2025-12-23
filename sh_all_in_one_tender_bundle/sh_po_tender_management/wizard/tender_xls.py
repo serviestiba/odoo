@@ -107,7 +107,7 @@ class PurchaseAgreementXlsReport(models.TransientModel):
                 
                 for line in parent_record.sh_purchase_agreement_line_ids:
                     worksheet.write_merge(
-                        line_var, line_var, 0, 0,line.sh_product_id.name_get()[0][1])
+                        line_var, line_var, 0, 0,line.sh_product_id.name)
                     worksheet.write_merge(
                         line_var, line_var, 1, 1,line.sh_product_id.default_code or '')
                     worksheet.write_merge(line_var, line_var, 2, 2,
@@ -238,7 +238,7 @@ class PurchaseAgreementXlsReport(models.TransientModel):
                                                     line.name,
                                                     green_font)
                                 worksheet.write_merge(line_var, line_var, 1, 1,
-                                                    line.product_id.name_get()[0][1],
+                                                    line.product_id.name,
                                                     green_font)
                                 worksheet.write_merge(line_var, line_var, 2, 2,
                                                     line.product_id.default_code or '',
@@ -257,7 +257,7 @@ class PurchaseAgreementXlsReport(models.TransientModel):
                                                     line.name,
                                                     green_font_line)
                                 worksheet.write_merge(line_var, line_var, 1, 1,
-                                                    line.product_id.name_get()[0][1],
+                                                    line.product_id.name,
                                                     green_font_line)
                                 worksheet.write_merge(line_var, line_var, 2, 2,
                                                     line.product_id.default_code or '',
