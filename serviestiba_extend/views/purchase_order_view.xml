@@ -6,12 +6,12 @@
 		<field name="inherit_id" ref="purchase.purchase_order_form" />
 		<field name="arch" type="xml">
 			<xpath expr="//button[@name='print_quotation']" position="after">
-				<button name="action_purchase_reviewed" string="Reviewed" type="object" class="btn btn-primary"/>
-				<button name="action_purchase_preapprove" string="Pre Approve" type="object" class="btn btn-primary"/>
-				<button name="button_approve" type="object" string="Approve Order" class="oe_highlight" data-hotkey="z"/>
+				<button name="action_purchase_reviewed" invisible="state not in ['sent']" string="Reviewed" type="object" class="btn btn-primary"/>
+				<button name="action_purchase_preapprove" invisible="state not in ['reviewed']" string="Pre Approve" type="object" class="btn btn-primary"/>
+				<button name="button_approve" type="object" invisible="state not in ['preapprove']" string="Approve Order" class="oe_highlight" data-hotkey="z"/>
 			</xpath>
 			<xpath expr="//button[@name='button_cancel']" position="replace">
-				<button name="button_cancel" string="Cancel" type="object" data-hotkey="x" />
+				<button name="button_cancel" string="Cancel" invisible="state not in ['draft','to approve', 'sent', 'purchase', 'reviewed', 'preapprove']" type="object" data-hotkey="x"/>
 			</xpath>
 			<xpath expr="/form//field[@name='tax_totals']" position="replace">
 				<field name="amount_total_cc" string="Total"/>
