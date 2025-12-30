@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <odoo>
     <record model="ir.module.category" id="module_purchase_tender_category">
         <field name="name">Purchase Tender</field>
@@ -7,22 +7,20 @@
     </record>
     <record id="sh_purchase_tender_user" model="res.groups">
         <field name="name">User</field>
-        <field name="category_id" ref="module_purchase_tender_category" />
-    </record>
+        </record>
     <record id="sh_purchase_tender_manager" model="res.groups">
         <field name="name">Manager</field>
-        <field name="category_id" ref="module_purchase_tender_category" />
-        <field name="implied_ids" eval="[(4, ref('sh_purchase_tender_user'))]" />
+        <field name="implied_ids" eval="[(4, ref('sh_purchase_tender_user'))]"/>
     </record>
     <record model="ir.rule" id="purchase_tender_comp_rule">
         <field name="name">Purchase Tender multi-company</field>
-        <field name="model_id" ref="model_purchase_agreement" />
+        <field name="model_id" ref="model_purchase_agreement"/>
         <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
     </record>
 
     <record model="ir.rule" id="purchase_tender_line_comp_rule">
         <field name="name">Purchase Tender Line multi-company</field>
-        <field name="model_id" ref="model_purchase_agreement_line" />
+        <field name="model_id" ref="model_purchase_agreement_line"/>
         <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
     </record>
     <record id="sh_import_tender_group" model="res.groups">

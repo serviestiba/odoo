@@ -7,8 +7,8 @@
 		<field name="arch" type="xml">
 			<form>
 				<header>
-					<button name="create_action" type="object" string="Create Action" attrs="{'invisible' : [('action_id','!=', False)]}" />
-					<button name="remove_action" type="object" string="Remove Action" attrs="{'invisible' : [('action_id','=', False)]}" />
+					<button name="create_action" type="object" string="Create Action" />
+					<button name="remove_action" type="object" string="Remove Action" />
 				</header>
 				<sheet>
 					<div class="oe_button_box" name="button_box">
@@ -36,20 +36,20 @@
 					</group>
 					<group string="Column">
 						<field name="line_ids" nolabel="1" colspan="2">
-							<tree>
+							<list>
 								<field name="sequence" widget="handle" />
 								<field name="name" />								
 								<field name="value" />						
-								<field name="crosstabloc" attrs="{'invisible' : [('parent.crosstab','=', False)],'required' : [('parent.crosstab','=', True)]}" />	
+								<field name="crosstabloc" />	
 								<field name="show_title" />
 								<field name="visible_condition" />	
-							</tree>
+							</list>
 							<form>
 								<group>
 									<field name="sequence" />
 									<field name="name" />
-									<field name="crosstabloc" attrs="{'invisible' : [('parent.crosstab','=', False)],'required' : [('parent.crosstab','=', True)]}" />
-									<field name="show_title" attrs="{'invisible' : [('parent.crosstab','=', False)]}" />
+									<field name="crosstabloc" />
+									<field name="show_title" />
 								</group>		
 								<group string="Value">
 									<field name="value" nolabel="1" widget="ace" options="{'mode': 'python'}" colspan="2" />	
@@ -62,7 +62,7 @@
 					</group>
 					<group string="Images">
 						<field name="image_ids" nolabel="1" colspan="2">
-							<tree editable="bottom">
+							<list editable="bottom">
 								<field name="name" invisible="1" />								
 								<field name="data" filename="name" />
 								<field name="cell" />			
@@ -70,7 +70,7 @@
 								<field name="offset_y" />		
 								<field name="scale_x" />
 								<field name="scale_y" />
-							</tree>
+							</list>
 						</field>
 					</group>
 					
@@ -83,10 +83,10 @@
 		<field name="name">oi_excel_export.config.tree</field>
 		<field name="model">oi_excel_export.config</field>
 		<field name="arch" type="xml">
-			<tree>
+			<list>
 				<field name="name" />
 				<field name="model_id" />
-			</tree>
+			</list>
 		</field>
 	</record>
 

@@ -11,30 +11,30 @@
                         <field name="allowed_use_debug_mode"/>
                     </group>
                     <field name="hidden_menu_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden menus"/>
-                        </tree>
+                        </list>
                     </field>
                     <field name="access_only_menu_ids">
-                        <tree>
+                        <list>
                             <field name="display_name"
                                    string="Access only menus"/>
-                        </tree>
+                        </list>
                     </field>
                     <field name="hidden_reports_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden reports"/>
-                        </tree>
+                        </list>
                     </field>
                     <field name="hidden_actions_ids">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden actions"/>
-                        </tree>
+                        </list>
                     </field>
                     <field name="hidden_server_actions_ids" domain="[('binding_model_id', '!=', False)]">
-                        <tree>
+                        <list>
                             <field name="display_name" string="Hidden server contextual actions"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>

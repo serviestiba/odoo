@@ -306,10 +306,18 @@ msgid "Hidden menus"
 msgstr ""
 
 #. module: generic_security_restriction
-#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_report__hide_for_group_ids
-#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_report__hide_for_user_ids
 #: model:ir.model.fields,field_description:generic_security_restriction.field_res_users__hidden_reports_ids
 msgid "Hidden print reports"
+msgstr ""
+
+#. module: generic_security_restriction
+#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_report__hide_for_group_ids
+msgid "Hidden print reports for Groups"
+msgstr ""
+
+#. module: generic_security_restriction
+#: model:ir.model.fields,field_description:generic_security_restriction.field_ir_actions_report__hide_for_user_ids
+msgid "Hidden print reports for Users"
 msgstr ""
 
 #. module: generic_security_restriction

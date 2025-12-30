@@ -15,21 +15,21 @@
                         </span>
                     </div>
                     <field name="field_security_ids"
-                           context="{'default_model_id': active_id}"
+                           context="{'default_model_id': context.get('active_model')}"
                            nolabel="1">
-                        <tree>
-                            <field name="model_id" invisible="1"/>
+                        <list>
+                            <field name="model_id" column_invisible="True"/>
                             <field name="field_name"/>
-                            <field name="field_type" invisible="1"/>
+                            <field name="field_type" column_invisible="True"/>
                             <field name="group_ids" widget="many2many_tags"/>
                             <field name="set_readonly"/>
                             <field name="set_invisible"/>
                             <field name="hide_stat_button"/>
-                            <field name="set_no_open" attrs="{'invisible': [('field_type', '!=', 'many2one')]}"/>
-                            <field name="set_no_create" attrs="{'invisible': [('field_type', '!=', 'many2one')]}"/>
-                            <field name="set_no_quick_create" attrs="{'invisible': [('field_type', '!=', 'many2one')]}"/>
-                            <field name="set_no_create_edit" attrs="{'invisible': [('field_type', '!=', 'many2one')]}"/>
-                        </tree>
+                            <field name="set_no_open" invisible="field_type != 'many2one'" />
+                            <field name="set_no_create" invisible="field_type != 'many2one'" />
+                            <field name="set_no_quick_create" invisible="field_type != 'many2one'" />
+                            <field name="set_no_create_edit" invisible="field_type != 'many2one'" />
+                        </list>
                         <form>
                             <sheet>
                                 <div class="oe_button_box" name="button_box">
@@ -48,25 +48,17 @@
                                     </group>
                                 </group>
                                 <group>
-                                    <group attrs="{'invisible': [('field_type', '!=', 'many2one')]}"
-                                           name="gsr_rewrite_options">
+                                    <group name="gsr_rewrite_options" invisible="field_type != 'many2one'">
                                         <field name="rewrite_options"/>
                                     </group>
-                                    <group attrs="{'invisible': [('field_type', '!=', 'many2one')]}"
-                                           name="gsr_field_options">
-                                        <field name="set_no_open"
-                                               attrs="{'readonly': [('rewrite_options', '!=', True)]}"/>
-                                        <field name="set_no_create"
-                                               attrs="{'readonly': [('rewrite_options', '!=', True)]}"/>
-                                        <field name="set_no_quick_create"
-                                               attrs="{'readonly': [('rewrite_options', '!=', True)]}"/>
-                                        <field name="set_no_create_edit"
-                                               attrs="{'readonly': [('rewrite_options', '!=', True)]}"/>
+                                    <group name="gsr_field_options" invisible="field_type != 'many2one'">
+                                        <field name="set_no_open" readonly="rewrite_options != True"/>
+                                        <field name="set_no_create" readonly="rewrite_options != True"/>
+                                        <field name="set_no_quick_create" readonly="rewrite_options != True"/>
+                                        <field name="set_no_create_edit" readonly="rewrite_options != True"/>
                                     </group>
                                 </group>
-                                <div class="mt4"
-                                     attrs="{'invisible': [('field_type', '!=', 'many2one')]}"
-                                     name="gsr_options_help_description">
+                                <div class="mt4" name="gsr_options_help_description" invisible="field_type != 'many2one'">
                                         <p><h4><strong>NOTE:</strong></h4></p>
                                         <p>The <i>Rewrite Options</i> checkbox allows you to overwrite field parameters.
                                             If it is not set, the field parameters are set as in the view.</p>

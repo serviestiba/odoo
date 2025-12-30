@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="odoo_studio_hr_emplo_86381cf6-2d41-40de-8ba4-6f4a142ba770" model="ir.ui.view">
+		<field name="name">Odoo Studio: hr.employee.kanban customization</field>
+		<field name="model">hr.employee</field>
+		<field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='work_email']" position="after">
+				<field name="active" display="full" invisible="1"/>
+			</xpath>
+			<xpath expr="//field[@name='work_phone']" position="after">
+				<field name="x_studio_empresa" display="full"/>
+				<field name="x_studio_estado_del_empleado_1" display="full"/>
+				<field name="x_studio_estado_de_eligibilad" display="full" invisible="1"/>
+				<field name="x_studio_puerto" display="full"/>
+				<field name="x_studio_estado_del_empleado" display="full" invisible="1"/>
+			</xpath>
+			<xpath expr="//field[@name='activity_ids']" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</xpath>
+			<xpath expr="//kanban[1]/templates[1]/t[1]/aside[1]/div[1]" position="after">
+				<div class="oe_kanban_bottom_left" name="studio_div_ce4182">
+				</div>
+				<div class="oe_kanban_bottom_left" name="studio_div_8c5218">
+				</div>
+			</xpath>
+		</field>
+	</record>
+	<record id="odoo_studio_stock_wa_78fceaeb-3f09-4490-9574-fd3128ff2c88" model="ir.ui.view">
+		<field name="name">Odoo Studio: stock.warehouse.tree customization</field>
+		<field name="model">stock.warehouse</field>
+		<field name="inherit_id" ref="stock.view_warehouse_tree"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='lot_stock_id']" position="after">
+				<field name="write_date" optional="show"/>
+				<field name="write_uid" optional="show"/>
+			</xpath>
+		</field>
+	</record>
+	<record id="odoo_studio_res_user_364fed5a-9302-4b21-99d2-1b86fc6e9b87" model="ir.ui.view">
+		<field name="name">Odoo Studio: res.users.tree customization</field>
+		<field name="model">res.users</field>
+		<field name="inherit_id" ref="base.view_users_tree"/>
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='state']" position="after">
+				<xpath expr="//field[@name='login_date']" position="move"/>
+				<xpath expr="//field[@name='lang']" position="move"/>
+			</xpath>
+		</field>
+	</record>
+	<record id="odoo_studio_equipmen_294571d3-77af-4e8f-abd3-1c5a4c7561a2" model="ir.ui.view">
+		<field name="name">Odoo Studio: equipment.request.form customization</field>
+		<field name="model">maintenance.request</field>
+		<field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+		<field name="arch" type="xml">
+			<data>
+				<xpath expr="//field[@name='description']" position="replace">
+					<field name="x_studio_descripcin_del_dao" string="Descripción del daño:"/>
+					<field name="x_studio_reparacin_del_dao" string="Reparación del daño:"/>
+					<field name="x_studio_observaciones" string="Observaciones:"/>
+				</xpath>
+				<xpath expr="//field[@name='email_cc']" position="replace">
+					<field name="x_studio_nmero_de_tracking" string="Número de tracking:"/>
+					<field name="x_studio_case_id" string="Case  ID:"/>
+					<field name="x_studio_tipo_de_pti" string="Tipo de PTI:"/>
+					<field name="x_studio_temperatura_antes" string="Setpoint:"/>
+					<field name="x_studio_supply_before" string="Supply before:"/>
+					<field name="x_studio_supply_after_1" string="Supply after:"/>
+					<field name="x_studio_return_before" string="Return before:"/>
+					<field name="x_studio_return_after" string="Return after:" widget="char"/>
+					<field name="x_studio_co2_set" string="CO2 SET:"/>
+					<field name="x_studio_o2_set_1" string="O2 SET:"/>
+					<field name="x_studio_co2_act" string="CO2 ACT:"/>
+					<field name="x_studio_o2_act" string="O2 ACT:"/>
+					<field name="x_studio_especificacin" string="Especificación:"/>
+					<field name="x_studio_pieza_utilizada" string="Pieza utilizada:"/>
+					<field name="x_studio_nmero_de_parte" string="Número de parte:"/>
+					<field name="x_studio_serial_viejo_id_rcd_viejo_1" string="Serial viejo - ID RCD viejo:"/>
+					<field name="x_studio_serial_nuevo_id_rcd_nuevo" string="Serial nuevo - ID RCD nuevo:"/>
+					<field name="x_studio_repair_name" string="Repair name"/>
+					<field name="x_studio_code" string="Code:"/>
+					<field name="x_studio_man_hour" string="Man hour:"/>
+					<field name="x_studio_empresa_responsable" string="Empresa responsable:"/>
+					<field name="x_studio_fecha_de_cierre" string="Fecha de cierre:" widget="date"/>
+					<field name="x_studio_hora_de_cierre" string="Hora de cierre:"/>
+					<field name="x_studio_supply_after" string="Supply after:" invisible="1"/>
+				</xpath>
+				<xpath expr="//form[1]/sheet[1]/group[1]/group[2]/div[1]" position="replace"/>
+				<xpath expr="//form[1]/sheet[1]/group[1]/group[2]/label[1]" position="replace"/>
+				<xpath expr="//field[@name='user_id']" position="replace"/>
+				<xpath expr="//field[@name='maintenance_team_id']" position="replace"/>
+				<xpath expr="//field[@name='stage_id']" position="attributes">
+					<attribute name="groups">studio_customization.mantenimiento_reefer_a068ff82-d020-4aef-b4f2-d2c5c5af6c4e,invisible_maintenance_stage.maintenance_stage_column_group1</attribute>
+				</xpath>
+				<xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='employee_id']" position="attributes">
+					<attribute name="string">Creado por :</attribute>
+				</xpath>
+				<xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='employee_id']" position="after">
+					<field name="x_studio_grupo_1" string="Grupo:"/>
+					<field name="x_studio_numero_de_orden" string="Numero de orden:"/>
+					<field name="x_studio_agencia_1" string="Agencia:"/>
+					<field name="x_studio_nmero_de_contenedor" string="Número de contenedor:"/>
+					<field name="x_studio_marca_de_contenedor" string="Marca de contenedor:"/>
+					<field name="x_studio_modelo" string="Modelo:"/>
+					<field name="x_studio_serial_" string="Serial #:"/>
+					<field name="x_studio_fecha_de_manufactura" string="Fecha de manufactura:"/>
+					<field name="x_studio_tipo_de_unidad" string="Tipo de unidad:"/>
+					<field name="x_studio_atencin" string="Atención:"/>
+					<field name="x_studio_ubicacin_del_contenedor" string="Ubicación del contenedor:"/>
+					<field name="x_studio_tipo_de_alarma" string="Tipo de alarma:"/>
+					<field name="x_studio_numero_de_alarma" string="Numero de alarma:"/>
+					<field name="x_studio_tcnicos" string="Técnico:"/>
+				</xpath>
+				<xpath expr="//field[@name='equipment_id']" position="attributes">
+					<attribute name="string">Equipo:</attribute>
+				</xpath>
+				<xpath expr="//field[@name='equipment_id']" position="after">
+					<field name="x_studio_detalle_de_la_unidad" string="Detalle de la unidad:" invisible="1"/>
+					<xpath expr="//field[@name='request_date']" position="move"/>
+				</xpath>
+				<xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='category_id']" position="after">
+					<field name="x_studio_hora_del_evento" string="Hora del evento:" force_save="True"/>
+					<field name="x_studio_tiempo_estimado_horas"/>
+					<field name="x_studio_rea_de_taller" string="Área de Taller"/>
+					<xpath expr="//field[@name='schedule_date']" position="move"/>
+					<field name="x_studio_areas_de_taller" string="Areas de taller:"/>
+				</xpath>
+				<xpath expr="//field[@name='maintenance_type']" position="attributes">
+					<attribute name="string">Tipo de mantenimiento</attribute>
+				</xpath>
+				<xpath expr="//field[@name='maintenance_type']" position="after">
+					<field name="x_studio_especificacin_de_mantenimiento" string="Especificación de Mantenimiento"/>
+					<field name="x_studio_cantidad_de_lquido" string="Cantidad de Líquido"/>
+					<field name="x_studio_especificacion_de_mantenimiento" string="Especificacion de mantenimiento:"/>
+					<field name="x_studio_cantidad_de_aceite" string="Cantidad de liquido:"/>
+					<field name="x_studio_many2one_field_WWqgD" string="Ubicaciones de inventario:"/>
+					<xpath expr="//field[@name='priority']" position="move"/>
+				</xpath>
+				<xpath expr="//field[@name='request_date']" position="attributes">
+					<attribute name="string">Fecha de solicitud:</attribute>
+				</xpath>
+				<xpath expr="//field[@name='schedule_date']" position="attributes">
+					<attribute name="string">Tiempo Estimado (Horas):</attribute>
+				</xpath>
+				<xpath expr="//field[@name='priority']" position="attributes">
+					<attribute name="string">Prioridad</attribute>
+				</xpath>
+			</data>
+		</field>
+	</record>
+	<record id="odoo_studio_stock_pi_5213b242-cc7a-4618-8723-c679ba604bb4" model="ir.ui.view">
+		<field name="name">Odoo Studio: stock.picking.tree customization</field>
+		<field name="model">stock.picking</field>
+		<field name="inherit_id" ref="stock.vpicktree"/>
+		<field name="arch" type="xml">
+			<data>
+				<xpath expr="//list[1]/field[@name='name']" position="after">
+					<field name="sale_id" optional="show" column_invisible="1"/>
+					<xpath expr="//field[@name='origin']" position="move"/>
+					<xpath expr="//field[@name='partner_id']" position="move"/>
+					<field name="x_studio_departamento" optional="show"/>
+				</xpath>
+				<xpath expr="//field[@name='user_id']" position="after">
+					<field name="product_id" optional="show" widget="selection"/>
+
+					<field name="x_studio_puerto" optional="show"/>
+					<field optional="show" name="x_studio_costo" string="Costo" column_invisible="1"/>
+				</xpath>
+				<xpath expr="//field[@name='batch_id']" position="attributes">
+					<attribute name="readonly">(state in ['cancel', 'done']) or (state in ['done', 'cancel'])</attribute>
+					<attribute name="column_invisible">1</attribute>
+				</xpath>
+				<xpath expr="//field[@name='batch_id']" position="after">
+					<xpath expr="//field[@name='scheduled_date']" position="move"/>
+				</xpath>
+				<xpath expr="//field[@name='state']" position="after">
+					<field name="move_ids" optional="show"/>
+				</xpath>
+				<xpath expr="//field[@name='origin']" position="attributes">
+					<attribute name="readonly">(state in ['cancel', 'done']) or (state in ['done', 'cancel'])</attribute>
+					<attribute name="column_invisible">1</attribute>
+				</xpath>
+			</data>
+		</field>
+	</record>
+	<record id="odoo_studio_purchase_c4bbda1c-add6-4599-9fe9-991d6adf7ccf" model="ir.ui.view">
+		<field name="name">Odoo Studio: purchase.order.inherit.purchase.order.tree customization</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_kpis_tree"/>
+		<field name="arch" type="xml">
+			<data>
+				<xpath expr="//field[@name='activity_ids']" position="replace"/>
+				<xpath expr="//list[1]/field[@name='name']" position="after">
+					<xpath expr="//field[@name='state']" position="move"/>
+					<field name="x_studio_mes_corresponde" optional="show"/>
+
+					<xpath expr="//field[@name='amount_total']" position="move"/>
+				</xpath>
+				<xpath expr="//list[1]/field[@name='name']" position="after">
+					<field name="agreement_id" optional="show"/>
+					<field name="date_calendar_start" optional="show" string="Fecha confirmación"/>
+					<field name="x_studio_estado" optional="show"/>
+					<field name="x_studio_departamento_1" optional="show"/>
+					<field name="x_studio_urgente" optional="show"/>
+				</xpath>
+				<xpath expr="//field[@name='partner_id']" position="attributes">
+					<attribute name="string">Proveedor</attribute>
+				</xpath>
+				<xpath expr="//field[@name='amount_total']" position="attributes">
+					<attribute name="column_invisible">1</attribute>
+				</xpath>
+
+			</data>
+		</field>
+	</record>
+	<record id="odoo_studio_equipmen_57a845e8-550a-4600-b627-4e571f6f97c5" model="ir.ui.view">
+		<field name="name">Odoo Studio: equipment.request.tree customization</field>
+		<field name="model">maintenance.request</field>
+		<field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree"/>
+		<field name="arch" type="xml">
+			<data>
+				<xpath expr="//field[@name='message_needaction']" position="after">
+					<field name="x_studio_especificacin" optional="show"/>
+					<field name="create_date" optional="show"/>
+					<field name="equipment_id" optional="show"/>
+					<field name="x_studio_nmero_de_parte" optional="show"/>
+				</xpath>
+				<xpath expr="//list[1]/field[@name='name']" position="after">
+					<field name="x_studio_especificacion_de_mantenimiento" optional="show"/>
+					<field name="x_studio_repair_name" optional="show"/>
+					<field name="x_studio_commodity" optional="show" column_invisible="1"/>
+					<field name="x_studio_tcnicos" optional="show"/>
+					<field name="x_studio_nmero_de_tracking" optional="show"/>
+					<field name="x_studio_reparacin_del_dao" optional="show"/>
+					<field name="x_studio_co2_act" optional="show"/>
+					<field name="x_studio_areas_de_taller" optional="show"/>
+					<field name="x_studio_detalle_de_la_unidad" optional="show"/>
+					<field name="x_studio_atencin" optional="show"/>
+					<field name="x_studio_descripcin_del_dao" optional="show" column_invisible="1"/>
+					<field name="maintenance_type" optional="show"/>
+					<field name="x_studio_pieza_utilizada" optional="show"/>
+					<field name="description" optional="show"/>
+					<field name="create_uid" optional="show"/>
+					<field name="x_studio_fecha_de_cierre" optional="show"/>
+				</xpath>
+				<xpath expr="//field[@name='employee_id']" position="attributes">
+					<attribute name="column_invisible">1</attribute>
+				</xpath>
+				<xpath expr="//field[@name='user_id']" position="attributes">
+					<attribute name="column_invisible">1</attribute>
+				</xpath>
+			</data>
+		</field>
+	</record>
+	<record id="odoo_studio_stock_mo_b294ff22-a9cc-44a1-96c0-8d0e2dfdc788" model="ir.ui.view">
+		<field name="name">Odoo Studio: stock.move.line.tree customization</field>
+		<field name="model">stock.move.line</field>
+		<field name="inherit_id" ref="stock.view_move_line_tree"/>
+		<field name="arch" type="xml">
+			<data>
+				<xpath expr="//field[@name='location_dest_usage']" position="after">
+					<field name="owner_id" optional="show" column_invisible="1"/>
+				</xpath>
+				<xpath expr="//field[@name='lot_id']" position="attributes">
+					<attribute name="column_invisible">1</attribute>
+				</xpath>
+
+				<xpath expr="//field[@name='quantity']" position="after">
+					<field optional="show" name="x_studio_related_field_GFxMm" string="Cantidad"/>
+					<field optional="show" name="x_studio_precio" string="Precio" invisible="1"/>
+				</xpath>
+				<xpath expr="//field[@name='state']" position="after">
+					<field name="picking_partner_id" optional="show"/>
+					<field name="picking_code" optional="show"/>
+				</xpath>
+				<xpath expr="//field[@name='create_uid']" position="attributes">
+					<attribute name="optional">show</attribute>
+					<attribute name="required">1</attribute>
+				</xpath>
+			</data>
+		</field>
+	</record>
+	<template id="odoo_studio_report_d_9e1a2679-23e8-4713-8d60-fa3f1ebb6b75" inherit_id="stock.report_delivery_document">
+
+		<xpath expr="/t/t/t/div/table[2]" position="after">
+			<div class="row">
+				<div class="col-3">
+					<span>
+						<strong>Firma:</strong>
+						<br/>
+					</span>
+					<span t-field="o.signature" t-options-widget="&quot;image&quot;" t-options-qweb_img_raw_data="1"/>
+				</div>
+				<div class="col-3"/>
+				<div class="col-3"/>
+				<div class="col-3"/>
+			</div>
+		</xpath>
+
+
+
+
+		<xpath expr="/t/t/t/div/div[2]" position="after">
+			<div class="row">
+				<div class="col">
+					<span>New Text Block</span>
+				</div>
+			</div>
+		</xpath>
+		<xpath expr="/t/t/t/div/div[3]/div/span" position="replace">
+			<span>Responsable<br/>
+			<br/>
+_______________________</span>
+	</xpath>
+
+	<xpath expr="/t/t/t/div/div[3]/div/span" position="replace">
+		<span>
+			<strong>
+				<span style="font-size: 18px;">
+					<em>                     Responsable<br/>
+      ______________________________</em>
+				</span>
+			</strong>
+		</span>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div/span" position="replace">
+		<span>
+			<strong>
+				<span style="font-size: 18px;">
+					<em>                     Responsable<br/>
+      ______________________________</em>
+				</span>
+			</strong>
+		</span>
+	</xpath>
+	<xpath expr="/t[1]/t[1]/t[1]/div[1]/div[3]/div[1]" position="replace"/>
+	<xpath expr="/t/t/t/div/table[2]" position="after">
+		<div class="row">
+			<div class="col">
+				<span>New Text Block</span>
+			</div>
+		</div>
+	</xpath>
+
+	<xpath expr="/t/t/t/div/div[2]" position="after">
+		<div class="row">
+			<div class="col">
+				<span>New Text Block</span>
+			</div>
+		</div>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div/span" position="replace">
+		<span>RECIBE<br/>
+________________________</span>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div/span" position="replace">
+		<span>RECIBE<br/>
+_______________________________</span>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div/span" position="replace">
+		<span>
+			<br/>
+			<br/>
+RECIBE<br/>
+_______________________________</span>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div/span" position="replace">
+		<span>RECIBE<br/>
+_______________________________</span>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " add="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " add="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " add="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " add="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " remove="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " add="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " add="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " remove="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " remove="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " add="text-end"/>
+	</xpath>
+
+	<xpath expr="/t[1]/t[1]/t[1]/div[1]/div[2]/div[1]" position="replace"/>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " add="h1"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" " add="h2"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div" position="attributes">
+		<attribute name="class" separator=" "/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]" position="after">
+		<div class="row">
+			<div class="col-6">
+				<span>New Column</span>
+			</div>
+			<div class="col-6">
+				<span>New Column</span>
+			</div>
+		</div>
+	</xpath>
+	<xpath expr="/t[1]/t[1]/t[1]/div[1]/div[3]" position="replace"/>
+	<xpath expr="/t/t/t/div/div[3]/div[1]/span" position="replace">
+		<span>ENTREGA<br/>
+_____________________________</span>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[3]/div[2]/span" position="replace">
+		<span>RECIBE<br/>
+________________________________</span>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[1]" position="after">
+		<div class="row">
+			<div class="col">
+				<span t-field="partner.barcode"/>
+			</div>
+		</div>
+	</xpath>
+	<xpath expr="/t/t/t/div/h2" position="after">
+		<div class="row">
+			<div class="col">
+				<span>New Text Block</span>
+			</div>
+		</div>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]/span" position="replace">
+		<span>RECIBE<br/>
+________________________________</span>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]" position="attributes">
+		<attribute name="class" separator=" " add="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="h6"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="o_bold"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]/span" position="replace">
+		<span>
+			<strong>RECIBE<br/>
+________________________________</strong>
+		</span>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]/span" position="replace">
+		<span>
+			<strong>RECIBE<br/>
+________________________________</strong>
+		</span>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " remove="h6"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="text-o-color-1"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="text-o-color-3" remove="text-o-color-1"/>
+	</xpath>
+
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="text-o-color-2" remove="text-o-color-3"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="text-white-50" remove="text-o-color-2"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="text-white-50" remove="text-white-50"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="text-600" remove="text-white-50"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="text-400" remove="text-white-50"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="text-400" remove="text-white-50"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]" position="attributes">
+		<attribute name="class" separator=" " add="text-600" remove="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]" position="attributes">
+		<attribute name="class" separator=" " add="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]" position="attributes">
+		<attribute name="class" separator=" " add="text-center" remove="text-end"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="text-center"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]" position="attributes">
+		<attribute name="class" separator=" " add="text-800" remove="text-600"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]" position="attributes">
+		<attribute name="class" separator=" " add="text-black" remove="text-center"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]" position="attributes">
+		<attribute name="class" separator=" " add="text-center"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]/span/strong" position="replace">
+		<strong>
+			<strong>
+				<font class="text-black">RECIBE</font>
+				<br/>
+				<font class="text-black">______________________________</font>
+			</strong>
+		</strong>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]/span/strong/strong/font[1]" position="replace">
+		<font class="text-black">RECIBE</font>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+		<attribute name="class" separator=" " add="text-black" remove="text-600"/>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]/span" position="replace">
+		<span>ENTREGA<br/>
+___________________________________________________</span>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[2]/span/strong/strong/font[2]" position="replace">
+		<font class="text-black">
+			<br/>
+___________________________________________________</font>
+	</xpath>
+	<xpath expr="/t/t/t/div/div[5]/div[1]/span" position="replace">
+		<span>ENTREGA<br/>
+		<br/>
+___________________________________________________</span>
+</xpath>
+<xpath expr="/t/t/t/div/div[5]/div[2]" position="attributes">
+	<attribute name="class" separator=" " add="o_bold"/>
+</xpath>
+<xpath expr="/t/t/t/div/div[5]/div[2]" position="attributes">
+	<attribute name="class" separator=" " remove="o_bold"/>
+</xpath>
+<xpath expr="/t/t/t/div/div[5]/div[2]" position="attributes">
+	<attribute name="class" separator=" " add="text-o-color-2" remove="text-800"/>
+</xpath>
+<xpath expr="/t/t/t/div/div[5]/div[2]" position="attributes">
+	<attribute name="class" separator=" " add="h6"/>
+</xpath>
+<xpath expr="/t/t/t/div/div[5]/div[1]" position="attributes">
+	<attribute name="class" separator=" " add="h6"/>
+</xpath>
+<xpath expr="/t/t/t/div/div[5]/div[2]/span/strong/strong/font[1]" position="replace">
+	<font class="text-black">RECIBE</font>
+</xpath>
+<xpath expr="/t[1]/t[1]/t[1]/div[1]/div[1]/div[1]" position="replace"/>
+
+</template>
+
+<record id="odoo_studio_hr_emplo_c03913bf-d1a9-440d-887b-5fb0519c6d92" model="ir.ui.view">
+<field name="name">Odoo Studio: hr.employee.form customization</field>
+<field name="model">hr.employee</field>
+<field name="inherit_id" ref="hr.view_employee_form"/>
+<field name="arch" type="xml">
+	<data>
+
+		<xpath expr="//field[@name='mobile_phone']" position="attributes">
+			<attribute name="force_save">True</attribute>
+			<attribute name="invisible">1</attribute>
+		</xpath>
+
+		<xpath expr="//field[@name='work_location_id']" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</xpath>
+		<xpath expr="//field[@name='work_location_id']" position="after">
+			<field name="x_studio_no_identificacin" string="No. Identificación"/>
+			<field filename="x_studio_cedula_filename" name="x_studio_cedula" string="Cédula"/>
+			<field invisible="1" name="x_studio_cedula_filename"/>
+			<field name="x_studio_chapa" string="Chapa"/>
+			<field name="x_studio_plantilla" string="Planilla" invisible="1"/>
+			<field name="x_studio_tipo_de_planilla" string="Tipo de Planilla"/>
+			<field name="x_studio_empresa" string="Empresa"/>
+			<field name="x_studio_categora" string="Categoría"/>
+			<field name="x_studio_puerto" string="Puerto"/>
+			<field name="x_studio_grupo" string="Grupo"/>
+			<field name="x_studio_fecha_de_ingreso" string="Fecha de ingreso"/>
+			<field invisible="1" name="x_studio_contratos_de_trabajo_antiguos_filename"/>
+			<field invisible="1" name="x_studio_contrato_de_trabajo_filename"/>
+			<field name="x_studio_practica_algn_deporte" string="Practica algún deporte" invisible="1"/>
+			<field name="x_studio_especifique" string="Especifique" invisible="1"/>
+		</xpath>
+
+		<xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='work_information']/div[1]" position="after">
+			<field invisible="1" name="x_studio_binary_field_CDvut_filename"/>
+			<group name="studio_group_jSWBM" string="Información Privada">
+				<field name="x_studio_direccin_residencial" string="Dirección Residencial"/>
+				<field name="x_studio_nombre_de_contacto_de_emergencia" string="Nombre de Contacto de emergencia"/>
+				<field name="x_studio_celular_de_contacto_de_emergencia" string="Celular de Contacto de Emergencia"/>
+				<field name="x_studio_tipo_de_sangre_1" string="Tipo de sangre"/>
+				<field name="x_studio_lentes" string="Lentes"/>
+				<field name="x_studio_estado_civil" string="Estado Civil"/>
+				<field name="x_studio_nmero_de_hijos" string="Número de Hijos"/>
+			</group>
+			<group name="studio_group_Ck6ue" string="Educación">
+				<field name="x_studio_nivel_de_estudios" string="Nivel de estudios"/>
+				<field name="x_studio_centro_de_estudios" string="Centro de Estudios" invisible="1"/>
+				<field filename="x_studio_certificados_1_filename" name="x_studio_certificados_1" string="Certificados"/>
+				<field invisible="1" name="x_studio_certificados_1_filename"/>
+				<field filename="x_studio_hoja_de_vida_1_filename" name="x_studio_hoja_de_vida_1" string="Hoja de vida"/>
+				<field name="x_studio_idoneidad_2" string="Idoneidad"/>
+				<field filename="x_studio_idoneidad_1_filename" name="x_studio_idoneidad_1" string="Documento de Idoneidad"/>
+				<field name="x_studio_tipo_de_licencia_1" string="Tipo de Licencia"/>
+				<field filename="x_studio_licencia_1_filename" name="x_studio_licencia_1" string="Licencia"/>
+				<field name="x_studio_fecha_de_vencimiento_de_la_licencia" string="Fecha de vencimiento de la licencia"/>
+				<field invisible="1" name="x_studio_licencia_1_filename"/>
+				<field name="x_studio_permiso_de_trabajo" string="Permiso de trabajo"/>
+				<field filename="x_studio_adjuntar_permiso_filename" name="x_studio_adjuntar_permiso" string="Adjuntar Permiso"/>
+				<field invisible="1" name="x_studio_adjuntar_permiso_filename"/>
+				<field invisible="1" name="x_studio_idoneidad_1_filename"/>
+				<field invisible="1" name="x_studio_hoja_de_vida_1_filename"/>
+			</group>
+			<group name="studio_group_OvRxs" string="Configuración RRHH">
+				<field name="x_studio_estado_del_empleado_1" string="Estado del Empleado"/>
+				<field name="x_studio_tipo_de_contrato_1" string="Tipo de Contrato"/>
+				<field name="x_studio_inicio_de_contrato" string="Inicio de Contrato"/>
+				<field name="x_studio_fin_de_contrato" string="Fin de Contrato"/>
+				<field filename="x_studio_contrato_de_trabajo_filename" name="x_studio_contrato_de_trabajo" string="Contrato de Trabajo Actual"/>
+				<field filename="x_studio_contrato_antiguo_1_filename" name="x_studio_contrato_antiguo_1" string="Contrato Antiguo #1"/>
+				<field invisible="1" name="x_studio_contrato_antiguo_1_filename"/>
+				<field filename="x_studio_contratos_de_trabajo_antiguos_filename" name="x_studio_contratos_de_trabajo_antiguos" string="Contrato de Trabajo Antiguo #2"/>
+				<field name="x_studio_requisin_de_personal_1" string="Requisión de Personal"/>
+				<field filename="x_studio_requisin_de_personal_filename" name="x_studio_requisin_de_personal" string="Requisión de Personal"/>
+				<field name="x_studio_formulario_de_empleo" string="Formulario de empleo"/>
+				<field filename="x_studio_formulario_de_solicitud_de_empleo_1_filename" name="x_studio_formulario_de_solicitud_de_empleo_1" string="Doc Formulario De Solicitud De Empleo"/>
+				<field filename="x_studio_record_policivo_filename" name="x_studio_record_policivo" string="Record Policivo"/>
+				<field filename="x_studio_contrato_1_filename" name="x_studio_contrato_1" string="Contrato" invisible="1"/>
+				<field filename="x_studio_carta_de_sustitucin_patronal_1_filename" name="x_studio_carta_de_sustitucin_patronal_1" string="Carta de sustitución patronal"/>
+				<field filename="x_studio_aviso_de_entrada_seguro_social_1_filename" name="x_studio_aviso_de_entrada_seguro_social_1" string="Aviso de entrada seguro social"/>
+				<field filename="x_studio_accin_de_personal_1_filename" name="x_studio_accin_de_personal_1" string="Acción de personal"/>
+				<field invisible="1" name="x_studio_accin_de_personal_1_filename"/>
+				<field invisible="1" name="x_studio_aviso_de_entrada_seguro_social_1_filename"/>
+				<field invisible="1" name="x_studio_carta_de_sustitucin_patronal_1_filename"/>
+				<field invisible="1" name="x_studio_contrato_1_filename"/>
+				<field invisible="1" name="x_studio_record_policivo_filename"/>
+				<field invisible="1" name="x_studio_formulario_de_solicitud_de_empleo_1_filename"/>
+				<field invisible="1" name="x_studio_requisin_de_personal_filename"/>
+			</group>
+			<group name="studio_group_jNoFY">
+				<group name="studio_group_jNoFY_left" string="BONO DE PRODUCTIVIDAD">
+					<field name="x_studio_restrinccin_de_bono" string="Restrincción de Bono RRHH"/>
+					<field name="x_studio_comentario" string="Comentario"/>
+					<field filename="x_studio_evidencia_de_bono_filename" name="x_studio_evidencia_de_bono" string="Evidencia de Bono"/>
+					<field invisible="1" name="x_studio_evidencia_de_bono_filename"/>
+				</group>
+				<group name="studio_group_jNoFY_right" string="Coaching">
+					<field name="x_studio_comentarios" string="Comentarios"/>
+					<field filename="x_studio_evidencia_de_coaching_filename" name="x_studio_evidencia_de_coaching" string="Evidencia de Coaching"/>
+					<field name="x_studio_comentarios_2" string="Comentarios"/>
+					<field filename="x_studio_evidencia_de_coaching_1_filename" name="x_studio_evidencia_de_coaching_1" string="Evidencia de Coaching"/>
+					<field name="x_studio_comentarios_3" string="Comentarios"/>
+					<field filename="x_studio_evidencia_de_coaching_4_filename" name="x_studio_evidencia_de_coaching_4" string="Evidencia de Coaching"/>
+					<field name="x_studio_comentarios_4" string="Comentarios"/>
+					<field filename="x_studio_evidencia_de_coaching_2_filename" name="x_studio_evidencia_de_coaching_2" string="Evidencia de Coaching"/>
+					<field name="x_studio_comentarios_5" string="Comentarios"/>
+					<field filename="x_studio_evidencia_de_coaching_3_filename" name="x_studio_evidencia_de_coaching_3" string="Evidencia de Coaching"/>
+					<field invisible="1" name="x_studio_evidencia_de_coaching_3_filename"/>
+					<field invisible="1" name="x_studio_evidencia_de_coaching_2_filename"/>
+					<field invisible="1" name="x_studio_evidencia_de_coaching_4_filename"/>
+					<field invisible="1" name="x_studio_evidencia_de_coaching_1_filename"/>
+					<field invisible="1" name="x_studio_evidencia_de_coaching_filename"/>
+					<field widget="priority" name="x_studio_selection_field_UkpXt" invisible="1"/>
+				</group>
+			</group>
+			<field name="x_studio_text_field_XwiNC"/>
+		</xpath>
+		<xpath expr="//page[@name='personal_information']" position="attributes">
+			<attribute name="groups">hr.group_hr_manager,studio_customization.empleados_recursos_h_fcc43ec0-1b73-4717-9b07-0ddf5ea200e7</attribute>
+			<attribute name="invisible">1</attribute>
+		</xpath>
+
+		<xpath expr="//field[@name='marital']" position="after">
+			<field filename="x_studio_certificado_matrimonio_filename" name="x_studio_certificado_matrimonio" string="Certificado Matrimonio"/>
+			<field invisible="1" name="x_studio_certificado_matrimonio_filename"/>
+		</xpath>
+		<xpath expr="//field[@name='emergency_phone']" position="after">
+			<field name="x_studio_tipo_de_sangre" string="Tipo de sangre"/>
+			<field name="x_studio_donante_de_sangre" string="Donante de sangre" invisible="1"/>
+			<field name="x_studio_alergias" string="Alergias" invisible="1"/>
+			<field name="x_studio_especifique_1" string="Especifique" invisible="1"/>
+			<field name="x_studio_lentes_si_o_no_" string="Lentes Si o No ?"/>
+		</xpath>
+		<xpath expr="//field[@name='study_field']" position="after">
+			<field filename="x_studio_hoja_de_vida_filename" name="x_studio_hoja_de_vida" string="Hoja de Vida"/>
+			<field filename="x_studio_certificados_filename" name="x_studio_certificados" string="Certificados"/>
+			<field filename="x_studio_idoneidad_filename" name="x_studio_idoneidad" string="Idoneidad"/>
+			<field name="x_studio_tipo_de_licencia" string="Tipo de licencia"/>
+			<field filename="x_studio_licencia_filename" name="x_studio_licencia" string="Licencia"/>
+			<field name="x_studio_fecha_de_vencimiento_licencia" string="Fecha de vencimiento licencia"/>
+			<field invisible="1" name="x_studio_licencia_filename"/>
+			<field invisible="1" name="x_studio_idoneidad_filename"/>
+			<field invisible="1" name="x_studio_certificados_filename"/>
+			<field invisible="1" name="x_studio_hoja_de_vida_filename"/>
+		</xpath>
+		<xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='personal_information']/group[1]/group[4]/field[@name='has_work_permit']" position="after">
+			<field name="x_studio_many2many_field_b4bVh"/>
+		</xpath>
+		<xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='personal_information']/group[1]/group[4]" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</xpath>
+		<xpath expr="//field[@name='identification_id']" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</xpath>
+		<xpath expr="//field[@name='passport_id']" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</xpath>
+
+		<xpath expr="//field[@name='place_of_birth']" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</xpath>
+		<xpath expr="//field[@name='country_of_birth']" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</xpath>
+		<xpath expr="//page[@name='hr_settings']" position="attributes">
+			<attribute name="groups">hr.group_hr_manager,studio_customization.empleados_recursos_h_fcc43ec0-1b73-4717-9b07-0ddf5ea200e7</attribute>
+			<attribute name="invisible">1</attribute>
+		</xpath>
+		<xpath expr="//field[@name='employee_type']" position="before">
+			<field name="x_studio_estado_del_empleado" string="Estado del Empleado"/>
+			<field name="x_studio_tipo_de_contrato" string="Tipo de Contrato" help="Si es definido agregar fecha de inicio y fin"/>
+			<field name="x_studio_inicio_de_contratacion" string="Inicio" help="inicio de contrato"/>
+			<field name="x_studio_fin" help="Finalización de contrato" string="Fin"/>
+		</xpath>
+		<xpath expr="//group[@name='identification_group']" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</xpath>
+		<xpath expr="//group[@name='application_group']" position="attributes">
+			<attribute name="invisible">1</attribute>
+		</xpath>
+		<xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+			<page string="Documentos de Ingreso" name="studio_page_J7cl6" groups="hr.group_hr_manager,studio_customization.empleados_recursos_h_fcc43ec0-1b73-4717-9b07-0ddf5ea200e7" invisible="1">
+				<group name="studio_group_J7cl6">
+					<group name="studio_group_J7cl6_left">
+						<field filename="x_studio_requisicion_de_persona_filename" name="x_studio_requisicion_de_persona" string="Requisión de Personal"/>
+						<field filename="x_studio_formulario_de_solicitud_de_empleo_filename" name="x_studio_formulario_de_solicitud_de_empleo" string="Formulario De Solicitud De Empleo"/>
+						<field filename="x_studio_record_policivo_permitir_adjunto_filename" name="x_studio_record_policivo_permitir_adjunto" string="Record Policivo"/>
+						<field filename="x_studio_contrato_filename" name="x_studio_contrato" string="Contrato"/>
+						<field filename="x_studio_carta_de_sustitucin_patronal_filename" name="x_studio_carta_de_sustitucin_patronal" string="Carta de sustitución patronal"/>
+						<field filename="x_studio_aviso_de_entrada_seguro_social_filename" name="x_studio_aviso_de_entrada_seguro_social" string="Aviso de entrada seguro social"/>
+						<field filename="x_studio_accin_de_personal_filename" name="x_studio_accin_de_personal" string="Acción de personal"/>
+						<field invisible="1" name="x_studio_accin_de_personal_filename"/>
+						<field invisible="1" name="x_studio_aviso_de_entrada_seguro_social_filename"/>
+						<field invisible="1" name="x_studio_carta_de_sustitucin_patronal_filename"/>
+						<field invisible="1" name="x_studio_contrato_filename"/>
+						<field invisible="1" name="x_studio_record_policivo_permitir_adjunto_filename"/>
+						<field invisible="1" name="x_studio_formulario_de_solicitud_de_empleo_filename"/>
+						<field invisible="1" name="x_studio_requisicion_de_persona_filename"/>
+					</group>
+					<group name="studio_group_J7cl6_right"/>
+				</group>
+			</page>
+			<page string="Capacitaciones Internas" name="studio_page_7VMtE" groups="hr.group_hr_manager,studio_customization.empleados_recursos_h_fcc43ec0-1b73-4717-9b07-0ddf5ea200e7">
+				<group name="studio_group_7VMtE">
+					<group name="studio_group_7VMtE_left">
+						<field name="x_studio_seguridad_somos_todos" string="Seguridad somos todos"/>
+						<field filename="x_studio_certificado_filename" name="x_studio_certificado" string="Certificado"/>
+						<field invisible="1" name="x_studio_certificado_filename"/>
+						<field name="x_studio_fecha_capacitacin" string="Fecha capacitación SST"/>
+						<field name="x_studio_estibador" string="Estibador"/>
+						<field filename="x_studio_binary_field_y7aUH_filename" name="x_studio_binary_field_y7aUH" string="Certificado"/>
+						<field invisible="1" name="x_studio_binary_field_y7aUH_filename"/>
+						<field name="x_studio_fecha_capacitacin_1" string="Fecha capacitación"/>
+						<field name="x_studio_operador_de_tractor_remolque" string="Operador de Tractor Remolque"/>
+						<field filename="x_studio_binary_field_pwMuW_filename" name="x_studio_binary_field_pwMuW" string="Certificado"/>
+						<field invisible="1" name="x_studio_binary_field_pwMuW_filename"/>
+						<field name="x_studio_fecha_capacitacin_2" string="Fecha capacitación"/>
+						<field name="x_studio_verificador_1" string="Verificador 1"/>
+						<field filename="x_studio_certificado_2_filename" name="x_studio_certificado_2" string="Certificado"/>
+						<field invisible="1" name="x_studio_certificado_2_filename"/>
+						<field name="x_studio_fecha_capacitacin_3" string="Fecha capacitación"/>
+						<field name="x_studio_verificador_2" string="Verificador 2"/>
+						<field filename="x_studio_certificado_3_filename" name="x_studio_certificado_3" string="Certificado"/>
+						<field invisible="1" name="x_studio_certificado_3_filename"/>
+						<field name="x_studio_fecha_capacitacin_4" string="Fecha capacitación"/>
+						<field name="x_studio_roro" string="RORO"/>
+						<field filename="x_studio_certificado_4_filename" name="x_studio_certificado_4" string="Certificado"/>
+						<field name="x_studio_fecha_capacitacin_9" string="Fecha capacitación"/>
+					</group>
+					<group name="studio_group_7VMtE_right">
+						<field name="x_studio_tcnico_de_contenedores_refrigerados" string="Técnico de contenedores refrigerados"/>
+						<field filename="x_studio_certificado_5_filename" name="x_studio_certificado_5" string="Certificado"/>
+						<field invisible="1" name="x_studio_certificado_5_filename"/>
+						<field name="x_studio_fecha_capacitacin_5" string="Fecha capacitación"/>
+						<field name="x_studio_estibador_en_conexin_y_desconexin_en_cont_ref" string="Estibador en conexión y desconexión  en Cont. Ref."/>
+						<field filename="x_studio_certificado_6_filename" name="x_studio_certificado_6" string="Certificado"/>
+						<field invisible="1" name="x_studio_certificado_6_filename"/>
+						<field name="x_studio_fecha_capacitacin_6" string="Fecha capacitación"/>
+						<field name="x_studio_tcnico_en_reparacin_contenedores_refrigerados" string="Técnico en reparación contenedores refrigerados"/>
+						<field filename="x_studio_certificado_7_filename" name="x_studio_certificado_7" string="Certificado"/>
+						<field invisible="1" name="x_studio_certificado_7_filename"/>
+						<field name="x_studio_fecha_capacitacin_7" string="Fecha capacitación"/>
+						<field name="x_studio_operador_de_equipo_pesado" string="Operador de equipo pesado"/>
+						<field filename="x_studio_certificado_8_filename" name="x_studio_certificado_8" string="Certificado"/>
+						<field invisible="1" name="x_studio_certificado_8_filename"/>
+						<field name="x_studio_fecha_capacitacin_8" string="Fecha capacitación"/>
+						<field name="x_studio_otra" string="Otra"/>
+						<field filename="x_studio_certificado_1_filename" name="x_studio_certificado_1" string="Certificado"/>
+						<field invisible="1" name="x_studio_certificado_1_filename"/>
+						<field name="x_studio_datetime_field_2LMNA" string="Fecha de Capacitación"/>
+						<field invisible="1" name="x_studio_certificado_4_filename"/>
+					</group>
+				</group>
+			</page>
+			<page string="Equipos de Seguridad y Uniforme" name="studio_page_RuKIH" groups="hr.group_hr_manager,studio_customization.empleados_recursos_h_fcc43ec0-1b73-4717-9b07-0ddf5ea200e7">
+				<group name="studio_group_RuKIH">
+					<group name="studio_group_RuKIH_left" string="Talla">
+						<field name="x_studio_sweater" string="Sweater"/>
+						<field name="x_studio_botas" string="Botas"/>
+						<field name="x_studio_pantaln" string="Pantalón"/>
+						<field name="x_studio_fecha_de_actualizacin" string="Fecha de Actualización"/>
+					</group>
+					<group name="studio_group_RuKIH_right" string="Docs de entrega">
+						<field filename="x_studio_uniforme_2025_filename" name="x_studio_uniforme_2025" string="Uniforme 2025"/>
+						<field filename="x_studio_uniforme_2026_filename" name="x_studio_uniforme_2026" string="Uniforme 2026"/>
+						<field filename="x_studio_uniforme_2027_filename" name="x_studio_uniforme_2027" string="Uniforme 2027"/>
+						<field invisible="1" name="x_studio_uniforme_2027_filename"/>
+						<field invisible="1" name="x_studio_uniforme_2026_filename"/>
+						<field invisible="1" name="x_studio_uniforme_2025_filename"/>
+					</group>
+				</group>
+			</page>
+			<page string="Seguro" name="studio_page_j1acW" groups="hr.group_hr_manager,studio_customization.empleados_recursos_h_fcc43ec0-1b73-4717-9b07-0ddf5ea200e7" invisible="1">
+				<group name="studio_group_j1acW">
+					<group name="studio_group_j1acW_left">
+						<field filename="x_studio_pliza_filename" name="x_studio_pliza" string="Póliza"/>
+						<field invisible="1" name="x_studio_pliza_filename"/>
+					</group>
+					<group name="studio_group_j1acW_right"/>
+				</group>
+			</page>
+			<page string="Legal" name="studio_page_R725B" groups="hr.group_hr_manager,studio_customization.empleados_legal2_631b358d-7f61-4800-a261-4c2394a53c07">
+				<group name="studio_group_R725B">
+					<group name="studio_group_R725B_left" string="Información 2025" invisible="1">
+						<field filename="x_studio_boletas_filename" name="x_studio_boletas" string="Boleta y Descargo #1" help="AÑO 2025"/>
+						<field name="x_studio_fecha_de_ultima_boleta" string="Fecha de Ejecución" widget="date" help="Colocar la fecha de ejecución de boleta"/>
+						<field name="x_studio_comentario_boletas" string="Comentario" help="En este apartado colocar si fue desestimada y el motivo otros comments"/>
+						<field filename="x_studio_boleta_y_descargo_2_1_filename" name="x_studio_boleta_y_descargo_2_1" string="Boleta y Descargo #2"/>
+						<field invisible="1" name="x_studio_boleta_y_descargo_2_1_filename"/>
+						<field name="x_studio_fecha_de_ultima_sancion" string="Fecha de Ejecución"/>
+						<field name="x_studio_comentario_sanciones" string="Comentario"/>
+						<field filename="x_studio_otros_documentos_1_filename" name="x_studio_otros_documentos_1" string="Boleta y Descargo #3"/>
+						<field invisible="1" name="x_studio_otros_documentos_1_filename"/>
+						<field name="x_studio_fecha_de_ultimo_otro_documento" string="Fecha de Boleta:"/>
+						<field name="x_studio_comentario_otros_documentos" string="Comentario"/>
+						<field invisible="1" name="x_studio_binary_field_D5N0Y_filename"/>
+						<field invisible="1" name="x_studio_sanciones_1_filename"/>
+						<field invisible="1" name="x_studio_boletas_filename"/>
+					</group>
+				</group>
+				<group name="studio_group_rZkIK" string="Boletas 2025">
+					<field name="x_studio_cantidad_de_boletas_ejecutadas_2025" string="Cantidad de Boletas Ejecutadas 2025"/>
+					<field filename="x_studio_boletas_ejecutadas_filename" name="x_studio_boletas_ejecutadas" string="1. Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_1_filename" name="x_studio_boletas_ejecutadas_1" string="2. Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_2_filename" name="x_studio_boletas_ejecutadas_2" string="3. Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_3_filename" name="x_studio_boletas_ejecutadas_3" string="4. Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_4_filename" name="x_studio_boletas_ejecutadas_4" string="5. Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_5_filename" name="x_studio_boletas_ejecutadas_5" string="6. Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_7_filename" name="x_studio_boletas_ejecutadas_7" string="7. Boletas Ejecutadas"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_7_filename"/>
+					<field filename="x_studio_boletas_ejecutadas_6_filename" name="x_studio_boletas_ejecutadas_6" string="Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_8_filename" name="x_studio_boletas_ejecutadas_8" string="Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_9_filename" name="x_studio_boletas_ejecutadas_9" string="Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_12_filename" name="x_studio_boletas_ejecutadas_12" string="Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_11_filename" name="x_studio_boletas_ejecutadas_11" string="Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_10_filename" name="x_studio_boletas_ejecutadas_10" string="Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_13_filename" name="x_studio_boletas_ejecutadas_13" string="Boletas Ejecutadas"/>
+					<field filename="x_studio_boletas_ejecutadas_14_filename" name="x_studio_boletas_ejecutadas_14" string="Boletas Ejecutadas"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_14_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_13_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_10_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_11_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_12_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_9_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_8_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_6_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_5_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_4_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_3_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_2_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_1_filename"/>
+					<field invisible="1" name="x_studio_boletas_ejecutadas_filename"/>
+				</group>
+				<group name="studio_group_5Hqwm" string="Boletas Años anteriores">
+					<field name="x_studio_cantidad_total_de_boletas" string="Cantidad total de boletas" invisible="1"/>
+					<field filename="x_studio_binary_field_SDl8M_filename" name="x_studio_binary_field_SDl8M" string="Boletas"/>
+					<field invisible="1" name="x_studio_binary_field_SDl8M_filename"/>
+					<field name="x_studio_fecha" invisible="1"/>
+				</group>
+				<group name="studio_group_AmS0b" string="SEGURO">
+					<field filename="x_studio_pliza_1_filename" name="x_studio_pliza_1" string="Póliza"/>
+					<field filename="x_studio_actualizacin_de_beneficiarios_filename" name="x_studio_actualizacin_de_beneficiarios" string="Actualización de Beneficiarios"/>
+					<field invisible="1" name="x_studio_actualizacin_de_beneficiarios_filename"/>
+					<field invisible="1" name="x_studio_pliza_1_filename"/>
+				</group>
+				<group name="studio_group_7CvSQ">
+					<group name="studio_group_7CvSQ_left" string="BONO DE PRODUCTIVIDAD" invisible="1">
+						<field name="x_studio_restrinccin_de_bono_1" string="Restrincción de Bono"/>
+						<field name="x_studio_fecha_de_actualizacin_1" string="Fecha de Actualización"/>
+					</group>
+					<group name="studio_group_7CvSQ_right" string="Comentarios" invisible="1">
+						<field name="x_studio_explicacin" string="Explicación"/>
+						<field name="x_studio_datetime_field_pjQAo"/>
+					</group>
+				</group>
+				<group name="studio_group_PV1He" string="Condición del Trabajador">
+					<field name="x_studio_estado_de_eligibilad" string="Estado de Eligibilad"/>
+					<field name="x_studio_comentarios_1" string="Comentarios"/>
+				</group>
+			</page>
+			<page string="Información médica" name="studio_page_Dez6Q" groups="hr.group_hr_manager,studio_customization.empleados_clinica_ad201d1f-00fe-4fe4-a697-f93b815ff7ee">
+				<group name="studio_group_Dez6Q">
+					<group name="studio_group_Dez6Q_left">
+						<field filename="x_studio_evaluacion_preocupacional_filename" name="x_studio_evaluacion_preocupacional" string="Evaluacion  Preocupacional:"/>
+						<field name="x_studio_fecha_de_evaluacion" string="Fecha de Evaluación"/>
+						<field name="x_studio_comentario_de_evaluacion" string="Comentario de Evaluación:"/>
+						<field filename="x_studio_hoja_de_certificacion_filename" name="x_studio_hoja_de_certificacion" string="Hoja de Certificacion"/>
+						<field name="x_studio_comentario_de_certificacion" string="Comentario de Certificación"/>
+						<field name="x_studio_situacin_mdica" string="Situación Médica"/>
+						<field name="x_studio_comentario_de_situacin_mdica" string="Comentario de Situación Médica"/>
+						<field name="x_studio_condicin_medica" string="Condición Medica"/>
+						<field filename="x_studio_recomendaciones_de_so_filename" name="x_studio_recomendaciones_de_so" string="Recomendaciones de S.O."/>
+						<field filename="x_studio_restrincciones_filename" name="x_studio_restrincciones" string="Restrincciones"/>
+						<field invisible="1" name="x_studio_restrincciones_filename"/>
+						<field invisible="1" name="x_studio_recomendaciones_de_so_filename"/>
+						<field name="x_studio_aclaracion_de_condicion" string="Aclaracion De Condición:"/>
+						<field name="x_studio_actualizacin_de_recomendaciones" string="Actualización de Recomendaciones" help="Si mantiene sus recomendaciones actualizadas"/>
+						<field name="x_studio_fecha_de_vencimiento_de_restricciones" string="Fecha de vencimiento de restricciones"/>
+						<field name="x_studio_fecha_de_certificacion" string="Fecha de certificacion"/>
+						<field name="x_studio_fecha_de_vencimiento" string="Fecha de vencimiento"/>
+						<field filename="x_studio_carta_de_notificacin_filename" name="x_studio_carta_de_notificacin" string="Carta de Notificación"/>
+						<field filename="x_studio_historial_clinico_filename" name="x_studio_historial_clinico" string="Historial Clínico:"/>
+						<field name="x_studio_fecha_de_historial_clinico" string="Fecha de Historial Clínico"/>
+						<field name="x_studio_comentario_de_historial_clinico" string="Comentario de Historial Clínico"/>
+						<field invisible="1" name="x_studio_carta_de_notificacin_filename"/>
+						<field invisible="1" name="x_studio_binary_field_ZKOb4_filename"/>
+						<field invisible="1" name="x_studio_incapacidades_filename"/>
+						<field invisible="1" name="x_studio_hoja_de_certificacion_filename"/>
+						<field invisible="1" name="x_studio_evaluacion_preocupacional_filename"/>
+					</group>
+					<group name="studio_group_Dez6Q_right" string="Incapacidades">
+						<field name="x_studio_incapacidades_por_enfermedad_comn" string="Incapacidades por enfermedad común"/>
+						<field filename="x_studio_subir_archivos_filename" name="x_studio_subir_archivos" string="Subir Archivos"/>
+						<field invisible="1" name="x_studio_subir_archivos_1_filename"/>
+						<field name="x_studio_incapacidades_por_riesgo" string="Incapacidades por Riesgo"/>
+						<field filename="x_studio_subir_archivos_1_filename" name="x_studio_subir_archivos_1" string="Subir Archivos"/>
+						<field filename="x_studio_carta_de_homologacin_filename" name="x_studio_carta_de_homologacin" string="Carta de Homologación"/>
+						<field filename="x_studio_carta_de_reintegro_filename" name="x_studio_carta_de_reintegro" string="Carta de Reintegro"/>
+						<field widget="many2many_tags" name="x_studio_many2many_field_aAYgQ"/>
+						<field invisible="1" name="x_studio_carta_de_reintegro_filename"/>
+						<field invisible="1" name="x_studio_carta_de_homologacin_filename"/>
+						<field invisible="1" name="x_studio_subir_archivos_filename"/>
+						<field name="x_studio_medicamentos" string="Medicamentos"/>
+						<field name="x_studio_alergias_1" string="Alergias"/>
+						<field name="x_studio_comentario_1" string="Comentario"/>
+						<field filename="x_studio_laboratorios_filename" name="x_studio_laboratorios" string="Laboratorios:"/>
+						<field name="x_studio_fecha_de_ultimo_laboratorio" string="Fecha de último Laboratorio:"/>
+						<field name="x_studio_comentario_de_laboratorio" string="Comentario de Laboratorio:"/>
+						<field filename="x_studio_estudio_de_imagen_filename" name="x_studio_estudio_de_imagen" string="Estudio de Imagen"/>
+						<field name="x_studio_comentario_de_estudio_de_imagen" string="Comentario de Estudio de imagen"/>
+						<field invisible="1" name="x_studio_estudio_de_imagen_filename"/>
+						<field filename="x_studio_referencias_filename" name="x_studio_referencias" string="Referencias:"/>
+						<field name="x_studio_comentario_de_referencias" string="Comentario de referencias"/>
+						<field name="x_studio_prxima_evaluacin" string="Próxima evaluación"/>
+						<field name="x_studio_cita_mdica_programada" string="Cita médica Programada"/>
+						<field name="x_studio_comentarios_adicionales" string="Comentarios Adicionales"/>
+						<field invisible="1" name="x_studio_binary_field_PDOuL_filename"/>
+						<field invisible="1" name="x_studio_referencias_filename"/>
+						<field invisible="1" name="x_studio_laboratorios_filename"/>
+						<field invisible="1" name="x_studio_historial_clinico_filename"/>
+					</group>
+				</group>
+				<group name="studio_group_s3qDi" string="BONO CLÍNICA">
+					<field name="x_studio_lesionado" string="LESIONADO"/>
+					<field name="x_studio_horas_trabajadas_lesionado" string="HORAS TRABAJADAS LESIONADO"/>
+				</group>
+				<group name="studio_group_OJUFj">
+					<group name="studio_group_OJUFj_left" string="Alcohol">
+						<field name="x_studio_resultado" string="Resultado"/>
+						<field name="x_studio_fecha_de_prueba_1" string="Fecha de Prueba Alcohol"/>
+						<field filename="x_studio_carta_de_notificacin_2_filename" name="x_studio_carta_de_notificacin_2" string="Carta de Notificación"/>
+						<field filename="x_studio_carta_de_culminacin_filename" name="x_studio_carta_de_culminacin" string="Carta de Culminación"/>
+						<field invisible="1" name="x_studio_carta_de_culminacin_filename"/>
+						<field invisible="1" name="x_studio_carta_de_notificacin_2_filename"/>
+					</group>
+					<group name="studio_group_OJUFj_right" string="Droga">
+						<field name="x_studio_resultado_1" string="Resultado"/>
+						<field name="x_studio_fecha_de_prueba_2" string="Fecha de Prueba de droga"/>
+						<field filename="x_studio_carta_de_notificacin_3_filename" name="x_studio_carta_de_notificacin_3" string="Carta de Notificación"/>
+						<field filename="x_studio_carta_de_culminacin_1_filename" name="x_studio_carta_de_culminacin_1" string="Carta de Culminación"/>
+						<field invisible="1" name="x_studio_carta_de_culminacin_1_filename"/>
+						<field invisible="1" name="x_studio_carta_de_notificacin_3_filename"/>
+					</group>
+				</group>
+				<group name="studio_group_cCHej">
+					<field name="x_studio_text_field_9uUI0"/>
+				</group>
+			</page>
+			<page string="Seguridad Industrial" name="studio_page_7yPnp">
+				<group name="studio_group_7yPnp">
+					<group name="studio_group_7yPnp_left" string="Daños materiales">
+						<field name="x_studio_cantidad_de_accidentes_1" string="Cantidad de Accidentes"/>
+						<field filename="x_studio_binary_field_qEqMM_filename" name="x_studio_binary_field_qEqMM"/>
+						<field invisible="1" name="x_studio_binary_field_qEqMM_filename"/>
+					</group>
+					<group name="studio_group_7yPnp_right" string="Daños Personales">
+						<field name="x_studio_cantidad_de_accidentes" string="Cantidad de Accidentes"/>
+						<field filename="x_studio_binary_field_dBsBa_filename" name="x_studio_binary_field_dBsBa"/>
+						<field invisible="1" name="x_studio_binary_field_dBsBa_filename"/>
+					</group>
+				</group>
+				<group name="studio_group_cxyBS" string="BONO SEGURIDAD INDUSTRIAL">
+					<field name="x_studio_restrinccin_de_bono_2" string="Restrincción de Bono"/>
+					<field name="x_studio_comentarios_de_bono_si" string="Comentarios de Bono S.I."/>
+					<field name="x_studio_date_field_hP1N0" invisible="1"/>
+				</group>
+			</page>
+		</xpath>
+	</data>
+</field>
+</record>
+
+<record id="odoo_studio_stock_pi_d594727a-06b7-4f04-9761-4e7b534af3c6" model="ir.ui.view">
+<field name="name">Odoo Studio: stock.picking.form customization</field>
+<field name="model">stock.picking</field>
+<field name="inherit_id" ref="stock.view_picking_form"/>
+<field name="arch" type="xml">
+	<data>
+
+		<xpath expr="//button[@name='action_confirm']" position="attributes">
+			<attribute name="studio_approval">True</attribute>
+		</xpath>
+		<xpath expr="//form[1]/header[1]/button[@name='button_validate']" position="attributes">
+			<attribute name="effect">False</attribute>
+			<attribute name="studio_approval">True</attribute>
+		</xpath>
+		<xpath expr="//form[1]/header[1]/button[@name='button_validate'][2]" position="attributes">
+			<attribute name="studio_approval">True</attribute>
+		</xpath>
+
+
+		<xpath expr="//button[@name='action_cancel']" position="attributes">
+			<attribute name="groups"/>
+		</xpath>
+		<xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='partner_id']" position="after">
+			<field name="x_studio_puerto" string="Puerto:"/>
+			<field name="x_studio_departamento" string="Departamento:"/>
+		</xpath>
+		<xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='location_id'][2]" position="attributes">
+			<attribute name="string">Ubicación Bodega:</attribute>
+		</xpath>
+		<xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='location_dest_id'][2]" position="attributes">
+			<attribute name="string">Ubicación Destinado:</attribute>
+			<attribute name="readonly">(state == 'done') or (state in ['done'])</attribute>
+		</xpath>
+		<xpath expr="//form[1]/sheet[1]/group[1]/group[2]/label[1]" position="attributes">
+			<attribute name="string">Fecha Generada</attribute>
+		</xpath>
+		<xpath expr="//field[@name='origin']" position="after">
+			<field name="x_studio_nombre_de_empleado" string="Nombre de empleado"/>
+			<field name="x_studio_chapa" string="Chapa"/>
+			<field name="x_studio_nota" string="Nota:"/>
+		</xpath>
+
+	</data>
+</field>
+</record>
+</odoo>

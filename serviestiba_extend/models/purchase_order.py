@@ -28,22 +28,24 @@ class PurchaseOrder(models.Model):
             }
         )
 
-    @api.depends_context("lang")
-    @api.depends(
-        "order_line.taxes_id",
-        "order_line.price_subtotal",
-        "amount_total",
-        "amount_untaxed",
-    )
-    def _compute_tax_totals(self):
+
+    @api.depends('order_line.price_subtotal', 'company_id', 'currency_id', 'order_line.status')
+    def _amount_all(self):
+        AccountTax = self.env['account.tax']
         for order in self:
-            order_lines = order.order_line.filtered(
-                lambda x: not x.display_type and x.status not in ["cancel"]
+            order_lines = order.order_line.filtered(lambda x: not x.display_type and not x.status == 'cancel')
+            base_lines = [line._prepare_base_line_for_taxes_computation() for line in order_lines]
+            AccountTax._add_tax_details_in_base_lines(base_lines, order.company_id)
+            AccountTax._round_base_lines_tax_details(base_lines, order.company_id)
+            tax_totals = AccountTax._get_tax_totals_summary(
+                base_lines=base_lines,
+                currency=order.currency_id or order.company_id.currency_id,
+                company=order.company_id,
             )
-            order.tax_totals = self.env["account.tax"]._prepare_tax_totals(
-                [x._convert_to_tax_base_line_dict() for x in order_lines],
-                order.currency_id or order.company_id.currency_id,
-            )
+            order.amount_untaxed = tax_totals['base_amount_currency']
+            order.amount_tax = tax_totals['tax_amount_currency']
+            order.amount_total = tax_totals['total_amount_currency']
+            order.amount_total_cc = tax_totals['total_amount']
 
 
 class ShPurchaseAgreement(models.Model):
