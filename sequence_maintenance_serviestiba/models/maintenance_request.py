@@ -3,22 +3,25 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
+
 class MaintenanceRequest(models.Model):
-    _inherit = 'maintenance.request'
+    _inherit = "maintenance.request"
 
-    @api.model
-    def create(self, vals):
+    @api.model_create_multi
+    def create(self, vals_list):
         _logger.info("Entering the overridden create method for maintenance.request")
-        
-        # Your custom logic here
-        sequence = self.env['ir.sequence'].next_by_code('maintenance.request.seq')
-        _logger.info(f"Sequence obtained: {sequence}")
 
-        if sequence:
-            vals['name'] = sequence
-        elif not vals.get('name'):
-            vals['name'] = '/'
-        
-        result = super(MaintenanceRequest, self).create(vals)
-        _logger.info(f"New maintenance request created with ID: {result.id}")
-        return result
+        for vals in vals_list:
+            # Solo asigna si no viene name o viene como "New" (comportamiento típico en Odoo)
+            if vals.get("name", "New") in (False, "/", "New"):
+                sequence = self.env["ir.sequence"].next_by_code("maintenance.request.seq")
+                _logger.info("Sequence obtained: %s", sequence)
+
+                if sequence:
+                    vals["name"] = sequence
+                else:
+                    vals["name"] = "/"
+
+        records = super().create(vals_list)
+        _logger.info("New maintenance requests created with IDs: %s", records.ids)
+        return records
