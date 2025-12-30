@@ -1,6 +1,6 @@
 {
     "name": "Generic Security Restriction",
-    "version": "16.0.0.22.0",
+    "version": "19.0.0.0.2",
     "author": "Center of Research and Development",
     "website": "https://crnd.pro",
     "license": 'OPL-1',
@@ -28,10 +28,9 @@
         'views/generic_security_model_restriction.xml',
     ],
     'demo': [],
-    'images': ['static/description/banner.gif'],
+    'images': ['static/description/banner.png'],
     'installable': True,
     'auto_install': False,
     'application': False,
-    'price': 21.0,
-    'currency': 'EUR',
+
 }

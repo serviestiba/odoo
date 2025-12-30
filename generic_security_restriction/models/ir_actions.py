@@ -7,7 +7,7 @@ class IrActions(models.Model):
     restrict_group_ids = fields.Many2many(
         'res.groups', 'ir_actions_act_window_res_groups_hidden_actions_rel',
         'act_window_id', 'group_id',
-        string='Groups',
+        string='Restricted Groups',
         help="If you have groups, the restrict of visibility of this action"
              " will be based on these groups.")
     hide_from_user_ids = fields.Many2many(
@@ -21,7 +21,7 @@ class IrActionsServer(models.Model):
     restrict_group_ids = fields.Many2many(
         'res.groups', 'ir_actions_server_res_groups_hidden_actions_rel',
         'act_server_id', 'group_id',
-        string='Groups',
+        string='Restricted Groups',
         help="If you have groups, the restrict of visibility "
              "of this contextual server action will be based on these groups.")
     hide_from_user_ids = fields.Many2many(

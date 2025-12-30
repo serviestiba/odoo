@@ -30,23 +30,24 @@ class ResUsers(models.Model):
     allowed_use_debug_mode = fields.Boolean(
         help="Allow use debug mode for this user.")
 
-    @api.model
-    def create(self, values):
-        users = super(ResUsers, self).create(values)
-        self.env['ir.ui.menu'].clear_caches()
-        if 'allowed_use_debug_mode' in values:
-            self._gsr_is_debug_mode_allowed.clear_cache(self)
-        if 'groups_id' in values:
-            self._gsr_is_debug_mode_allowed.clear_cache(self)
+    @api.model_create_multi
+    def create(self, vals_list):
+        users = super(ResUsers, self).create(vals_list)
+        for user in users:
+            self.env['ir.ui.menu'].clear_caches()
+            if 'allowed_use_debug_mode' in user:
+                self.env.registry.clear_cache()
+            if 'group_ids' in user:
+                self.env.registry.clear_cache()
         return users
 
     def write(self, values):
         res = super(ResUsers, self).write(values)
-        self.env['ir.ui.menu'].clear_caches()
+        self.env.registry.clear_cache()
         if 'allowed_use_debug_mode' in values:
-            self._gsr_is_debug_mode_allowed.clear_cache(self)
-        if 'groups_id' in values:
-            self._gsr_is_debug_mode_allowed.clear_cache(self)
+            self.env.registry.clear_cache()
+        if 'group_ids' in values:
+            self.env.registry.clear_cache()
         return res
 
     @api.model
@@ -56,7 +57,7 @@ class ResUsers(models.Model):
         if user.allowed_use_debug_mode:
             return True
         # Check if allowed debug mode by groups
-        if bool(user.groups_id.filtered(
+        if bool(user.group_ids.filtered(
                 lambda g: g.allowed_use_debug_mode)):
             return True
         return False
