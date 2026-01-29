@@ -224,7 +224,7 @@ class ShPurchaseAgreement(models.Model):
         self.ensure_one()
         ir_model_data = self.env['ir.model.data']
         
-        template_id = ir_model_data._xmlid_lookup('sh_all_in_one_tender_bundle.email_template_edi_purchase_tedner')[2]
+        template_id = self.env.ref('sh_all_in_one_tender_bundle.email_template_edi_purchase_tedner')
         try:
             compose_form_id = ir_model_data._xmlid_lookup('mail.email_compose_message_wizard_form')[2]
         except ValueError:
