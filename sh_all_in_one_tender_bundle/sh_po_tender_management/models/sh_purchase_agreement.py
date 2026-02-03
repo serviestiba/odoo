@@ -222,37 +222,41 @@ class ShPurchaseAgreement(models.Model):
 
     def action_send_tender(self):
         self.ensure_one()
-        ir_model_data = self.env['ir.model.data']
-        
-        template_id = self.env.ref('sh_all_in_one_tender_bundle.email_template_edi_purchase_tedner')
 
-        compose_form_id = False
+        template = self.env.ref(
+            "sh_all_in_one_tender_bundle.email_template_edi_purchase_tedner",
+            raise_if_not_found=False,
+        )
+
         ctx = {
-            'default_model': 'purchase.agreement',
-            'default_res_ids': self.ids,        # lista completa
-            'default_use_template': bool(template_id),
-            'default_template_id': template_id,
-            'default_composition_mode': 'comment',
-            'force_email': True,
+            "default_model": "purchase.agreement",
+            "default_res_ids": self.ids,  # en ensure_one será [id]
+            "default_composition_mode": "comment",
+            "force_email": True,
         }
-        if self.sh_vender_id:
+
+        # Template (en Odoo 19, default_template_id debe ser INT, no recordset)
+        if template:
             ctx.update({
-                'default_partner_ids': [(6, 0, self.sh_vender_id.ids)]
+                "default_use_template": True,
+                "default_template_id": template.id,
             })
-        if self.partner_ids:
-            ctx.update({
-                'default_partner_ids': [(6, 0, self.partner_ids.ids)]
-            })
+
+        # Partners: unir (no sobrescribir)
+        partners = (self.sh_vender_id | self.partner_ids)
+        if partners:
+            ctx["default_partner_ids"] = [(6, 0, partners.ids)]
+
         return {
-            'type': 'ir.actions.act_window',
-            'view_type': 'form',
-            'view_mode': 'form',
-            'res_model': 'mail.compose.message',
-            'views': [(compose_form_id, 'form')],
-            'view_id': compose_form_id,
-            'target': 'new',
-            'context': ctx,
+            "type": "ir.actions.act_window",
+            "name": "Send Tender",
+            "res_model": "mail.compose.message",
+            "view_mode": "form",
+            "views": [(False, "form")],
+            "target": "new",
+            "context": ctx,
         }
+
 
     def action_view_quote(self):
         return {
