@@ -225,17 +225,15 @@ class ShPurchaseAgreement(models.Model):
         ir_model_data = self.env['ir.model.data']
         
         template_id = self.env.ref('sh_all_in_one_tender_bundle.email_template_edi_purchase_tedner')
-        try:
-            compose_form_id = ir_model_data._xmlid_lookup('mail.email_compose_message_wizard_form')[2]
-        except ValueError:
-            compose_form_id = False
+
+        compose_form_id = False
         ctx = {
             'default_model': 'purchase.agreement',
-            'default_res_id': self.ids[0],
+            'default_res_ids': self.ids,        # lista completa
             'default_use_template': bool(template_id),
             'default_template_id': template_id,
             'default_composition_mode': 'comment',
-            'force_email': True
+            'force_email': True,
         }
         if self.sh_vender_id:
             ctx.update({
