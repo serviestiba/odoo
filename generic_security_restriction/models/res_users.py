@@ -34,7 +34,7 @@ class ResUsers(models.Model):
     def create(self, vals_list):
         users = super(ResUsers, self).create(vals_list)
         for user in users:
-            self.env['ir.ui.menu'].clear_caches()
+            self.env.registry.clear_cache()
             if 'allowed_use_debug_mode' in user:
                 self.env.registry.clear_cache()
             if 'group_ids' in user:
