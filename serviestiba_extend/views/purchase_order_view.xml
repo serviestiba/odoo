@@ -76,4 +76,32 @@
 		</field>
 	</record>
 	<menuitem id="serviestiba_sh_purchase_agreement_menu" name="Licitaciones" parent="purchase.purchase_report_main" action="serviestiba_sh_purchase_agreement_action" />
+
+	<!-- Serviestibas: show only confirmed lines in Softhealer Tender Lines. -->
+	<function model="ir.actions.act_window" name="_serviestiba_filter_confirmed_tender_lines"/>
+
+    <!-- Serviestibas: expose the custom line status in Purchase History. -->
+    <record id="serviestiba_purchase_history_tree_status" model="ir.ui.view">
+        <field name="name">serviestiba.purchase.history.tree.status</field>
+        <field name="model">purchase.order.line</field>
+        <field name="inherit_id" ref="purchase.purchase_history_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='price_subtotal']" position="after">
+                <field name="status" string="Estado de Línea" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Serviestibas: make the custom status label explicit in Tender Lines. -->
+    <record id="serviestiba_sh_bidline_tree_status_label" model="ir.ui.view">
+        <field name="name">serviestiba.sh.bidline.tree.status.label</field>
+        <field name="model">purchase.order.line</field>
+        <field name="inherit_id" ref="sh_all_in_one_tender_bundle.sh_bidline_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='status']" position="attributes">
+                <attribute name="string">Estado de Línea</attribute>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>
